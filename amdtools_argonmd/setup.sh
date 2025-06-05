@@ -31,3 +31,7 @@ done
 clang++ -std=c++11 -g -O3 -L$AOCL_ROOT/lib -lamdlibm -lm -o argonmd_o3_amdlibm.x argonmd.cpp
 clang++ -std=c++11 -g -O3 -L$AOCL_ROOT/lib -fveclib=AMDLIBM -lamdlibm -lm -o argonmd_o3_amdlibm_vec.x argonmd.cpp
 clang++ -std=c++11 -g -Ofast -L$AOCL_ROOT/lib -ffastlib=AMDLIBM -lamdlibmfast -lamdlibm -lm -o argonmd_ofast_amdlibm_fast.x argonmd.cpp
+
+clang++ -std=c++11 -g -O3 -march=native -L$AOCL_ROOT/lib -lamdlibm -lm -o argonmd_o3_amdlibm_march.x argonmd.cpp
+clang++ -std=c++11 -g -O3 -march=native -L$AOCL_ROOT/lib -fveclib=AMDLIBM -lamdlibm -lm -o argonmd_o3_amdlibm_vec_march.x argonmd.cpp
+clang++ -std=c++11 -g -Ofast -march=native -L$AOCL_ROOT/lib -ffastlib=AMDLIBM -lamdlibmfast -lamdlibm -lm -o argonmd_ofast_amdlibm_fast_march.x argonmd.cpp

@@ -11,3 +11,6 @@ done
 for opt in o3_amdlibm o3_amdlibm_vec ofast_amdlibm_fast ; do
   (time ./argonmd_${opt}.x) &>out_time_${opt}
 done
+for opt in o3_amdlibm o3_amdlibm_vec ofast_amdlibm_fast ; do
+  (time ./argonmd_${opt}_march.x) &>out_time_${opt}_march
+done
