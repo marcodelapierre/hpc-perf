@@ -9,3 +9,4 @@ done
 for olev in 3 fast ; do
   g++ -std=c++11 -g -O${olev} -funroll-loops -o argonmd_o${olev}_unroll.x argonmd.cpp
 done
+g++ -std=c++11 -g -O3 -funroll-loops -fprefetch-loop-arrays -o argonmd_o3_unroll_prefetch.x argonmd.cpp
