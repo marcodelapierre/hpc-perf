@@ -27,3 +27,7 @@ done
 for olev in 3 fast ; do
   clang++ -std=c++11 -g -O${olev} -march=native -zopt -o argonmd_o${olev}_zopt_march.x argonmd.cpp
 done
+
+clang++ -std=c++11 -g -O3 -L$AOCL_ROOT/lib -lamdlibm -lm -o argonmd_o3_amdlibm.x argonmd.cpp
+clang++ -std=c++11 -g -O3 -L$AOCL_ROOT/lib -fveclib=AMDLIBM -lamdlibm -lm -o argonmd_o3_amdlibm_vec.x argonmd.cpp
+clang++ -std=c++11 -g -Ofast -L$AOCL_ROOT/lib -ffastlib=AMDLIBM -lamdlibmfast -lamdlibm -lm -o argonmd_ofast_amdlibm_fast.x argonmd.cpp
