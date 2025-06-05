@@ -1,0 +1,165 @@
+Warning:
+Kernel address maps (/proc/{kallsyms,modules}) were restricted.
+
+Check /proc/sys/kernel/kptr_restrict before running 'perf record'.
+
+As no suitable kallsyms nor vmlinux was found, kernel samples
+can't be resolved.
+
+Samples in kernel modules can't be resolved as well.
+
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 20K of event 'cycles:P'
+# Event count (approx.): 21999580202
+#
+# Overhead  Command       Shared Object         Symbol                                                                                                                                        
+# ........  ............  ....................  ..............................................................................................................................................
+#
+    80.78%  argonmd_o2.x  argonmd_o2.x          [.] compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&)
+    16.66%  argonmd_o2.x  argonmd_o2.x          [.] compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*)
+     0.65%  argonmd_o2.x  argonmd_o2.x          [.] update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*)
+     0.43%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc088e1
+     0.18%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc088e6
+     0.16%  argonmd_o2.x  argonmd_o2.x          [.] update_vel(double*, double const*, double const*, int, double, double)
+     0.16%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc088e9
+     0.10%  argonmd_o2.x  [unknown]             [k] 0xffffffffaff0410b
+     0.09%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9d72
+     0.05%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9d22
+     0.04%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec150f0
+     0.03%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9d6e
+     0.02%  argonmd_o2.x  [unknown]             [k] 0xffffffffaff04104
+     0.02%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc95622
+     0.02%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc95612
+     0.02%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9d6a
+     0.02%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc95626
+     0.02%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec150f8
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9c90
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec150fb
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7f1c9
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb6d6d3
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9c95
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9d63
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaff04109
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec150f5
+     0.01%  argonmd_o2.x  argonmd_o2.x          [.] main
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffafe00ef0
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffafca91ce
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb6d6a1
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7023b
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffafca99f3
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaebf2c39
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb9d718
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaf29a906
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb8ce26
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaebeb474
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb154bd
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7f209
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7f1b0
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc083fc
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaedb7c55
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec15132
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb70297
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec189f4
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffafa496f2
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb77d1e
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb70ae2
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaebeb46b
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaea1a2a2
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9cb8
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7d062
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb5dca6
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffc075ff32
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec178fa
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffafe00efb
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec2d092
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec15287
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaee5d7f6
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb6d6ca
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb8c630
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaea1597b
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7f5bd
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb69930
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaedc2a09
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9d61
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeacdc54
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeba1830
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec2d2b4
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeac9d29
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec328dd
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc986ef
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeabe8da
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec172b5
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7110a
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb70b2c
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb70b54
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffafe00f03
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeba1691
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb8cf2f
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec15010
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaf29affe
+     0.01%  argonmd_o2.x  [unknown]             [.] 0x000000007be4e852
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec14665
+     0.01%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb8ccf6
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7f1d5
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec15108
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec1282f
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeba163a
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb6a3fd
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeba5f35
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb8ce23
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec0d145
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafca9281
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb6d646
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb154c7
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc0885a
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc986fa
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb9d7b3
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc051f8
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc95644
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb77aff
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc9561a
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7e919
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeab30d5
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc956e9
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb6a41f
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb77d23
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafe00002
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec160a1
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaebed9a6
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb7f296
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb70ab8
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb8c65d
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc955f6
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaec323ce
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb91a8f
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeb77cf0
+     0.00%  argonmd_o2.x  ld-linux-x86-64.so.2  [.] _dl_relocate_object
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeeefc46
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc98c34
+     0.00%  argonmd_o2.x  libstdc++.so.6.0.33   [.] 0x00000000000e9858
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaee4ebff
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafe00112
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc91330
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaede1875
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaef6d262
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaee4b651
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafbf4dbd
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafbf562d
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaeef18c5
+     0.00%  perf-exec     [unknown]             [k] 0xffffffffaedc38c5
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaedc2b05
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffafc94db7
+     0.00%  perf-exec     [unknown]             [k] 0xffffffffaea15966
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaedb7c59
+     0.00%  argonmd_o2.x  [unknown]             [k] 0xffffffffaebe3660
+     0.00%  perf-exec     [unknown]             [k] 0xffffffffaea1ab3a
+     0.00%  perf-exec     [unknown]             [k] 0xffffffffaeacdc54
+
+
+#
+# (Tip: To show inline functions in call traces add --inline to perf report)
+#

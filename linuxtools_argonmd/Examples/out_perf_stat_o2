@@ -1,0 +1,50 @@
+
+** ArgonMD **
+
+ Box Units : 5    5    5  
+ No. Time Steps : 10000
+ Initial Temp [K] : 10.0  
+ Neigh Update Freq : 20
+ Thermo Print Freq : 1000
+ Coord Dump Freq : 0
+
+ Time Step [ps] : 0.001
+ Cutoff Dist [Ang] : 8.760
+ Cell Par [Ang] : 5.795
+ Box Length [Ang] : 28.975   28.975   28.975 
+ No. Atoms : 500
+
+      Step    Time[ps]   Temp[K]      Ekin[eV]      Epot[eV]      Etot[eV]    Clock[s]
+         0       0.000    10.000  +0.001290016  -0.072045884  -0.070755867       0.000
+      1000       1.000     5.973  +0.000770507  -0.071526372  -0.070755865       0.686
+      2000       2.000     4.778  +0.000616321  -0.071376488  -0.070760167       1.187
+      3000       3.000     4.492  +0.000579534  -0.071339370  -0.070759837       1.685
+      4000       4.000     4.805  +0.000619904  -0.071377424  -0.070757520       2.181
+      5000       5.000     5.007  +0.000645927  -0.071402785  -0.070756858       2.677
+      6000       6.000     4.770  +0.000615386  -0.071373898  -0.070758513       3.175
+      7000       7.000     5.101  +0.000658049  -0.071414245  -0.070756196       3.676
+      8000       8.000     4.975  +0.000641736  -0.071398594  -0.070756858       4.178
+      9000       9.000     4.839  +0.000624277  -0.071381135  -0.070756857       4.683
+     10000      10.000     4.879  +0.000629441  -0.071386299  -0.070756857       5.202
+
+ Loop Clock Time [s] :      5.202
+
+ Performance counter stats for './argonmd_o2.x':
+
+          5,208.58 msec task-clock                       #    0.999 CPUs utilized             
+                91      context-switches                 #   17.471 /sec                      
+                24      cpu-migrations                   #    4.608 /sec                      
+               219      page-faults                      #   42.046 /sec                      
+    22,789,707,825      cycles                           #    4.375 GHz                       
+       126,513,546      stalled-cycles-frontend          #    0.56% frontend cycles idle      
+    51,601,011,163      instructions                     #    2.26  insn per cycle            
+                                                  #    0.00  stalled cycles per insn   
+     2,757,484,991      branches                         #  529.412 M/sec                     
+        17,596,469      branch-misses                    #    0.64% of all branches           
+
+       5.211415785 seconds time elapsed
+
+       5.205575000 seconds user
+       0.003998000 seconds sys
+
+
