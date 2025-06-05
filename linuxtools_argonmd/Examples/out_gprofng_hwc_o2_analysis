@@ -1,0 +1,772 @@
+Experiment: gprofng_hwc_o2.er/
+No errors
+*** Collector Warning: Collection interval timer period was changed (10007 -> 0); profile data may be unreliable
+Archive command ` /usr/bin/gp-archive -n -a on --outfile /home/mdelapierre/proj/bmkg/linux-profiling/gprofng_hwc_o2.er/archive.log /home/mdelapierre/proj/bmkg/linux-profiling/gprofng_hwc_o2.er'
+
+Target command (64-bit): './argonmd_o2.x'
+Process pid 1820117, ppid 1307241, pgrp 1820117, sid 1307241
+Current working directory: /home/mdelapierre/proj/bmkg/linux-profiling
+Collector version: `2.42'; experiment version 12.4 (64-bit)
+Host `lenovoE14-mdelapierre', OS `Linux 6.11.0-25-generic', page size 4096, architecture `x86_64'
+  12 CPUs, with clocks ranging from 400 to 2955 MHz.; max of 2955 MHz. assumed
+  Memory: 3773528 pages @  4096 = 14740 MB.
+  Machine model: generic
+Data collection parameters:
+  Clock-profiling, interval = 10007 microsecs.
+  HW counter-profiling; counters:
+    insts, tag 0, interval 30001, memop 0
+    cycles, tag 1, interval 30001, memop 0
+  Periodic sampling, 1 secs.
+  Follow descendant processes from: fork|exec|combo
+
+Experiment started Thu Jun  5 12:15:19 2025
+
+Experiment Ended: 5.327074600
+Data Collection Duration: 5.327074600
+Error: Invalid command: ovewview
+Current metrics: e+%insts:e.%cycles:name
+Current Sort Metric: Exclusive Instructions Executed ( e+%insts )
+Functions sorted by metric: Exclusive Instructions Executed
+
+Excl. Instructions  Excl. CPU      Name
+Executed            Cycles
+                 %   sec.      %
+51551915416 100.00  7.599 100.00   <Total>
+40893913129  79.33  6.055  79.69   compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&)
+ 9919319661  19.24  1.439  18.94   compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*)
+  738229011   1.43  0.083   1.10   update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*)
+     362535   0.00  0.000   0.00   setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*)
+      91080   0.00  0.000   0.00   pthread_sigmask
+          0   0.    0.      0.     <static>@0x2a145 (<libc.so.6>)
+          0   0.    0.      0.     <static>@0x2b195 (<ld-linux-x86-64.so.2>)
+          0   0.    0.      0.     <static>@0x4328 (<ld-linux-x86-64.so.2>)
+          0   0.    0.      0.     <static>@0x48a60 (<libgp-collector.so>)
+          0   0.    0.      0.     __collector_allocCSize
+          0   0.    0.      0.     __collector_create_handle
+          0   0.    0.      0.     __collector_register_module
+          0   0.    0.      0.     __libc_start_main
+          0   0.    0.      0.     main
+          0   0.    0.      0.     sigprocmask
+          0   0.    0.021   0.27   update_vel(double*, double const*, double const*, int, double, double)
+
+Current metrics: e+insts:e.cycles:name
+Current Sort Metric: Exclusive Instructions Executed ( e+insts )
+Source file: argonmd.cpp
+Object file: argonmd_o2.x (found as gprofng_hwc_o2.er/archives/argonmd_o2.x_0HP2_kCVu49)
+Load Object: argonmd_o2.x (found as gprofng_hwc_o2.er/archives/argonmd_o2.x_0HP2_kCVu49)
+
+   Excl.         Excl. CPU
+   Instructions  Cycles
+   Executed       sec.
+                                     1. #include <iostream>
+                                     2. #include <cstring>
+                                     3. #include <cmath>
+                                     4. #include <ctime>
+                                     5. 
+                                     6. using namespace std;
+                                     7. 
+                                     8. // struct definitions
+                                     9. struct InputParams {
+                                    10.   int box_units[ 3 ];
+                                    11.   int nsteps;
+                                    12.   double temp_ini;
+                                    13.   int nneighupd;
+                                    14.   int nthermo;
+                                    15.   int ndump;
+                                    16. };
+                                    17. 
+                                    18. // function headers
+                                    19. InputParams get_input_params( const int, char** );
+                                    20. //
+                                    21. void setup_struc_vel( const int, const int* const, const double, const double* const, const int, double*, double*, double* );
+                                    22. //
+                                    23. void compute_temp_ekin( const double* const, const int, const double, const double, const double, double&, double& );
+                                    24. void rescale_temp( double*, const int, const double, double&, double& );
+                                    25. //
+                                    26. void compute_neigh( const double* const, const int, const double* const, const double* const, const double, const int, int*, int* );
+                                    27. //
+                                    28. void compute_forc_epot( const double* const, const int, const int, const int* const, const int* const, 
+                                    29.     const double* const, const double* const, const double, const double, const double, double*, double& );
+                                    30. //
+                                    31. void check_pbc( double*, const int, const double* const );
+                                    32. void update_pos_pbc( double*, double*, const double* const, const double* const, const int, 
+                                    33.     const double, const double, const double, const double* const );
+                                    34. void update_vel( double*, const double* const, const double* const, const int, const double, const double );
+                                    35. //
+                                    36. double random( int* ); // this one is taken from Mantevo/miniMD
+                                    37. //
+                                    38. void print_arr( const double* const, const int, const int );
+                                    39. void print_info( const int* const, const int, const double, const int, const int, const int, 
+                                    40.     const double, const double, const double, const double* const, const int );
+                                    41. void print_thermo( const int, const double, const double, const double, const double, const double, const double );
+                                    42. void dump_pdb( FILE*, const int, const double* const, const double, const char* const, const double* const, const int );
+                                    43. 
+                                    44. 
+                                    45. 
+                                        <Function: main>
+             0   0.                 46. int main( int argc, char** argv ) {
+                                    47. //cout<<"Ciao Mondo!"<<endl;
+                                    48. 
+                                    49. // Define parameters - using LAMMPS "metal" physical units convention
+                                    50. // pressure unit is bar
+                                    51. // force unit is eV/Ang
+                                    52. //
+                                    53. // Input parameters - editable by input
+             0   0.                 54. InputParams input_params = get_input_params( argc, argv );
+             0   0.                 55. const int box_units[ 3 ] = {
+             0   0.                 56.   input_params.box_units[0],
+                                    57.   input_params.box_units[1],
+             0   0.                 58.   input_params.box_units[2]
+             0   0.                 59. }; // no of unit cells per each dimension in the simulation box
+             0   0.                 60. const int nsteps = input_params.nsteps; // no of time steps in the simulation
+             0   0.                 61. const double temp_ini = input_params.temp_ini; // K [117.7: datum from LAMMPS LJ example]
+             0   0.                 62. const int nneighupd = input_params.nneighupd; // update neighbour list every these steps [from LAMMPS LJ example]
+             0   0.                 63. const int nthermo = input_params.nthermo; // print thermo info every these steps
+             0   0.                 64. const int ndump = input_params.ndump; // dump structure every these steps
+                                    65. //
+             0   0.                 66. const char* coorfile = "coord.pdb"; // filename for initial atomic coordinates
+             0   0.                 67. const char* trajfile = "traj.pdb"; // filename for trajectory atomic coordinates
+                                    68. //
+                                    69. // Crystal structure for Argon (fcc)
+                                    70. // Note that fcc implies 3D PBC
+             0   0.                 71. const int funits = 4;
+             0   0.                 72. const int natoms = funits * box_units[0] * box_units[1] * box_units[2]; // note that this implies 3D PBC // affected by input parameters
+             0   0.                 73. const double cellpar = 5.795; // angstrom [datum from LAMMPS LJ example] [5.256: from real data]
+             0   0.                 74. const double cellang = 90.0; // degrees
+             0   0.                 75. const double boxlen[ 3 ] = {
+             0   0.                 76.   cellpar * box_units[0],
+                                    77.   cellpar * box_units[1],
+             0   0.                 78.   cellpar * box_units[2]
+             0   0.                 79. }; // affected by input parameters
+             0   0.                 80. const double boxhalf[ 3 ] = {
+             0   0.                 81.   0.5 * boxlen[0],
+                                    82.   0.5 * boxlen[1],
+             0   0.                 83.   0.5 * boxlen[2]
+             0   0.                 84. }; // affected by input parameters
+             0   0.                 85. const double unitpos[ funits * 3 ] = {
+                                    86.   0., 0., 0.,
+                                    87.   0.5*cellpar, 0.5*cellpar, 0.,
+                                    88.   0.5*cellpar, 0., 0.5*cellpar,
+                                    89.   0., 0.5*cellpar, 0.5*cellpar
+                                    90. };
+                                    91. //
+                                    92. // Some physical constants here
+             0   0.                 93. const double k_B = 8.617343e-05; // eV/K
+             0   0.                 94. const double N_av = 6.02214129e23; // mol-1
+             0   0.                 95. const double J_eV = 1.602177e-19; // this is q_e
+                                    96. //
+                                    97. // Model parameters
+             0   0.                 98. const double dt = 0.001; // ps
+             0   0.                 99. const double hdt = 0.5 * dt;
+             0   0.                100. const double hdtsq = 0.5 * dt * dt;
+             0   0.                101. const double mass = 39.95; // gram/mol (also amu)
+             0   0.                102. const double imass = 1.0 / mass;
+             0   0.                103. const int atno = 18; // atomic number
+             0   0.                104. const char* elsym = "Ar"; // element symbol
+             0   0.                105. const double eps_kB = 117.7; // K
+             0   0.                106. const double eps = eps_kB * k_B; // eV
+             0   0.                107. const double sigma = 3.504; // angstrom
+             0   0.                108. const double sigma2 = sigma * sigma;
+             0   0.                109. const double sigma6 = sigma2 * sigma2 * sigma2;
+             0   0.                110. const double cut_fac = 2.5; // adimensional, multiplies sigma
+             0   0.                111. const double skin_fac = 0.3; // adimensional, multiplies sigma
+             0   0.                112. const double cut = cut_fac * sigma;
+             0   0.                113. const double cutskin = cut + skin_fac * sigma;
+             0   0.                114. const double cutsq = cut * cut;
+             0   0.                115. const double cutskinsq = cutskin * cutskin;
+             0   0.                116. const int maxneigh = 150; // with an fcc of side 5.256, and cut+skin of 9.8112, the real maxneigh is 86
+                                   117. //
+             0   0.                118. const double N_dof = ( natoms * 3 - 3 ); // note that this implies 3D PBC (different expressions for lower dimensionalities) // affected by input parameters
+             0   0.                119. const double ekin_scale = 10.0 / N_av / J_eV; // 1.036427e-04; // this factor is needed when using metal units ("mvv2e" in Mantevo/miniMD) [from my notes]
+             0   0.                120. const double temp_scale = ekin_scale / ( N_dof * k_B ); // [from my notes] // affected by input parameters
+             0   0.                121. const double forc_scale = 1.0 / ekin_scale; // J_eV * N_av * 0.1; // 9648.536; // this factor is needed when using metal units [from my notes]
+             0   0.                122. const double forc_hdt_scale = forc_scale * hdt;
+             0   0.                123. const double forc_hdtsq_scale = forc_scale * hdtsq;
+                                   124. 
+                                   125. 
+                                   126. // Allocate arrays
+                                        <Function: main.cold>
+             0   0.                127. int* numneigh = new int [ natoms ];
+             0   0.                128. int* neigh = new int [ natoms * maxneigh ];
+             0   0.                129. double* pos = new double [ natoms * 3 ];
+             0   0.                130. double* posraw = new double [ natoms * 3 ];
+             0   0.                131. double* vel = new double [ natoms * 3 ];
+             0   0.                132. double* forc = new double [ natoms * 3 ];
+             0   0.                133. double* forcold = new double [ natoms * 3 ];
+                                   134. 
+                                   135. // Define variables and pointers
+             0   0.                136. double temp, ekin, epot, clocktime;
+             0   0.                137. int istep = 0;
+             0   0.                138. double* forctmp;
+             0   0.                139. clock_t start, watch;
+             0   0.                140. FILE* coor; // file for initial atomic coordinates
+             0   0.                141. FILE* traj; // file for trajectory atomic coordinates
+                                   142. 
+                                   143. // Print program header
+             0   0.                144. printf( "\n** ArgonMD **\n" );
+                                   145. 
+                                   146. 
+                                   147. // Define structure and initialise velocities
+             0   0.                148. setup_struc_vel( funits, box_units, cellpar, unitpos, natoms, pos, posraw, vel );
+                                   149. // Rescale to desired temperature
+             0   0.                150. compute_temp_ekin( vel, natoms, mass, temp_scale, ekin_scale, temp, ekin );
+             0   0.                151. rescale_temp( vel, natoms, temp_ini, temp, ekin );
+                                   152. 
+                                   153. // PBC check // not needed at startup with current input structure, yet here for generality
+             0   0.                154. check_pbc( pos, natoms, boxlen );
+                                   155. // Build (full) neighbour list
+             0   0.                156. compute_neigh( pos, natoms, boxlen, boxhalf, cutskinsq, maxneigh, numneigh, neigh );
+                                   157. 
+                                   158. // Compute initial forces
+             0   0.                159. compute_forc_epot( pos, natoms, maxneigh, numneigh, neigh, 
+                                   160.                    boxlen, boxhalf, cutsq, sigma6, eps, forc, epot );
+                                   161. 
+                                   162. // Print simulation info
+             0   0.                163. print_info( box_units, nsteps, temp_ini, nneighupd, nthermo, ndump, dt, cut, cellpar, boxlen, natoms );
+                                   164. //if ( 0 ) { print_arr( pos, 0, natoms ); print_arr( vel, 0, natoms ); } // debug print
+                                   165. //
+                                   166. // Print initial thermo output
+             0   0.                167. printf( "\n %9s  %10s  %8s  %12s  %12s  %12s  %10s\n", "Step", "Time[ps]", "Temp[K]", "Ekin[eV]", "Epot[eV]", "Etot[eV]", "Clock[s]" );
+             0   0.                168. print_thermo( istep, dt*istep, temp, ekin/natoms, epot/natoms, (ekin+epot)/natoms, 0.0 );
+                                   169. 
+                                   170. // Dump initial atomic coordinates
+             0   0.                171. if ( ndump > 0 ) {
+             0   0.                172.   coor = fopen( coorfile, "w" );
+             0   0.                173.   dump_pdb( coor, istep, boxlen, cellang, elsym, pos, natoms );
+             0   0.                174.   fclose( coor );
+             0   0.                175.   traj = fopen( trajfile, "w" );
+                                   176. }
+                                   177. 
+                                   178. 
+                                   179. // Time evolution loop
+             0   0.                180. start = clock();
+             0   0.                181. for (istep = 1; istep <= nsteps; istep++) {
+                                   182. 
+                                   183. // This code block could become a routine "integrate"; leaving it here for algorithm readability
+                                   184. // Note that this implies Velocity Verlet integrator
+             0   0.                185.   {
+                                   186. // Update positions and check PBC meanwhile
+             0   0.                187.   update_pos_pbc( pos, posraw, vel, forc, natoms, dt, forc_hdtsq_scale, imass, boxlen );
+                                   188. 
+                                   189. // Update (full) neighbour list
+             0   0.                190.   if( nneighupd > 0 && istep%nneighupd == 0 ) { 
+             0   0.                191.     compute_neigh( pos, natoms, boxlen, boxhalf, cutskinsq, maxneigh, numneigh, neigh );
+                                   192.   }
+                                   193. 
+                                   194. // Store old forces and compute new forces
+             0   0.                195.   forctmp = forcold;
+             0   0.                196.   forcold = forc;
+             0   0.                197.   forc = forctmp;
+             0   0.                198.   compute_forc_epot( pos, natoms, maxneigh, numneigh, neigh, 
+                                   199.                      boxlen, boxhalf, cutsq, sigma6, eps, forc, epot );
+                                   200. 
+                                   201. // Update velocities
+             0   0.                202.   update_vel( vel, forcold, forc, natoms, forc_hdt_scale, imass );
+                                   203.   }
+                                   204. 
+                                   205. 
+             0   0.                206.   if ( nthermo > 0 && istep%nthermo == 0 ) {
+                                   207. // Compute temperature when required
+             0   0.                208.     compute_temp_ekin( vel, natoms, mass, temp_scale, ekin_scale, temp, ekin );
+                                   209. 
+                                   210. // Get clock time when required
+             0   0.                211.     watch = clock() - start;
+             0   0.                212.     clocktime = ((float)watch)/CLOCKS_PER_SEC;
+                                   213. 
+                                   214. // Print thermo output when required
+             0   0.                215.     print_thermo( istep, dt*istep, temp, ekin/natoms, epot/natoms, (ekin+epot)/natoms, clocktime );
+                                   216.   }
+                                   217. 
+                                   218. // Dump atomic coordinates when required
+                                   219. // Note that PDB files are large, so enable dumping only for demonstrations; ideally these should go in a binary format (eg DCD)
+                                   220. // Note also that ideally "posraw" should be used for positions; "pos" is used here instead, for convenience when demonstrating with VMD
+             0   0.                221.   if ( ndump > 0 && istep%ndump == 0 ) {
+             0   0.                222.     dump_pdb( traj, istep, boxlen, cellang, elsym, pos, natoms );
+                                   223.   }
+                                   224. 
+                                   225. }
+                                   226. 
+                                   227. // Get and print final clocktime
+             0   0.                228. watch = clock() - start;
+             0   0.                229. clocktime = ((float)watch)/CLOCKS_PER_SEC;
+             0   0.                230. printf( "\n Loop Clock Time [s] : %10.3F\n" , clocktime );
+                                   231. 
+                                   232. 
+                                   233. // Close trajectory file if needed
+             0   0.                234. if ( ndump > 0 ) { fclose( traj ); }
+                                   235. 
+                                   236. // Deallocate arrays
+             0   0.                237. delete [] forcold;
+             0   0.                238. delete [] forc;
+             0   0.                239. delete [] vel;
+             0   0.                240. delete [] posraw;
+             0   0.                241. delete [] pos;
+             0   0.                242. delete [] neigh;
+             0   0.                243. delete [] numneigh;
+                                   244. 
+             0   0.                245. return 0;
+             0   0.                246. }
+                                   247. 
+                                   248. 
+                                   249. 
+                                   250. 
+                                   251. // Get input parameters
+                                        <Function: get_input_params(int, char**)>
+             0   0.                252. InputParams get_input_params( const int argc, char** argv ) 
+             0   0.                253. {
+             0   0.                254.   InputParams input_params;
+                                   255. 
+             0   0.                256.   if ( argc > 1 ) {
+                                   257. // allowing requests for orthorhombic boxes
+             0   0.                258.     char input_string[ 63 ];
+             0   0.                259.     char* token_string;
+             0   0.                260.     int count = 0;
+             0   0.                261.     int box_units[ 3 ] = { 0, 0, 0 };
+             0   0.                262.     strcpy ( input_string, argv[1] );
+             0   0.                263.     token_string = strtok( input_string, "," );
+             0   0.                264.     while ( token_string != NULL ) {
+             0   0.                265.       box_units[count++] = atoi( token_string );
+             0   0.                266.       token_string = strtok( NULL, "," );
+                                   267.     }
+             0   0.                268.     if ( count == 1 ) {
+             0   0.                269.       input_params.box_units[0] = box_units[0];
+             0   0.                270.       input_params.box_units[1] = box_units[0];
+             0   0.                271.       input_params.box_units[2] = box_units[0];
+             0   0.                272.     } else if ( count == 2 ) {
+             0   0.                273.       input_params.box_units[0] = box_units[0];
+             0   0.                274.       input_params.box_units[1] = box_units[0];
+             0   0.                275.       input_params.box_units[2] = box_units[1];
+             0   0.                276.     } else if ( count == 3 ) {
+             0   0.                277.       input_params.box_units[0] = box_units[0];
+             0   0.                278.       input_params.box_units[1] = box_units[1];
+             0   0.                279.       input_params.box_units[2] = box_units[2];
+                                   280.     } else {
+             0   0.                281.       input_params.box_units[0] = 5;
+             0   0.                282.       input_params.box_units[1] = 5;
+             0   0.                283.       input_params.box_units[2] = 5;
+                                   284.     }
+                                   285.   } else {
+             0   0.                286.     input_params.box_units[0] = 5;
+             0   0.                287.     input_params.box_units[1] = 5;
+             0   0.                288.     input_params.box_units[2] = 5;
+                                   289.   }
+                                   290. 
+             0   0.                291.   if ( argc > 2 ) {
+             0   0.                292.     input_params.nsteps = atoi( argv[2] );
+                                   293.   } else {
+             0   0.                294.     input_params.nsteps = 10000;
+                                   295.   }
+             0   0.                296.   if ( argc > 3 ) {
+             0   0.                297.     input_params.temp_ini = atof( argv[3] );
+                                   298.   } else {
+             0   0.                299.     input_params.temp_ini = 10.;
+                                   300.   }
+             0   0.                301.   if ( argc > 4 ) {
+             0   0.                302.     input_params.nneighupd = atoi( argv[4] );
+                                   303.   } else {
+             0   0.                304.     input_params.nneighupd = 20;
+                                   305.   }
+             0   0.                306.   if ( argc > 5 ) {
+             0   0.                307.     input_params.nthermo = atoi( argv[5] );
+                                   308.   } else {
+             0   0.                309.     input_params.nthermo = 1000;
+                                   310.   }
+             0   0.                311.   if ( argc > 6 ) {
+             0   0.                312.     input_params.ndump = atoi( argv[6] );
+                                   313.   } else {
+             0   0.                314.     input_params.ndump = 0;
+                                   315.   }
+                                   316. 
+             0   0.                317.   return input_params;
+             0   0.                318. }
+                                   319. 
+                                   320. 
+                                   321. // Define structure and initialise velocities
+                                   322. // Note that this implies 3D PBC
+                                        <Function: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*)>
+             0   0.                323. void setup_struc_vel( const int funits, const int* const box_units, 
+                                   324.     const double cellpar, const double* const unitpos, const int natoms, 
+                                   325.     double* pos, double* posraw, double* vel ) 
+             0   0.                326. {
+             0   0.                327.   const int fd = funits * 3;
+             0   0.                328.   const int bfd = box_units[2] * fd;
+             0   0.                329.   const int bbfd = box_units[1] * bfd;
+                                   330. 
+             0   0.                331.   double vxtmp = 0.;
+             0   0.                332.   double vytmp = 0.;
+             0   0.                333.   double vztmp = 0.;
+             0   0.                334.   for ( int i = 0; i < box_units[0]; i++ ) {
+             0   0.                335.     for ( int j = 0; j < box_units[1]; j++ ) {
+             0   0.                336.       for ( int k = 0; k < box_units[2]; k++ ) {
+             0   0.                337.         for ( int l = 0; l < funits; l++ ) {
+             0   0.                338.           const int idx = i * bbfd + j * bfd + k * fd + l * 3;
+                                   339.           // positions
+             0   0.                340.           pos[ idx + 0 ] = cellpar*i + unitpos[ 3 * l + 0 ];
+             0   0.                341.           pos[ idx + 1 ] = cellpar*j + unitpos[ 3 * l + 1 ];
+             0   0.                342.           pos[ idx + 2 ] = cellpar*k + unitpos[ 3 * l + 2 ];
+        121083   0.000             343.           posraw[ idx + 0 ] = cellpar*i + unitpos[ 3 * l + 0 ];
+             0   0.                344.           posraw[ idx + 1 ] = cellpar*j + unitpos[ 3 * l + 1 ];
+             0   0.                345.           posraw[ idx + 2 ] = cellpar*k + unitpos[ 3 * l + 2 ];
+                                   346.   
+                                   347.           // velocities
+             0   0.                348.           int seed = idx;
+             0   0.                349.           for ( int m = 0; m < 5; m++ ) random( &seed );
+             0   0.                350.           vel[ idx + 0 ] = random( &seed );
+             0   0.                351.           for ( int m = 0; m < 5; m++ ) random( &seed );
+             0   0.                352.           vel[ idx + 1 ] = random( &seed );
+        241452   0.                353.           for ( int m = 0; m < 5; m++ ) random( &seed );
+             0   0.                354.           vel[ idx + 2 ] = random( &seed );
+                                   355.   
+             0   0.                356.           vxtmp += vel[ idx + 0 ];
+             0   0.                357.           vytmp += vel[ idx + 1 ];
+             0   0.                358.           vztmp += vel[ idx + 2 ];
+                                   359.         }
+                                   360.       }
+                                   361.     }
+                                   362.   }
+             0   0.                363.   vxtmp /= natoms;
+             0   0.                364.   vytmp /= natoms;
+             0   0.                365.   vztmp /= natoms;
+                                   366. 
+                                   367.   // Zero centre-of-mass motion
+             0   0.                368.   for ( int i = 0; i < natoms; i++ ) {
+             0   0.                369.     vel[ 3 * i + 0 ] -= vxtmp;
+             0   0.                370.     vel[ 3 * i + 1 ] -= vytmp;
+             0   0.                371.     vel[ 3 * i + 2 ] -= vztmp;
+                                   372.   }
+                                   373.   
+                                   374.   return;
+             0   0.                375. }
+                                   376. 
+                                   377. 
+                                   378. // Compute temperature and kinetic energy
+                                        <Function: compute_temp_ekin(double const*, int, double, double, double, double&, double&)>
+             0   0.                379. void compute_temp_ekin( const double* const vel, const int natoms, 
+                                   380.     const double mass, const double temp_scale, const double ekin_scale, 
+                                   381.     double& temp, double& ekin ) 
+             0   0.                382. {
+             0   0.                383.   double tmp = 0.;
+             0   0.                384.   for ( int i = 0; i < natoms; i++ ) {
+             0   0.                385.     const double vx = vel[ 3 * i + 0 ];
+             0   0.                386.     const double vy = vel[ 3 * i + 1 ];
+             0   0.                387.     const double vz = vel[ 3 * i + 2 ];
+             0   0.                388.     tmp += (vx * vx + vy * vy + vz * vz) * mass; // mass: having it here is more general
+                                   389.   }
+                                   390. 
+             0   0.                391.   temp = tmp * temp_scale;
+             0   0.                392.   ekin = tmp * ekin_scale * 0.5;
+                                   393. 
+             0   0.                394.   return;
+             0   0.                395. }
+                                   396. 
+                                   397. 
+                                   398. // Rescale to desired temperature
+                                        <Function: rescale_temp(double*, int, double, double&, double&)>
+             0   0.                399. void rescale_temp( double* vel, const int natoms, const double temp_ini, 
+                                   400.     double& temp, double& ekin ) 
+             0   0.                401. {
+             0   0.                402.   const double t_factor = temp_ini / temp;
+             0   0.                403.   const double t_factor_sqrt = sqrt( t_factor );
+                                   404.   
+             0   0.                405.   for ( int i = 0; i < natoms; i++ ) {
+             0   0.                406.     vel[ 3 * i + 0 ] *= t_factor_sqrt;
+             0   0.                407.     vel[ 3 * i + 1 ] *= t_factor_sqrt;
+             0   0.                408.     vel[ 3 * i + 2 ] *= t_factor_sqrt;
+                                   409.   }
+             0   0.                410.   temp *= t_factor;
+             0   0.                411.   ekin *= t_factor;
+                                   412.   
+             0   0.                413.   return;
+             0   0.                414. }
+                                   415. 
+                                   416. 
+                                   417. // Build full neighbour list
+                                   418. // Note that this implies 3D PBC
+                                        <Function: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*)>
+             0   0.                419. void compute_neigh( const double* const pos, const int natoms, 
+                                   420.     const double* const boxlen, const double* const boxhalf, 
+                                   421.     const double cutskinsq, const int maxneigh, 
+                                   422.     int* numneigh, int* neigh ) 
+             0   0.                423. {
+             0   0.                424.   const double boxlen0 = boxlen[0];
+             0   0.                425.   const double boxlen1 = boxlen[1];
+             0   0.                426.   const double boxlen2 = boxlen[2];
+             0   0.                427.   const double boxhalf0 = boxhalf[0];
+             0   0.                428.   const double boxhalf1 = boxhalf[1];
+             0   0.                429.   const double boxhalf2 = boxhalf[2];
+                                   430. 
+             0   0.                431.   for ( int i = 0; i < natoms; i++ ) {
+             0   0.                432.     numneigh[ i ] = 0;
+                                   433.   }
+                                   434. 
+             0   0.                435.   for ( int i = 0; i < natoms; i++ ) {
+             0   0.                436.     int num_nn = 0;
+    1295731471   0.177             437.     for ( int j = 0; j < natoms; j++ ) {
+     492142927   0.064             438.       if ( i == j ) continue;
+                                   439. 
+     123035568   0.052             440.       double dx = pos[ 3 * i + 0 ] - pos[ 3 * j + 0 ];
+    1353396641   0.230             441.       dx -= floor( ( dx + boxhalf0 ) / boxlen0 ) * boxlen0;
+                                   442. 
+     246069974   0.                443.       double dy = pos[ 3 * i + 1 ] - pos[ 3 * j + 1 ];
+     738215892   0.094             444.       dy -= floor( ( dy + boxhalf1 ) / boxlen1 ) * boxlen1;
+                                   445. 
+     369110577   0.                446.       double dz = pos[ 3 * i + 2 ] - pos[ 3 * j + 2 ];
+    1599470054   0.187             447.       dz -= floor( ( dz + boxhalf2 ) / boxlen2 ) * boxlen2;
+                                   448. 
+    1848425367   0.489             449.       double rsq = dx * dx + dy * dy + dz * dz;
+    1607165302   0.125             450.       if ( rsq <= cutskinsq ) {
+     246555888   0.021             451.         neigh[ i * maxneigh + num_nn++ ] = j;
+                                   452.       }
+                                   453.     }
+             0   0.                454.     numneigh[ i ] = num_nn;
+                                   455.   }
+                                   456. 
+                                   457.   return;
+             0   0.                458. }
+                                   459. 
+                                   460. 
+                                   461. // Compute forces and potential energy
+                                   462. // Note that this implies 3D PBC
+                                   463. // Test against LAMMPS successful! (forces and accelerations)
+                                        <Function: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&)>
+             0   0.                464. void compute_forc_epot( const double* const pos, const int natoms, 
+                                   465.     const int maxneigh, const int* const numneigh, const int* const neigh, 
+                                   466.     const double* const boxlen, const double* const boxhalf, 
+                                   467.     const double cutsq, const double sigma6, const double eps, 
+                                   468.     double* forc, double& epot )
+             0   0.                469. {
+             0   0.                470.   const double boxlen0 = boxlen[0];
+             0   0.                471.   const double boxlen1 = boxlen[1];
+             0   0.                472.   const double boxlen2 = boxlen[2];
+             0   0.                473.   const double boxhalf0 = boxhalf[0];
+             0   0.                474.   const double boxhalf1 = boxhalf[1];
+             0   0.                475.   const double boxhalf2 = boxhalf[2];
+                                   476. 
+             0   0.                477.   epot = 0.;
+     123035958   0.                478.   for ( int i = 0; i < natoms; i++ ) {
+             0   0.                479.     const int* const neighs = &neigh[ i * maxneigh ];
+             0   0.                480.     const int numneighs = numneigh[ i ];
+             0   0.                481.     const double x = pos[ 3 * i + 0 ];
+             0   0.                482.     const double y = pos[ 3 * i + 1 ];
+             0   0.                483.     const double z = pos[ 3 * i + 2 ];
+             0   0.                484.     double fx = 0.;
+             0   0.                485.     double fy = 0.;
+             0   0.                486.     double fz = 0.;
+                                   487.   
+    1230355799   0.177             488.     for ( int k = 0; k < numneighs; k++ ) {
+             0   0.                489.       const int j = neighs[k];
+                                   490. 
+     492141443   0.062             491.       double dx = x - pos[ 3 * j + 0 ];
+    2829815474   0.494             492.       dx -= floor( ( dx + boxhalf0 ) / boxlen0 ) * boxlen0;
+                                   493. 
+     861245977   0.125             494.       double dy = y - pos[ 3 * j + 1 ];
+    3321955365   0.468             495.       dy -= floor( ( dy + boxhalf1 ) / boxlen1 ) * boxlen1;
+                                   496. 
+    1230353884   0.146             497.       double dz = z - pos[ 3 * j + 2 ];
+    3091266195   0.489             498.       dz -= floor( ( dz + boxhalf2 ) / boxlen2 ) * boxlen2;
+                                   499. 
+    2337675137   0.489             500.       const double rsq = dx * dx + dy * dy + dz * dz;
+    2337674656   0.229             501.       if ( rsq <= cutsq ) {
+    2091605637   0.344             502.         const double irsq = 1.0 / rsq;
+    3568024650   0.596             503.         const double isr6 = irsq * irsq * irsq * sigma6;
+                                   504. 
+## 11934442438   1.665             505.         const double force_factor = 48.0 * isr6 * (isr6 - 0.5) * irsq * eps;
+    1845530922   0.364             506.         fx += dx * force_factor;
+     615178764   0.104             507.         fy += dy * force_factor;
+    2368433070   0.281             508.         fz += dz * force_factor;
+     615177760   0.021             509.         epot += isr6 * (isr6 - 1.0) * eps;
+                                   510.       }
+                                   511.     }
+             0   0.                512.     forc[ 3 * i + 0 ] = fx;
+             0   0.                513.     forc[ 3 * i + 1 ] = fy;
+             0   0.                514.     forc[ 3 * i + 2 ] = fz;
+                                   515.   }
+             0   0.                516.   epot *= 2.0; // 4.0 * 0.5 [4.0 from LJ formula, 0.5 to account for double counting of contributes]
+                                   517.   
+             0   0.                518.   return;
+             0   0.                519. }
+                                   520. 
+                                   521. 
+                                   522. // Check periodic boundary conditions
+                                   523. // Note that this implies 3D PBC
+                                        <Function: check_pbc(double*, int, double const*)>
+             0   0.                524. void check_pbc( double* pos, const int natoms, const double* const boxlen ) 
+             0   0.                525. {
+             0   0.                526.   const double boxlen0 = boxlen[0];
+             0   0.                527.   const double boxlen1 = boxlen[1];
+             0   0.                528.   const double boxlen2 = boxlen[2];
+                                   529. 
+             0   0.                530.   for ( int i = 0; i < natoms; i++ ) {
+             0   0.                531.     double x = pos[ 3 * i + 0 ];
+             0   0.                532.     if ( x >= boxlen0 ) { x -= boxlen0; pos[ 3 * i + 0 ] = x; }
+             0   0.                533.     if ( x < 0. )      { x += boxlen0; pos[ 3 * i + 0 ] = x; }
+                                   534.   
+             0   0.                535.     double y = pos[ 3 * i + 1 ];
+             0   0.                536.     if ( y >= boxlen1 ) { y -= boxlen1; pos[ 3 * i + 1 ] = y; }
+             0   0.                537.     if ( y < 0. )      { y += boxlen1; pos[ 3 * i + 1 ] = y; }
+                                   538.   
+             0   0.                539.     double z = pos[ 3 * i + 2 ];
+             0   0.                540.     if ( z >= boxlen2 ) { z -= boxlen2; pos[ 3 * i + 2 ] = z; }
+             0   0.                541.     if ( z < 0. )      { z += boxlen2; pos[ 3 * i + 2 ] = z; }
+                                   542.   }
+                                   543. 
+                                   544.   return;
+             0   0.                545. }
+                                   546. 
+                                   547. 
+                                   548. // Update positions and check PBC meanwhile
+                                        <Function: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*)>
+             0   0.                549. void update_pos_pbc( double* pos, double* posraw, 
+                                   550.     const double* const vel, const double* const forc, const int natoms, 
+                                   551.     const double dt, const double forc_hdtsq_scale, 
+                                   552.     const double imass, const double* const boxlen ) 
+             0   0.                553. {
+             0   0.                554.   const double boxlen0 = boxlen[0];
+             0   0.                555.   const double boxlen1 = boxlen[1];
+             0   0.                556.   const double boxlen2 = boxlen[2];
+                                   557. 
+             0   0.021             558.   for ( int i = 0; i < natoms; i++ ) {
+             0   0.                559.     double dx = vel[ 3 * i + 0 ] * dt + forc[ 3 * i + 0 ] * forc_hdtsq_scale * imass;
+             0   0.                560.     double x = pos[ 3 * i + 0 ] + dx;
+             0   0.021             561.     x -= floor( x / boxlen0 ) * boxlen0;
+             0   0.021             562.     pos[ 3 * i + 0 ] = x;
+             0   0.                563.     posraw[ 3 * i + 0 ] += dx;
+                                   564.   
+             0   0.                565.     double dy = vel[ 3 * i + 1 ] * dt + forc[ 3 * i + 1 ] * forc_hdtsq_scale * imass;
+             0   0.                566.     double y = pos[ 3 * i + 1 ] + dy;
+     246072516   0.                567.     y -= floor( y / boxlen1 ) * boxlen1;
+             0   0.                568.     pos[ 3 * i + 1 ] = y;
+             0   0.                569.     posraw[ 3 * i + 1 ] += dy;
+                                   570.   
+             0   0.                571.     double dz = vel[ 3 * i + 2 ] * dt + forc[ 3 * i + 2 ] * forc_hdtsq_scale * imass;
+             0   0.                572.     double z = pos[ 3 * i + 2 ] + dz;
+     492156495   0.021             573.     z -= floor( z / boxlen2 ) * boxlen2;
+             0   0.                574.     pos[ 3 * i + 2 ] = z;
+             0   0.                575.     posraw[ 3 * i + 2 ] += dz;
+                                   576.   }
+             0   0.                577. }
+                                   578. 
+                                   579. 
+                                   580. // Update velocities
+                                   581. // Note that this implies Velocity Verlet integrator
+                                        <Function: update_vel(double*, double const*, double const*, int, double, double)>
+             0   0.                582. void update_vel( double* vel, 
+                                   583.     const double* const forcold, const double* const forc, 
+                                   584.     const int natoms, const double forc_hdt_scale, const double imass ) 
+             0   0.                585. {
+             0   0.                586.   for ( int i = 0; i < natoms; i++ ) {
+             0   0.                587.     vel[ 3 * i + 0 ] += ( forcold[ 3 * i + 0 ] + forc[ 3 * i + 0 ] ) * forc_hdt_scale * imass;
+             0   0.021             588.     vel[ 3 * i + 1 ] += ( forcold[ 3 * i + 1 ] + forc[ 3 * i + 1 ] ) * forc_hdt_scale * imass;
+             0   0.                589.     vel[ 3 * i + 2 ] += ( forcold[ 3 * i + 2 ] + forc[ 3 * i + 2 ] ) * forc_hdt_scale * imass;
+                                   590.   }
+             0   0.                591. }
+                                   592. 
+                                   593. 
+                                   594. // Random number generator
+                                   595. // This is taken from Mantevo/miniMD
+                                   596. /* Park/Miller RNG w/out MASKING, so as to be like f90s version */
+                                   597. #define IA 16807
+                                   598. #define IM 2147483647
+                                   599. #define AM (1.0/IM)
+                                   600. #define IQ 127773
+                                   601. #define IR 2836
+                                   602. #define MASK 123459876
+                                   603. 
+                                        <Function: random(int*)>
+             0   0.                604. double random(int* idum) 
+             0   0.                605. {
+             0   0.                606.   int k;
+             0   0.                607.   double ans;
+                                   608. 
+             0   0.                609.   k = (*idum) / IQ;
+             0   0.                610.   *idum = IA * (*idum - k * IQ) - IR * k;
+                                   611. 
+             0   0.                612.   if(*idum < 0) *idum += IM;
+                                   613. 
+             0   0.000             614.   ans = AM * (*idum);
+             0   0.                615.   return ans;
+             0   0.                616. }
+                                   617. 
+                                   618. #undef IA
+                                   619. #undef IM
+                                   620. #undef AM
+                                   621. #undef IQ
+                                   622. #undef IR
+                                   623. #undef MASK
+                                   624. 
+                                   625. 
+                                   626. // Generic function to print arrays
+                                        <Function: print_arr(double const*, int, int)>
+             0   0.                627. void print_arr( const double* const arr, const int istart, const int istop ) 
+             0   0.                628. {
+             0   0.                629.   printf( "\n%16c %16c %16c\n", 'X', 'Y', 'Z' );
+             0   0.                630.   for ( int i = istart; i < istop; i++) {
+             0   0.                631.     printf( "%+16.6E %+16.6E %+16.6E\n", arr[ 3 * i + 0 ], arr[ 3 * i + 1 ], arr[ 3 * i + 2 ] );
+                                   632.   }
+                                   633. 
+                                   634.   return;
+             0   0.                635. }
+                                   636. 
+                                   637. 
+                                   638. // Print information on simulation
+                                        <Function: print_info(int const*, int, double, int, int, int, double, double, double, double const*, int)>
+             0   0.                639. void print_info ( const int* const box_units, const int nsteps, 
+                                   640.     const double temp_ini, const int nneighupd, 
+                                   641.     const int nthermo, const int ndump, 
+                                   642.     const double dt, const double cut, const double cellpar, 
+                                   643.     const double* const boxlen, const int natoms ) 
+             0   0.                644. {
+             0   0.                645.   printf( "\n Box Units : %-3i  %-3i  %-3i\n", 
+                                   646.     box_units[0], box_units[1], box_units[2] );
+             0   0.                647.   printf( " No. Time Steps : %i\n", nsteps );
+             0   0.                648.   printf( " Initial Temp [K] : %-6.1F\n", temp_ini );
+             0   0.                649.   printf( " Neigh Update Freq : %i\n", nneighupd );
+             0   0.                650.   printf( " Thermo Print Freq : %i\n", nthermo );
+             0   0.                651.   printf( " Coord Dump Freq : %i\n", ndump );
+                                   652. 
+             0   0.                653.   printf( "\n Time Step [ps] : %-5.3F\n", dt );
+             0   0.                654.   printf( " Cutoff Dist [Ang] : %-5.3F\n", cut );
+             0   0.                655.   printf( " Cell Par [Ang] : %-5.3F\n", cellpar );
+             0   0.                656.   printf( " Box Length [Ang] : %-7.3F  %-7.3F  %-7.3F\n", 
+                                   657.     boxlen[0], boxlen[1], boxlen[2] );
+             0   0.                658.   printf( " No. Atoms : %i\n", natoms );
+                                   659. 
+                                   660.   return;
+             0   0.                661. }
+                                   662. 
+                                   663. 
+                                   664. // Print thermodynamic information
+                                        <Function: print_thermo(int, double, double, double, double, double, double)>
+             0   0.                665. void print_thermo( const int istep, const double time, const double temp, 
+                                   666.     const double ekin, const double epot, const double etot, 
+                                   667.     const double clock ) 
+             0   0.                668. {
+             0   0.                669.   printf( " %9i  %10.3F  %8.3F  %+12.9F  %+12.9F  %+12.9F  %10.3F\n", 
+                                   670.          istep, time, temp, ekin, epot, etot, clock );
+                                   671. 
+             0   0.                672.   return;
+                                   673. }
+                                   674. 
+                                   675. 
+                                   676. // Dump atomic coordinates
+                                        <Function: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int)>
+             0   0.                677. void dump_pdb( FILE* file, const int istep, 
+                                   678.     const double* const boxlen, const double boxang, 
+                                   679.     const char* const elsym, const double* const pos, const int natoms ) 
+             0   0.                680. {
+             0   0.                681.   fprintf( file, "REMARK --- frame: %-5i\n", istep );
+             0   0.                682.   fprintf( file, "CRYST1%9.3F%9.3F%9.3F%7.2F%7.2F%7.2F\n", boxlen[0], boxlen[1], boxlen[2], boxang, boxang, boxang );
+             0   0.                683.   if ( natoms < 100000 ) {
+             0   0.                684.     for (int i = 0; i < natoms; i++ ) {
+             0   0.                685.       fprintf( file, "ATOM  %5i %4s UNK  %-5i   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", 
+                                   686.                i+1, elsym , i+1, pos[ 3 * i + 0 ], pos[ 3 * i + 1 ], pos[ 3 * i + 2 ], elsym );
+                                   687.     }
+                                   688.   } else {
+             0   0.                689.     for (int i = 0; i < natoms; i++ ) {
+             0   0.                690.       fprintf( file, "ATOM  %5X %4s UNK  %-5X   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", 
+                                   691.                i+1, elsym , i+1, pos[ 3 * i + 0 ], pos[ 3 * i + 1 ], pos[ 3 * i + 2 ], elsym );
+                                   692.     }
+                                   693.   }
+             0   0.                694.   fprintf( file, "END   \n" );
+                                   695.   return;
+             0   0.                696. }
