@@ -1,0 +1,278 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 64.85      5.24     5.24        3     1.75     2.60  std::ctype<char>::do_widen(char) const
+ 31.68      7.80     2.56 37657832     0.00     0.00  LR_I::compute(double, double*)
+  1.73      7.94     0.14                             _init
+  0.62      7.99     0.05        1     0.05     0.05  Mesh::calc_fem_matrices()
+  0.25      8.01     0.02        1     0.02     0.02  Mesh::find_neighbours()
+  0.25      8.03     0.02        1     0.02     7.82  Task::distribute()
+  0.25      8.05     0.02        1     0.02     0.02  std::vector<compute_node, std::allocator<compute_node> >::_M_default_append(unsigned long)
+  0.25      8.07     0.02                             main
+  0.12      8.08     0.01   395322     0.00     0.00  triangulation_order6_example2_size(int*, int*, int*)
+  0.00      8.08     0.00    56334     0.00     0.00  std::vector<double, std::allocator<double> >::_M_default_append(unsigned long)
+  0.00      8.08     0.00    28187     0.00     0.00  LR_I::init()
+  0.00      8.08     0.00     1336     0.00     0.00  Task::exchange(int)
+  0.00      8.08     0.00      334     0.00     0.00  Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double)
+  0.00      8.08     0.00       12     0.00     0.00  usage()
+  0.00      8.08     0.00        2     0.00     0.00  Task::~Task()
+  0.00      8.08     0.00        1     0.00     0.00  Mesh::read_points(std::string)
+  0.00      8.08     0.00        1     0.00     0.01  Mesh::read_tets(std::string)
+  0.00      8.08     0.00        1     0.00     0.01  Mesh::Mesh(std::string, int)
+  0.00      8.08     0.00        1     0.00     0.00  Task::solve(double)
+  0.00      8.08     0.00        1     0.00     0.02  Task::Task(Mesh*, bool)
+  0.00      8.08     0.00        1     0.00     0.00  std::vector<Tet, std::allocator<Tet> >::_M_default_append(unsigned long)
+  0.00      8.08     0.00        1     0.00     0.00  std::vector<Point, std::allocator<Point> >::_M_default_append(unsigned long)
+  0.00      8.08     0.00        1     0.00     0.00  std::vector<float, std::allocator<float> >::_M_default_append(unsigned long)
+  0.00      8.08     0.00        1     0.00     0.00  Point* std::__do_uninit_copy<__gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, Point*>(__gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, __gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, Point*)
+  0.00      8.08     0.00        1     0.00     0.00  frame_dummy
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.12% of 8.08 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     98.3    0.02    7.92                 main [1]
+                0.02    7.80       1/1           Task::distribute() [2]
+                0.05    0.00       1/1           Mesh::calc_fem_matrices() [6]
+                0.02    0.00       1/1           Mesh::find_neighbours() [7]
+                0.00    0.02       1/1           Task::Task(Mesh*, bool) [8]
+                0.00    0.01       1/1           Mesh::Mesh(std::string, int) [12]
+                0.00    0.00      11/12          usage() [23]
+                0.00    0.00       2/2           Task::~Task() [24]
+                0.00    0.00       1/1           frame_dummy [13]
+                0.00    0.00       1/1           Task::solve(double) [26]
+-----------------------------------------------
+                0.02    7.80       1/1           main [1]
+[2]     96.8    0.02    7.80       1         Task::distribute() [2]
+                5.24    2.56       3/3           std::ctype<char>::do_widen(char) const [3]
+                0.00    0.00       1/1           std::vector<float, std::allocator<float> >::_M_default_append(unsigned long) [29]
+-----------------------------------------------
+                                   1             std::ctype<char>::do_widen(char) const [3]
+                5.24    2.56       3/3           Task::distribute() [2]
+[3]     96.5    5.24    2.56       3+1       std::ctype<char>::do_widen(char) const [3]
+                2.56    0.00 37657832/37657832     LR_I::compute(double, double*) [4]
+                                   1             std::ctype<char>::do_widen(char) const [3]
+-----------------------------------------------
+                2.56    0.00 37657832/37657832     std::ctype<char>::do_widen(char) const [3]
+[4]     31.7    2.56    0.00 37657832         LR_I::compute(double, double*) [4]
+-----------------------------------------------
+                                                 <spontaneous>
+[5]      1.7    0.14    0.00                 _init [5]
+-----------------------------------------------
+                0.05    0.00       1/1           main [1]
+[6]      0.6    0.05    0.00       1         Mesh::calc_fem_matrices() [6]
+-----------------------------------------------
+                0.02    0.00       1/1           main [1]
+[7]      0.3    0.02    0.00       1         Mesh::find_neighbours() [7]
+                0.00    0.00   56952/395322      triangulation_order6_example2_size(int*, int*, int*) [10]
+                0.00    0.00   56334/56334       std::vector<double, std::allocator<double> >::_M_default_append(unsigned long) [19]
+-----------------------------------------------
+                0.00    0.02       1/1           main [1]
+[8]      0.2    0.00    0.02       1         Task::Task(Mesh*, bool) [8]
+                0.02    0.00       1/1           std::vector<compute_node, std::allocator<compute_node> >::_M_default_append(unsigned long) [9]
+                0.00    0.00   28187/28187       LR_I::init() [20]
+                0.00    0.00       1/12          usage() [23]
+                0.00    0.00       1/1           Point* std::__do_uninit_copy<__gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, Point*>(__gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, __gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, Point*) [30]
+-----------------------------------------------
+                0.02    0.00       1/1           Task::Task(Mesh*, bool) [8]
+[9]      0.2    0.02    0.00       1         std::vector<compute_node, std::allocator<compute_node> >::_M_default_append(unsigned long) [9]
+-----------------------------------------------
+                              175077             triangulation_order6_example2_size(int*, int*, int*) [10]
+                0.00    0.00   56952/395322      Mesh::find_neighbours() [7]
+                0.01    0.00  338370/395322      Mesh::read_tets(std::string) [11]
+[10]     0.1    0.01    0.00  395322+175077  triangulation_order6_example2_size(int*, int*, int*) [10]
+                              175077             triangulation_order6_example2_size(int*, int*, int*) [10]
+-----------------------------------------------
+                0.00    0.01       1/1           Mesh::Mesh(std::string, int) [12]
+[11]     0.1    0.00    0.01       1         Mesh::read_tets(std::string) [11]
+                0.01    0.00  338370/395322      triangulation_order6_example2_size(int*, int*, int*) [10]
+                0.00    0.00       1/1           std::vector<Tet, std::allocator<Tet> >::_M_default_append(unsigned long) [27]
+-----------------------------------------------
+                0.00    0.01       1/1           main [1]
+[12]     0.1    0.00    0.01       1         Mesh::Mesh(std::string, int) [12]
+                0.00    0.01       1/1           Mesh::read_tets(std::string) [11]
+                0.00    0.00       1/1           Mesh::read_points(std::string) [25]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[13]     0.0    0.00    0.00       1         frame_dummy [13]
+-----------------------------------------------
+                0.00    0.00   56334/56334       Mesh::find_neighbours() [7]
+[19]     0.0    0.00    0.00   56334         std::vector<double, std::allocator<double> >::_M_default_append(unsigned long) [19]
+-----------------------------------------------
+                0.00    0.00   28187/28187       Task::Task(Mesh*, bool) [8]
+[20]     0.0    0.00    0.00   28187         LR_I::init() [20]
+-----------------------------------------------
+                0.00    0.00    1336/1336        Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [22]
+[21]     0.0    0.00    0.00    1336         Task::exchange(int) [21]
+-----------------------------------------------
+                0.00    0.00     334/334         Task::solve(double) [26]
+[22]     0.0    0.00    0.00     334         Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [22]
+                0.00    0.00    1336/1336        Task::exchange(int) [21]
+-----------------------------------------------
+                                   2             usage() [23]
+                0.00    0.00       1/12          Task::Task(Mesh*, bool) [8]
+                0.00    0.00      11/12          main [1]
+[23]     0.0    0.00    0.00      12+2       usage() [23]
+                                   2             usage() [23]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[24]     0.0    0.00    0.00       2         Task::~Task() [24]
+-----------------------------------------------
+                0.00    0.00       1/1           Mesh::Mesh(std::string, int) [12]
+[25]     0.0    0.00    0.00       1         Mesh::read_points(std::string) [25]
+                0.00    0.00       1/1           std::vector<Point, std::allocator<Point> >::_M_default_append(unsigned long) [28]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[26]     0.0    0.00    0.00       1         Task::solve(double) [26]
+                0.00    0.00     334/334         Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [22]
+-----------------------------------------------
+                0.00    0.00       1/1           Mesh::read_tets(std::string) [11]
+[27]     0.0    0.00    0.00       1         std::vector<Tet, std::allocator<Tet> >::_M_default_append(unsigned long) [27]
+-----------------------------------------------
+                0.00    0.00       1/1           Mesh::read_points(std::string) [25]
+[28]     0.0    0.00    0.00       1         std::vector<Point, std::allocator<Point> >::_M_default_append(unsigned long) [28]
+-----------------------------------------------
+                0.00    0.00       1/1           Task::distribute() [2]
+[29]     0.0    0.00    0.00       1         std::vector<float, std::allocator<float> >::_M_default_append(unsigned long) [29]
+-----------------------------------------------
+                0.00    0.00       1/1           Task::Task(Mesh*, bool) [8]
+[30]     0.0    0.00    0.00       1         Point* std::__do_uninit_copy<__gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, Point*>(__gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, __gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, Point*) [30]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [10] triangulation_order6_example2_size(int*, int*, int*) [2] Task::distribute() [28] std::vector<Point, std::allocator<Point> >::_M_default_append(unsigned long)
+  [23] usage()                [22] Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [19] std::vector<double, std::allocator<double> >::_M_default_append(unsigned long)
+  [20] LR_I::init()           [26] Task::solve(double)    [29] std::vector<float, std::allocator<float> >::_M_default_append(unsigned long)
+   [4] LR_I::compute(double, double*) [21] Task::exchange(int) [30] Point* std::__do_uninit_copy<__gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, Point*>(__gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, __gnu_cxx::__normal_iterator<Point const*, std::vector<Point, std::allocator<Point> > >, Point*)
+  [25] Mesh::read_points(std::string) [8] Task::Task(Mesh*, bool) [5] _init
+   [7] Mesh::find_neighbours() [24] Task::~Task()         [13] frame_dummy
+   [6] Mesh::calc_fem_matrices() [3] std::ctype<char>::do_widen(char) const [1] main
+  [11] Mesh::read_tets(std::string) [9] std::vector<compute_node, std::allocator<compute_node> >::_M_default_append(unsigned long)
+  [12] Mesh::Mesh(std::string, int) [27] std::vector<Tet, std::allocator<Tet> >::_M_default_append(unsigned long)

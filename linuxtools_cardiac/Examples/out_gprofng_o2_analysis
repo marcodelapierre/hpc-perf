@@ -1,0 +1,177 @@
+Experiment: gprofng_o2.er/
+No errors
+*** Collector Warning: Collection interval timer period was changed (10007 -> 0); profile data may be unreliable
+Archive command ` /usr/bin/gp-archive -n -a on --outfile /home/mdelapierre/proj/bmkg/linux-profiling-cardiac/gprofng_o2.er/archive.log /home/mdelapierre/proj/bmkg/linux-profiling-cardiac/gprofng_o2.er'
+
+Target command (64-bit): './heart_demo_o2_unroll.x -m ./mesh_mid -s ./setup_mid.txt -t 1'
+Process pid 4012368, ppid 4012334, pgrp 4012334, sid 2011688
+Current working directory: /home/mdelapierre/proj/bmkg/linux-profiling-cardiac
+Collector version: `2.42'; experiment version 12.4 (64-bit)
+Host `lenovoE14-mdelapierre', OS `Linux 6.11.0-25-generic', page size 4096, architecture `x86_64'
+  12 CPUs, with clocks ranging from 1859 to 2969 MHz.; max of 2969 MHz. assumed
+  Memory: 3773528 pages @  4096 = 14740 MB.
+Data collection parameters:
+  Clock-profiling, interval = 10007 microsecs.
+  Periodic sampling, 1 secs.
+  Follow descendant processes from: fork|exec|combo
+
+Experiment started Fri Jun  6 16:11:21 2025
+
+Experiment Ended: 11.501712926
+Data Collection Duration: 11.501712926
+Error: Invalid command: ovewview
+Functions sorted by metric: Exclusive Total CPU Time
+
+Excl. Total   Incl. Total    Name
+CPU           CPU
+ sec.      %   sec.      %
+1.121 100.00  1.121 100.00   <Total>
+0.300  26.79  0.300  26.79   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0]
+0.280  25.00  0.580  51.79   LR_I::compute(double, double*)
+0.170  15.18  0.270  24.11   exp
+0.140  12.50  0.140  12.50   <static>@0x77ace (<libm.so.6>)
+0.070   6.25  0.230  20.54   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.2]
+0.030   2.68  0.030   2.68   <static>@0x10220 (<libm.so.6>)
+0.030   2.68  0.030   2.68   <static>@0x4770 (<heart_demo_o2_unroll.x>)
+0.030   2.68  0.030   2.68   Task::update_coupling_remotes(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int, std::vector<double, std::allocator<double> >&) [clone ._omp_fn.0]
+0.020   1.79  0.110   9.82   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.0]
+0.010   0.89  0.010   0.89   Mesh::calc_fem_matrices()
+0.010   0.89  0.010   0.89   Task::distribute()
+0.010   0.89  0.180  16.07   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.1]
+0.010   0.89  0.010   0.89   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.4]
+0.010   0.89  0.010   0.89   std::istreambuf_iterator<char, std::char_traits<char> > std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, long&) const
+0.      0.    1.051  93.75   <static>@0x2a145 (<libc.so.6>)
+0.      0.    1.021  91.07   GOMP_parallel
+0.      0.    0.010   0.89   Mesh::Mesh(std::string, int)
+0.      0.    0.010   0.89   Mesh::read_tets(std::string)
+0.      0.    1.021  91.07   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double)
+0.      0.    0.160  14.29   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.3]
+0.      0.    1.021  91.07   Task::solve(double)
+0.      0.    1.051  93.75   __libc_start_main
+0.      0.    1.051  93.75   main
+0.      0.    0.010   0.89   std::istream::operator>>(int&)
+
+Lines sorted by metric: Exclusive Total CPU Time
+
+Excl. Total   Incl. Total    Name
+CPU           CPU
+ sec.      %   sec.      %
+1.121 100.00  1.121 100.00   <Total>
+0.170  15.18  0.270  24.11   <Function: exp, instructions without line numbers>
+0.140  12.50  0.140  12.50   <static>@0x77ace (<libm.so.6>)
+0.090   8.04  0.090   8.04   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0], line 295 in "heart_demo.cpp"
+0.040   3.57  0.040   3.57   LR_I::compute(double, double*), line 86 in "luo_rudy_1991.cpp"
+0.040   3.57  0.040   3.57   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.2], line 368 in "heart_demo.cpp"
+0.040   3.57  0.040   3.57   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0], line 284 in "heart_demo.cpp"
+0.030   2.68  0.030   2.68   <static>@0x10220 (<libm.so.6>)
+0.030   2.68  0.030   2.68   <static>@0x4770 (<heart_demo_o2_unroll.x>)
+0.030   2.68  0.030   2.68   LR_I::compute(double, double*), line 31 in "luo_rudy_1991.cpp"
+0.030   2.68  0.050   4.46   LR_I::compute(double, double*), line 69 in "luo_rudy_1991.cpp"
+0.030   2.68  0.030   2.68   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.2], line 372 in "heart_demo.cpp"
+0.030   2.68  0.030   2.68   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0], line 1129 in alternate source context "stl_vector.h"
+0.030   2.68  0.030   2.68   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0], line 282 in "heart_demo.cpp"
+0.030   2.68  0.030   2.68   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0], line 285 in "heart_demo.cpp"
+0.030   2.68  0.030   2.68   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0], line 288 in "heart_demo.cpp"
+0.030   2.68  0.030   2.68   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0], line 291 in "heart_demo.cpp"
+0.020   1.79  0.030   2.68   LR_I::compute(double, double*), line 85 in "luo_rudy_1991.cpp"
+0.020   1.79  0.030   2.68   LR_I::compute(double, double*), line 88 in "luo_rudy_1991.cpp"
+0.020   1.79  0.020   1.79   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.0], line 341 in "heart_demo.cpp"
+0.020   1.79  0.020   1.79   Task::update_coupling_remotes(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int, std::vector<double, std::allocator<double> >&) [clone ._omp_fn.0], line 310 in "heart_demo.cpp"
+0.020   1.79  0.020   1.79   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0], line 293 in "heart_demo.cpp"
+0.010   0.89  0.010   0.89   <Function: std::istreambuf_iterator<char, std::char_traits<char> > std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, long&) const, instructions without line numbers>
+0.010   0.89  0.010   0.89   LR_I::compute(double, double*), line 30 in "luo_rudy_1991.cpp"
+0.010   0.89  0.030   2.68   LR_I::compute(double, double*), line 39 in "luo_rudy_1991.cpp"
+0.010   0.89  0.080   7.14   LR_I::compute(double, double*), line 46 in "luo_rudy_1991.cpp"
+0.010   0.89  0.030   2.68   LR_I::compute(double, double*), line 51 in "luo_rudy_1991.cpp"
+0.010   0.89  0.010   0.89   LR_I::compute(double, double*), line 59 in "luo_rudy_1991.cpp"
+0.010   0.89  0.010   0.89   LR_I::compute(double, double*), line 61 in "luo_rudy_1991.cpp"
+0.010   0.89  0.010   0.89   LR_I::compute(double, double*), line 74 in "luo_rudy_1991.cpp"
+0.010   0.89  0.070   6.25   LR_I::compute(double, double*), line 75 in "luo_rudy_1991.cpp"
+0.010   0.89  0.010   0.89   LR_I::compute(double, double*), line 76 in "luo_rudy_1991.cpp"
+0.010   0.89  0.030   2.68   LR_I::compute(double, double*), line 78 in "luo_rudy_1991.cpp"
+0.010   0.89  0.010   0.89   LR_I::compute(double, double*), line 80 in "luo_rudy_1991.cpp"
+0.010   0.89  0.030   2.68   LR_I::compute(double, double*), line 82 in "luo_rudy_1991.cpp"
+0.010   0.89  0.010   0.89   LR_I::compute(double, double*), line 83 in "luo_rudy_1991.cpp"
+0.010   0.89  0.010   0.89   LR_I::compute(double, double*), line 89 in "luo_rudy_1991.cpp"
+0.010   0.89  0.010   0.89   Mesh::calc_fem_matrices(), line 285 in "mesh.cpp"
+0.010   0.89  0.010   0.89   Task::distribute(), line 119 in alternate source context "stl_construct.h"
+0.010   0.89  0.010   0.89   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.1], line 354 in "heart_demo.cpp"
+0.010   0.89  0.010   0.89   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.4], line 399 in "heart_demo.cpp"
+0.010   0.89  0.010   0.89   Task::update_coupling_remotes(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int, std::vector<double, std::allocator<double> >&) [clone ._omp_fn.0], line 316 in "heart_demo.cpp"
+0.      0.    1.021  91.07   <Function: GOMP_parallel, instructions without line numbers>
+0.      0.    0.010   0.89   <Function: Mesh::Mesh(std::string, int), instructions without line numbers>
+0.      0.    0.010   0.89   <Function: Mesh::read_tets(std::string), instructions without line numbers>
+0.      0.    1.051  93.75   <Function: __libc_start_main, instructions without line numbers>
+0.      0.    0.010   0.89   <Function: std::istream::operator>>(int&), instructions without line numbers>
+0.      0.    1.051  93.75   <static>@0x2a145 (<libc.so.6>)
+0.      0.    0.010   0.89   LR_I::compute(double, double*), line 34 in "luo_rudy_1991.cpp"
+0.      0.    0.010   0.89   LR_I::compute(double, double*), line 57 in "luo_rudy_1991.cpp"
+0.      0.    0.010   0.89   LR_I::compute(double, double*), line 84 in "luo_rudy_1991.cpp"
+0.      0.    0.020   1.79   LR_I::compute(double, double*), line 87 in "luo_rudy_1991.cpp"
+0.      0.    0.090   8.04   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.0], line 340 in "heart_demo.cpp"
+0.      0.    0.170  15.18   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.1], line 353 in "heart_demo.cpp"
+0.      0.    0.160  14.29   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.2], line 370 in "heart_demo.cpp"
+0.      0.    0.160  14.29   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.3], line 384 in "heart_demo.cpp"
+0.      0.    0.030   2.68   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 278 in "heart_demo.cpp"
+0.      0.    0.180  16.07   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 306 in "heart_demo.cpp"
+0.      0.    0.110   9.82   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 331 in "heart_demo.cpp"
+0.      0.    0.120  10.71   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 361 in alternate source context "locale_facets.h"
+0.      0.    0.010   0.89   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 364 in alternate source context "locale_facets.h"
+0.      0.    0.230  20.54   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 365 in "heart_demo.cpp"
+0.      0.    0.060   5.36   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 375 in alternate source context "locale_facets.h"
+0.      0.    0.010   0.89   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 378 in alternate source context "locale_facets.h"
+0.      0.    0.160  14.29   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 379 in "heart_demo.cpp"
+0.      0.    0.090   8.04   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 389 in alternate source context "locale_facets.h"
+0.      0.    0.010   0.89   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 392 in alternate source context "locale_facets.h"
+0.      0.    0.010   0.89   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double), line 394 in "heart_demo.cpp"
+0.      0.    1.021  91.07   Task::solve(double), line 557 in "heart_demo.cpp"
+0.      0.    0.010   0.89   main, line 1103 in "heart_demo.cpp"
+0.      0.    0.010   0.89   main, line 1105 in "heart_demo.cpp"
+0.      0.    1.021  91.07   main, line 1125 in "heart_demo.cpp"
+0.      0.    0.010   0.89   main, line 222 in "heart_demo.cpp"
+
+Functions Call Tree. Metric: Attributed Total CPU Time
+
+Attr. Total    Name
+CPU
+ sec.      %
+1.121 100.00   +-<Total>
+1.051  93.75     +-__libc_start_main
+1.051  93.75     |  +-<static>@0x2a145 (<libc.so.6>)
+1.051  93.75     |    +-main
+1.021  91.07     |      +-Task::solve(double)
+1.021  91.07     |      |  +-Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double)
+1.021  91.07     |      |    +-GOMP_parallel
+0.300  26.79     |      |      +-Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0]
+0.230  20.54     |      |      +-Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.2]
+0.160  14.29     |      |      |  +-LR_I::compute(double, double*)
+0.080   7.14     |      |      |    +-exp
+0.050   4.46     |      |      |    |  +-<static>@0x77ace (<libm.so.6>)
+0.020   1.79     |      |      |    +-<static>@0x10220 (<libm.so.6>)
+0.180  16.07     |      |      +-Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.1]
+0.170  15.18     |      |      |  +-LR_I::compute(double, double*)
+0.060   5.36     |      |      |    +-exp
+0.030   2.68     |      |      |    |  +-<static>@0x77ace (<libm.so.6>)
+0.010   0.89     |      |      |    +-<static>@0x10220 (<libm.so.6>)
+0.160  14.29     |      |      +-Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.3]
+0.160  14.29     |      |      |  +-LR_I::compute(double, double*)
+0.090   8.04     |      |      |    +-exp
+0.020   1.79     |      |      |    |  +-<static>@0x77ace (<libm.so.6>)
+0.010   0.89     |      |      |    +-<static>@0x4770 (<heart_demo_o2_unroll.x>)
+0.110   9.82     |      |      +-Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.0]
+0.090   8.04     |      |      |  +-LR_I::compute(double, double*)
+0.030   2.68     |      |      |    +-exp
+0.030   2.68     |      |      +-Task::update_coupling_remotes(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int, std::vector<double, std::allocator<double> >&) [clone ._omp_fn.0]
+0.010   0.89     |      |      +-Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.4]
+0.010   0.89     |      +-Mesh::Mesh(std::string, int)
+0.010   0.89     |      |  +-Mesh::read_tets(std::string)
+0.010   0.89     |      |    +-std::istream::operator>>(int&)
+0.010   0.89     |      |      +-std::istreambuf_iterator<char, std::char_traits<char> > std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, long&) const
+0.010   0.89     |      +-Mesh::calc_fem_matrices()
+0.010   0.89     |      +-Task::distribute()
+0.040   3.57     +-<static>@0x77ace (<libm.so.6>)
+0.020   1.79     +-<static>@0x4770 (<heart_demo_o2_unroll.x>)
+0.010   0.89     +-exp
+Current metrics: e.totalcpu:i.totalcpu:name
+Current Sort Metric: Exclusive Total CPU Time ( e.totalcpu )
+Error: No function or file with given name `argonmd.cpp' found.
