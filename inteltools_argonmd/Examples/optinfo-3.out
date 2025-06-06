@@ -1,0 +1,2891 @@
+Begin optimization report for: print_info(int const*, int, double, int, int, int, double, double, double, double const*, int)
+=================================================================
+
+Begin optimization report for: print_thermo(int, double, double, double, double, double, double)
+=================================================================
+
+Begin optimization report for: random(int*)
+=================================================================
+
+Begin optimization report for: main.V
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+<Distributed chunk1>
+    remark #25426: Loop distributed (2 way) for perfect loopnest formation
+    remark #25529: Dead stores eliminated in loop
+    remark #25260: Dead loop optimized away
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+    remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+    remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 16.000000 
+    remark #15477: vector cost: 7.000000 
+    remark #15478: estimated potential speedup: 2.250000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.843750
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+    remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9 @[ argonmd.cpp:150:1 ]]
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+    remark #25264: Loop rerolled by 3
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 5.000000 
+    remark #15477: vector cost: 2.140625 
+    remark #15478: estimated potential speedup: 2.281250 
+    remark #15309: vectorization support: normalized vectorization overhead 0.921875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (531, 16) ] 
+    remark #15598: load #2 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 16) ] 
+    remark #15598: load #3 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (530, 33) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 60.000000 
+    remark #15477: vector cost: 40.062500 
+    remark #15478: estimated potential speedup: 1.453125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.109375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15459: masked indexed (or scatter) stores: 3 
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+<Distributed chunk1>
+    remark #25426: Loop distributed (2 way) for perfect loopnest formation
+    remark #25529: Dead stores eliminated in loop
+    remark #25260: Dead loop optimized away
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+<Distributed chunk2>
+    remark #25452: Poor spatial locality detected in memref(s). 
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+    <Predicate Optimized v1>
+        remark #25580: Induction variable range split using condition at line 438
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+    <Predicate Optimized v2>
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (181, 1)
+
+    LOOP BEGIN at argonmd.cpp (558, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 17) ] 
+        remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 17) ] 
+        remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 17) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 41) ] 
+        remark #15598: load #2 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 41) ] 
+        remark #15598: load #3 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 41) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (560, 16) ] 
+        remark #15598: load #2 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (566, 16) ] 
+        remark #15598: load #3 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (572, 16) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 25) ] 
+        remark #15598: load #2 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 25) ] 
+        remark #15598: load #3 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 25) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+        remark #15599: store #1 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 5) ] 
+        remark #15599: store #2 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 5) ] 
+        remark #15599: store #3 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 5) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+        remark #15599: store #1 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (562, 22) ] 
+        remark #15599: store #2 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (568, 22) ] 
+        remark #15599: store #3 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (574, 22) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 90.000000 
+        remark #15477: vector cost: 42.750000 
+        remark #15478: estimated potential speedup: 2.078125 
+        remark #15309: vectorization support: normalized vectorization overhead 0.031250
+        remark #15591: vectorized intrinsic functions: 3
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 12
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 6
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (558, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (435, 3)
+    <Distributed chunk2>
+        remark #25452: Poor spatial locality detected in memref(s). 
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at argonmd.cpp (437, 5)
+        <Predicate Optimized v1>
+            remark #25580: Induction variable range split using condition at line 438
+            remark #25563: Load hoisted out of the loop
+            remark #25563: Load hoisted out of the loop
+            remark #25563: Load hoisted out of the loop
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+        LOOP END
+
+        LOOP BEGIN at argonmd.cpp (437, 5)
+        <Predicate Optimized v2>
+            remark #25563: Load hoisted out of the loop
+            remark #25563: Load hoisted out of the loop
+            remark #25563: Load hoisted out of the loop
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (586, 3)
+        remark #25264: Loop rerolled by 3
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15389: vectorization support: unmasked unaligned unit stride load: forc forc forc forctmp forc forc forctmp forcold [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 50) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride load: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 27) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride load: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 22) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride store: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 5) ] 
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 9.000000 
+        remark #15477: vector cost: 3.234375 
+        remark #15478: estimated potential speedup: 2.703125 
+        remark #15309: vectorization support: normalized vectorization overhead 0.609375
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 3 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (586, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (384, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+        remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+        remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 16.000000 
+        remark #15477: vector cost: 7.000000 
+        remark #15478: estimated potential speedup: 2.250000 
+        remark #15309: vectorization support: normalized vectorization overhead 0.843750
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+        remark #15474: --- end vector loop memory reference summary ---
+        remark #25587: Loop has reduction
+        remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9 @[ argonmd.cpp:208:5 ]]
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (384, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: main.A
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+    remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+    remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 16.000000 
+    remark #15477: vector cost: 14.000000 
+    remark #15478: estimated potential speedup: 1.125000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.421875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+    remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9 @[ argonmd.cpp:150:1 ]]
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+    remark #25264: Loop rerolled by 3
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 5.000000 
+    remark #15477: vector cost: 2.140625 
+    remark #15478: estimated potential speedup: 2.281250 
+    remark #15309: vectorization support: normalized vectorization overhead 0.921875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (531, 16) ] 
+    remark #15598: load #2 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 16) ] 
+    remark #15598: load #3 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (530, 33) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 60.000000 
+    remark #15477: vector cost: 47.062500 
+    remark #15478: estimated potential speedup: 1.250000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.093750
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15459: masked indexed (or scatter) stores: 3 
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+    remark #25529: Dead stores eliminated in loop
+    remark #25488: Loads eliminated in loop by forwarding stores
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+    <Predicate Optimized v1>
+        remark #25580: Induction variable range split using condition at line 438
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+    <Predicate Optimized v2>
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (181, 1)
+
+    LOOP BEGIN at argonmd.cpp (558, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 17) ] 
+        remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 17) ] 
+        remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 17) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 41) ] 
+        remark #15598: load #2 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 41) ] 
+        remark #15598: load #3 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 41) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (560, 16) ] 
+        remark #15598: load #2 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (566, 16) ] 
+        remark #15598: load #3 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (572, 16) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 25) ] 
+        remark #15598: load #2 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 25) ] 
+        remark #15598: load #3 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 25) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+        remark #15599: store #1 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 5) ] 
+        remark #15599: store #2 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 5) ] 
+        remark #15599: store #3 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 5) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+        remark #15599: store #1 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (562, 22) ] 
+        remark #15599: store #2 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (568, 22) ] 
+        remark #15599: store #3 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (574, 22) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 90.000000 
+        remark #15477: vector cost: 84.250000 
+        remark #15478: estimated potential speedup: 1.062500 
+        remark #15309: vectorization support: normalized vectorization overhead 0.015625
+        remark #15591: vectorized intrinsic functions: 3
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 12
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 6
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (558, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (435, 3)
+        remark #25529: Dead stores eliminated in loop
+        remark #25488: Loads eliminated in loop by forwarding stores
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at argonmd.cpp (437, 5)
+        <Predicate Optimized v1>
+            remark #25580: Induction variable range split using condition at line 438
+            remark #25563: Load hoisted out of the loop
+            remark #25563: Load hoisted out of the loop
+            remark #25563: Load hoisted out of the loop
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+        LOOP END
+
+        LOOP BEGIN at argonmd.cpp (437, 5)
+        <Predicate Optimized v2>
+            remark #25563: Load hoisted out of the loop
+            remark #25563: Load hoisted out of the loop
+            remark #25563: Load hoisted out of the loop
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (586, 3)
+        remark #25264: Loop rerolled by 3
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15389: vectorization support: unmasked unaligned unit stride load: forc forc forc forctmp forc forc forctmp forcold [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 50) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride load: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 27) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride load: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 22) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride store: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 5) ] 
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 9.000000 
+        remark #15477: vector cost: 3.234375 
+        remark #15478: estimated potential speedup: 2.703125 
+        remark #15309: vectorization support: normalized vectorization overhead 0.609375
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 3 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (586, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (384, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+        remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+        remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 16.000000 
+        remark #15477: vector cost: 14.000000 
+        remark #15478: estimated potential speedup: 1.125000 
+        remark #15309: vectorization support: normalized vectorization overhead 0.421875
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+        remark #15474: --- end vector loop memory reference summary ---
+        remark #25587: Loop has reduction
+        remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9 @[ argonmd.cpp:208:5 ]]
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (384, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: main.resolver
+=================================================================
+
+Begin optimization report for: get_input_params(int, char**) (.V)
+
+LOOP BEGIN at argonmd.cpp (264, 5)
+    remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+=================================================================
+
+Begin optimization report for: get_input_params(int, char**) (.A)
+
+LOOP BEGIN at argonmd.cpp (264, 5)
+    remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+=================================================================
+
+Begin optimization report for: get_input_params(int, char**) (.resolver)
+=================================================================
+
+Begin optimization report for: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.V)
+
+LOOP BEGIN at argonmd.cpp (334, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (335, 5)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at argonmd.cpp (336, 7)
+            remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+            LOOP BEGIN at argonmd.cpp (337, 9)
+                remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at argonmd.cpp (349, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #25436: Loop completely unrolled by 6
+                LOOP END
+
+                LOOP BEGIN at argonmd.cpp (351, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #25436: Loop completely unrolled by 6
+                LOOP END
+
+                LOOP BEGIN at argonmd.cpp (353, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #25436: Loop completely unrolled by 6
+                LOOP END
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (368, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (369, 22) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (370, 22) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (371, 22) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (369, 5) ] 
+    remark #15599: store #2 to: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (370, 5) ] 
+    remark #15599: store #3 to: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (371, 5) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 15.000000 
+    remark #15477: vector cost: 8.250000 
+    remark #15478: estimated potential speedup: 1.796875 
+    remark #15309: vectorization support: normalized vectorization overhead 0.234375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (368, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.A)
+
+LOOP BEGIN at argonmd.cpp (334, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (335, 5)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at argonmd.cpp (336, 7)
+            remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+            LOOP BEGIN at argonmd.cpp (337, 9)
+                remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at argonmd.cpp (349, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #25436: Loop completely unrolled by 6
+                LOOP END
+
+                LOOP BEGIN at argonmd.cpp (351, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #25436: Loop completely unrolled by 6
+                LOOP END
+
+                LOOP BEGIN at argonmd.cpp (353, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #25436: Loop completely unrolled by 6
+                LOOP END
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (368, 3)
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+    remark #25439: Loop unrolled with remainder by 2
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (368, 3)
+<Remainder loop>
+    remark #25261: Single iteration loop optimized away
+LOOP END
+=================================================================
+
+Begin optimization report for: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.resolver)
+=================================================================
+
+Begin optimization report for: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.V)
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 16.000000 
+    remark #15477: vector cost: 7.000000 
+    remark #15478: estimated potential speedup: 2.250000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.843750
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+    remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9]
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.A)
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 16.000000 
+    remark #15477: vector cost: 14.000000 
+    remark #15478: estimated potential speedup: 1.125000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.421875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+    remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9]
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.resolver)
+=================================================================
+
+Begin optimization report for: rescale_temp(double*, int, double, double&, double&) (.V)
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+    remark #25264: Loop rerolled by 3
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 5.000000 
+    remark #15477: vector cost: 2.140625 
+    remark #15478: estimated potential speedup: 2.281250 
+    remark #15309: vectorization support: normalized vectorization overhead 0.921875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: rescale_temp(double*, int, double, double&, double&) (.A)
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+    remark #25264: Loop rerolled by 3
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 5.000000 
+    remark #15477: vector cost: 2.140625 
+    remark #15478: estimated potential speedup: 2.281250 
+    remark #15309: vectorization support: normalized vectorization overhead 0.921875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: rescale_temp(double*, int, double, double&, double&) (.resolver)
+=================================================================
+
+Begin optimization report for: check_pbc(double*, int, double const*) (.V)
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (531, 16) ] 
+    remark #15598: load #2 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 16) ] 
+    remark #15598: load #3 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (530, 33) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 60.000000 
+    remark #15477: vector cost: 40.062500 
+    remark #15478: estimated potential speedup: 1.453125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.109375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15459: masked indexed (or scatter) stores: 3 
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: check_pbc(double*, int, double const*) (.A)
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (531, 16) ] 
+    remark #15598: load #2 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 16) ] 
+    remark #15598: load #3 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (530, 33) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 60.000000 
+    remark #15477: vector cost: 47.062500 
+    remark #15478: estimated potential speedup: 1.250000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.093750
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15459: masked indexed (or scatter) stores: 3 
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: check_pbc(double*, int, double const*) (.resolver)
+=================================================================
+
+Begin optimization report for: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.V)
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+    remark #25452: Poor spatial locality detected in memref(s). 
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+    <Predicate Optimized v1>
+        remark #25580: Induction variable range split using condition at line 438
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+    <Predicate Optimized v2>
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.A)
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+    <Predicate Optimized v1>
+        remark #25580: Induction variable range split using condition at line 438
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+    <Predicate Optimized v2>
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #25563: Load hoisted out of the loop
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.resolver)
+=================================================================
+
+Begin optimization report for: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.V)
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 17) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 17) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 17) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 41) ] 
+    remark #15598: load #2 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 41) ] 
+    remark #15598: load #3 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 41) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (560, 16) ] 
+    remark #15598: load #2 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (566, 16) ] 
+    remark #15598: load #3 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (572, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 25) ] 
+    remark #15598: load #2 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 25) ] 
+    remark #15598: load #3 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 25) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 5) ] 
+    remark #15599: store #2 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 5) ] 
+    remark #15599: store #3 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 5) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (562, 22) ] 
+    remark #15599: store #2 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (568, 22) ] 
+    remark #15599: store #3 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (574, 22) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 90.000000 
+    remark #15477: vector cost: 42.750000 
+    remark #15478: estimated potential speedup: 2.078125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.031250
+    remark #15591: vectorized intrinsic functions: 3
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 12
+    remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 6
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.A)
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 17) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 17) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 17) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 41) ] 
+    remark #15598: load #2 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 41) ] 
+    remark #15598: load #3 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 41) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (560, 16) ] 
+    remark #15598: load #2 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (566, 16) ] 
+    remark #15598: load #3 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (572, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 25) ] 
+    remark #15598: load #2 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 25) ] 
+    remark #15598: load #3 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 25) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 5) ] 
+    remark #15599: store #2 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 5) ] 
+    remark #15599: store #3 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 5) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (562, 22) ] 
+    remark #15599: store #2 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (568, 22) ] 
+    remark #15599: store #3 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (574, 22) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 90.000000 
+    remark #15477: vector cost: 84.250000 
+    remark #15478: estimated potential speedup: 1.062500 
+    remark #15309: vectorization support: normalized vectorization overhead 0.015625
+    remark #15591: vectorized intrinsic functions: 3
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 12
+    remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 6
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.resolver)
+=================================================================
+
+Begin optimization report for: update_vel(double*, double const*, double const*, int, double, double) (.V)
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25264: Loop rerolled by 3
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 50) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride load: forcold [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 27) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 9.000000 
+    remark #15477: vector cost: 3.234375 
+    remark #15478: estimated potential speedup: 2.703125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.609375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 3 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: update_vel(double*, double const*, double const*, int, double, double) (.A)
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25264: Loop rerolled by 3
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 50) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride load: forcold [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 27) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 9.000000 
+    remark #15477: vector cost: 3.234375 
+    remark #15478: estimated potential speedup: 2.703125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.609375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 3 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: update_vel(double*, double const*, double const*, int, double, double) (.resolver)
+=================================================================
+
+Begin optimization report for: print_arr(double const*, int, int) (.V)
+
+LOOP BEGIN at argonmd.cpp (630, 3)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 4
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (630, 3)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: print_arr(double const*, int, int) (.A)
+
+LOOP BEGIN at argonmd.cpp (630, 3)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 4
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (630, 3)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: print_arr(double const*, int, int) (.resolver)
+=================================================================
+
+Begin optimization report for: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.V)
+
+LOOP BEGIN at argonmd.cpp (478, 3)
+    remark #25452: Poor spatial locality detected in memref(s). 
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (488, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (491, 23) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (494, 23) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (497, 23) ] 
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.A)
+
+LOOP BEGIN at argonmd.cpp (478, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (488, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (491, 23) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (494, 23) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (497, 23) ] 
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.resolver)
+=================================================================
+
+Begin optimization report for: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.V)
+
+LOOP BEGIN at argonmd.cpp (689, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 4
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (689, 5)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (684, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 4
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (684, 5)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.A)
+
+LOOP BEGIN at argonmd.cpp (689, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 4
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (689, 5)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (684, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25439: Loop unrolled with remainder by 4
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (684, 5)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.resolver)
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: update_vel(double*, double const*, double const*, int, double, double)
+
+DEAD STATIC FUNC: rescale_temp(double*, int, double, double&, double&)
+
+DEAD STATIC FUNC: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*)
+
+DEAD STATIC FUNC: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*)
+
+DEAD STATIC FUNC: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*)
+
+DEAD STATIC FUNC: get_input_params(int, char**)
+
+DEAD STATIC FUNC: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&)
+
+DEAD STATIC FUNC: compute_temp_ekin(double const*, int, double, double, double, double&, double&)
+
+DEAD STATIC FUNC: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int)
+
+DEAD STATIC FUNC: check_pbc(double*, int, double const*)
+
+DEAD STATIC FUNC: print_arr(double const*, int, int)
+
+DEAD STATIC FUNC: atof
+
+DEAD STATIC FUNC: atoi
+
+DEAD STATIC FUNC: llvm.ssa.copy.f64
+
+DEAD STATIC FUNC: llvm.ssa.copy.i32
+
+DEAD STATIC FUNC: llvm.ssa.copy.i64
+
+DEAD STATIC FUNC: main
+
+COMPILE FUNC: random(int*)
+
+COMPILE FUNC: print_info(int const*, int, double, int, int, int, double, double, double, double const*, int)
+   -> EXTERN: printf argonmd.cpp(645,3)
+   -> EXTERN: printf argonmd.cpp(647,3)
+   -> EXTERN: printf argonmd.cpp(648,3)
+   -> EXTERN: printf argonmd.cpp(649,3)
+   -> EXTERN: printf argonmd.cpp(650,3)
+   -> EXTERN: printf argonmd.cpp(651,3)
+   -> EXTERN: printf argonmd.cpp(653,3)
+   -> EXTERN: printf argonmd.cpp(654,3)
+   -> EXTERN: printf argonmd.cpp(655,3)
+   -> EXTERN: printf argonmd.cpp(656,3)
+   -> EXTERN: printf argonmd.cpp(658,3)
+
+COMPILE FUNC: print_thermo(int, double, double, double, double, double, double)
+   -> EXTERN: printf argonmd.cpp(669,3)
+
+COMPILE FUNC: main.V
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> DELETE: llvm.dbg.assign argonmd.cpp
+   -> DELETE: llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> get_input_params(int, char**) argonmd.cpp(54,28) (540>250)
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.memset.p0.i64 argonmd.cpp(85,14)
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(127,17)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(128,14)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(129,15)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(130,18)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(131,15)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(132,16)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(133,19)
+   -> EXTERN: puts argonmd.cpp(144,1)
+   -> setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) argonmd.cpp(148,1) (555>250)
+   -> INLINE: compute_temp_ekin(double const*, int, double, double, double, double&, double&) argonmd.cpp(150,1) (35<=250)
+   -> INLINE: rescale_temp(double*, int, double, double&, double&) argonmd.cpp(151,1) (50<=250)
+      -> DELETE: llvm.sqrt.f64 argonmd.cpp(403,32)
+      -> DELETE: llvm.sqrt.f64 argonmd.cpp(403,32)
+      -> llvm.sqrt.f64 argonmd.cpp(403,32)
+   -> INLINE: check_pbc(double*, int, double const*) argonmd.cpp(154,1) (145<=250)
+   -> INLINE: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) argonmd.cpp(156,1) (205<=250)
+      -> DELETE: llvm.memset.p0.i64 argonmd.cpp(432,19)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+      -> llvm.memset.p0.i64 argonmd.cpp(432,19)
+      -> llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+      -> llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) argonmd.cpp(159,1) (285>250)
+   -> print_info(int const*, int, double, int, int, int, double, double, double, double const*, int) argonmd.cpp(163,1) (375>375)
+   -> EXTERN: printf argonmd.cpp(167,1)
+   -> INLINE: print_thermo(int, double, double, double, double, double, double) argonmd.cpp(168,1) (5<=375)
+      -> EXTERN: printf argonmd.cpp(669,3)
+   -> EXTERN: fopen argonmd.cpp(172,10)
+   -> dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) argonmd.cpp(173,3) (360>250)
+   -> EXTERN: fclose argonmd.cpp(174,3)
+   -> EXTERN: fopen argonmd.cpp(175,10)
+   -> EXTERN: clock argonmd.cpp(180,9)
+   -> INLINE: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) argonmd.cpp(187,3) (190<=250)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(561,10)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(567,10)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(573,10)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(561,10)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(567,10)
+      -> llvm.floor.f64 argonmd.cpp(573,10)
+   -> INLINE: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) argonmd.cpp(191,5) (205<=250)
+      -> llvm.memset.p0.i64 argonmd.cpp(432,19)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+      -> llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+      -> llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) argonmd.cpp(198,3) (285>250)
+   -> INLINE: update_vel(double*, double const*, double const*, int, double, double) argonmd.cpp(202,3) (85<=250)
+   -> INLINE: compute_temp_ekin(double const*, int, double, double, double, double&, double&) argonmd.cpp(208,5) (35<=250)
+   -> EXTERN: clock argonmd.cpp(211,13)
+   -> INLINE: print_thermo(int, double, double, double, double, double, double) argonmd.cpp(215,5) (5<=375)
+      -> EXTERN: printf argonmd.cpp(669,3)
+   -> dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) argonmd.cpp(222,5) (360>250)
+   -> EXTERN: clock argonmd.cpp(228,9)
+   -> EXTERN: printf argonmd.cpp(230,1)
+   -> EXTERN: fclose argonmd.cpp(234,20)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(237,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(238,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(239,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(240,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(241,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(242,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(243,1)
+   -> compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) argonmd.cpp(198,3) (285>250)
+   -> llvm.dbg.assign argonmd.cpp
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(561,10)
+   -> llvm.floor.v4f64 argonmd.cpp(561,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(567,10)
+   -> llvm.floor.v4f64 argonmd.cpp(567,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(573,10)
+   -> llvm.floor.v4f64 argonmd.cpp(573,10)
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(384,33)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(405,33)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(530,33)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(437,35)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(435,33)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(558,33)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(437,35)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(435,33)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(586,33)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(384,33)
+   -> DELETE: llvm.smin.i64
+   -> DELETE: llvm.smax.i64
+   -> DELETE: llvm.smax.i64 argonmd.cpp(440,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(443,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(446,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(451,42)
+   -> DELETE: llvm.smin.i64
+   -> DELETE: llvm.smax.i64
+   -> DELETE: llvm.smax.i64 argonmd.cpp(440,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(443,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(446,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(451,42)
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v64f64.p0
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(535,27)
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(539,27)
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(530,33)
+   -> llvm.smin.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.smax.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.store.v16f64.p0 argonmd.cpp(574,22)
+   -> llvm.masked.store.v16f64.p0 argonmd.cpp(575,25)
+   -> llvm.floor.v2f64 argonmd.cpp(561,10)
+   -> llvm.smin.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.smax.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.masked.load.v16f64.p0
+
+COMPILE FUNC: main.A
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> DELETE: llvm.dbg.assign argonmd.cpp
+   -> DELETE: llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> get_input_params(int, char**) argonmd.cpp(54,28) (540>250)
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.memset.p0.i64 argonmd.cpp(85,14)
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(127,17)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(128,14)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(129,15)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(130,18)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(131,15)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(132,16)
+   -> EXTERN: operator new[](unsigned long) argonmd.cpp(133,19)
+   -> EXTERN: puts argonmd.cpp(144,1)
+   -> setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) argonmd.cpp(148,1) (555>250)
+   -> INLINE: compute_temp_ekin(double const*, int, double, double, double, double&, double&) argonmd.cpp(150,1) (35<=250)
+   -> INLINE: rescale_temp(double*, int, double, double&, double&) argonmd.cpp(151,1) (50<=250)
+      -> DELETE: llvm.sqrt.f64 argonmd.cpp(403,32)
+      -> DELETE: llvm.sqrt.f64 argonmd.cpp(403,32)
+      -> llvm.sqrt.f64 argonmd.cpp(403,32)
+   -> INLINE: check_pbc(double*, int, double const*) argonmd.cpp(154,1) (145<=250)
+   -> INLINE: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) argonmd.cpp(156,1) (205<=250)
+      -> DELETE: llvm.memset.p0.i64 argonmd.cpp(432,19)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+      -> llvm.memset.p0.i64 argonmd.cpp(432,19)
+      -> llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+      -> llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) argonmd.cpp(159,1) (285>250)
+   -> print_info(int const*, int, double, int, int, int, double, double, double, double const*, int) argonmd.cpp(163,1) (375>375)
+   -> EXTERN: printf argonmd.cpp(167,1)
+   -> INLINE: print_thermo(int, double, double, double, double, double, double) argonmd.cpp(168,1) (5<=375)
+      -> EXTERN: printf argonmd.cpp(669,3)
+   -> EXTERN: fopen argonmd.cpp(172,10)
+   -> dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) argonmd.cpp(173,3) (360>250)
+   -> EXTERN: fclose argonmd.cpp(174,3)
+   -> EXTERN: fopen argonmd.cpp(175,10)
+   -> EXTERN: clock argonmd.cpp(180,9)
+   -> INLINE: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) argonmd.cpp(187,3) (190<=250)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(561,10)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(567,10)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(573,10)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(561,10)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(567,10)
+      -> llvm.floor.f64 argonmd.cpp(573,10)
+   -> INLINE: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) argonmd.cpp(191,5) (205<=250)
+      -> llvm.memset.p0.i64 argonmd.cpp(432,19)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+      -> llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+      -> llvm.floor.f64 argonmd.cpp(441,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+      -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) argonmd.cpp(198,3) (285>250)
+   -> INLINE: update_vel(double*, double const*, double const*, int, double, double) argonmd.cpp(202,3) (85<=250)
+   -> INLINE: compute_temp_ekin(double const*, int, double, double, double, double&, double&) argonmd.cpp(208,5) (35<=250)
+   -> EXTERN: clock argonmd.cpp(211,13)
+   -> INLINE: print_thermo(int, double, double, double, double, double, double) argonmd.cpp(215,5) (5<=375)
+      -> EXTERN: printf argonmd.cpp(669,3)
+   -> dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) argonmd.cpp(222,5) (360>250)
+   -> EXTERN: clock argonmd.cpp(228,9)
+   -> EXTERN: printf argonmd.cpp(230,1)
+   -> EXTERN: fclose argonmd.cpp(234,20)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(237,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(238,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(239,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(240,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(241,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(242,1)
+   -> EXTERN: operator delete[](void*) argonmd.cpp(243,1)
+   -> compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) argonmd.cpp(198,3) (285>250)
+   -> llvm.dbg.assign argonmd.cpp
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(561,10)
+   -> llvm.floor.v4f64 argonmd.cpp(561,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(567,10)
+   -> llvm.floor.v4f64 argonmd.cpp(567,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(573,10)
+   -> llvm.floor.v4f64 argonmd.cpp(573,10)
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(384,33)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(405,33)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(530,33)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(437,35)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(435,33)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(558,33)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(437,35)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(435,33)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(586,33)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(384,33)
+   -> DELETE: llvm.smin.i64
+   -> DELETE: llvm.smax.i64
+   -> DELETE: llvm.smax.i64 argonmd.cpp(440,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(443,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(446,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(451,42)
+   -> DELETE: llvm.smin.i64
+   -> DELETE: llvm.smax.i64
+   -> DELETE: llvm.smax.i64 argonmd.cpp(440,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(443,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(446,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(451,42)
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v64f64.p0
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(535,27)
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(539,27)
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(530,33)
+   -> llvm.smin.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.smax.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.store.v16f64.p0 argonmd.cpp(574,22)
+   -> llvm.masked.store.v16f64.p0 argonmd.cpp(575,25)
+   -> llvm.floor.v2f64 argonmd.cpp(561,10)
+   -> llvm.smin.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.smax.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.masked.load.v16f64.p0
+
+COMPILE FUNC: get_input_params(int, char**) (.V)
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.memset.p0.i64 argonmd.cpp(261,9)
+   -> llvm.dbg.assign argonmd.cpp
+   -> EXTERN: strcpy argonmd.cpp(262,5)
+   -> EXTERN: strtok argonmd.cpp(263,20)
+   -> INLINE: atoi argonmd.cpp(265,28) (10<=487)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+   -> EXTERN: strtok argonmd.cpp(266,22)
+   -> INLINE: atoi argonmd.cpp(292,27) (10<=487)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+   -> INLINE: atof argonmd.cpp(297,29) (5<=487)
+      -> EXTERN: strtod stdlib-float.h(27,10)
+   -> INLINE: atoi argonmd.cpp(302,30) (10<=487)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+   -> INLINE: atoi argonmd.cpp(307,28) (10<=487)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+   -> INLINE: atoi argonmd.cpp(312,26) (10<=45)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+
+COMPILE FUNC: get_input_params(int, char**) (.A)
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.dbg.assign argonmd.cpp
+   -> llvm.memset.p0.i64 argonmd.cpp(261,9)
+   -> llvm.dbg.assign argonmd.cpp
+   -> EXTERN: strcpy argonmd.cpp(262,5)
+   -> EXTERN: strtok argonmd.cpp(263,20)
+   -> INLINE: atoi argonmd.cpp(265,28) (10<=487)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+   -> EXTERN: strtok argonmd.cpp(266,22)
+   -> INLINE: atoi argonmd.cpp(292,27) (10<=487)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+   -> INLINE: atof argonmd.cpp(297,29) (5<=487)
+      -> EXTERN: strtod stdlib-float.h(27,10)
+   -> INLINE: atoi argonmd.cpp(302,30) (10<=487)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+   -> INLINE: atoi argonmd.cpp(307,28) (10<=487)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+   -> INLINE: atoi argonmd.cpp(312,26) (10<=45)
+      -> EXTERN: __isoc23_strtol stdlib.h(483,16)
+
+COMPILE FUNC: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.V)
+   -> DELETE: llvm.dbg.assign argonmd.cpp
+   -> DELETE: llvm.dbg.assign argonmd.cpp
+   -> INLINE: random(int*) argonmd.cpp(350,28) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(349,41) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(352,28) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(351,41) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(354,28) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(353,41) (20<=787)
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(335,41)
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(336,43)
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(338,55)
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(349,36)
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(351,36)
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(353,36)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(337,39)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.f64
+   -> DELETE: llvm.ssa.copy.f64
+   -> DELETE: llvm.ssa.copy.f64
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(334,39)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(368,33)
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.store.v16f64.p0 argonmd.cpp(371,22)
+
+COMPILE FUNC: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.A)
+   -> DELETE: llvm.dbg.assign argonmd.cpp
+   -> DELETE: llvm.dbg.assign argonmd.cpp
+   -> INLINE: random(int*) argonmd.cpp(350,28) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(349,41) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(352,28) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(351,41) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(354,28) (20<=787)
+   -> INLINE: random(int*) argonmd.cpp(353,41) (20<=787)
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(335,41)
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(336,43)
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(338,55)
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(349,36)
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(351,36)
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(353,36)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(337,39)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.f64
+   -> DELETE: llvm.ssa.copy.f64
+   -> DELETE: llvm.ssa.copy.f64
+   -> DELETE: llvm.ssa.copy.i32 argonmd.cpp(334,39)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(368,33)
+
+COMPILE FUNC: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.V)
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(384,33)
+   -> llvm.masked.load.v16f64.p0
+
+COMPILE FUNC: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.A)
+   -> DELETE: llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> llvm.vector.reduce.fadd.v4f64 argonmd.cpp(388,9)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(384,33)
+   -> llvm.masked.load.v16f64.p0
+
+COMPILE FUNC: rescale_temp(double*, int, double, double&, double&) (.V)
+   -> llvm.sqrt.f64 argonmd.cpp(403,32)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(405,33)
+
+COMPILE FUNC: rescale_temp(double*, int, double, double&, double&) (.A)
+   -> llvm.sqrt.f64 argonmd.cpp(403,32)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(405,33)
+
+COMPILE FUNC: check_pbc(double*, int, double const*) (.V)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(530,33)
+   -> llvm.masked.load.v64f64.p0
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(535,27)
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(539,27)
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(530,33)
+
+COMPILE FUNC: check_pbc(double*, int, double const*) (.A)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(530,33)
+   -> llvm.masked.load.v64f64.p0
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(535,27)
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(539,27)
+   -> llvm.masked.scatter.v16f64.v16p0 argonmd.cpp(530,33)
+
+COMPILE FUNC: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.V)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(441,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> llvm.memset.p0.i64 argonmd.cpp(432,19)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(441,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> llvm.floor.f64 argonmd.cpp(441,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> llvm.floor.f64 argonmd.cpp(441,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(437,35)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(435,33)
+   -> DELETE: llvm.smin.i64
+   -> DELETE: llvm.smax.i64
+   -> DELETE: llvm.smax.i64 argonmd.cpp(440,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(443,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(446,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(451,42)
+   -> llvm.smin.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.smax.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+
+COMPILE FUNC: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.A)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(441,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> llvm.memset.p0.i64 argonmd.cpp(432,19)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(441,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> llvm.floor.f64 argonmd.cpp(441,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> llvm.floor.f64 argonmd.cpp(441,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(444,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(447,13)
+   -> DELETE: llvm.ssa.copy.i64
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i32
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(437,35)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(435,33)
+   -> DELETE: llvm.smin.i64
+   -> DELETE: llvm.smax.i64
+   -> DELETE: llvm.smax.i64 argonmd.cpp(440,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(443,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(446,38)
+   -> DELETE: llvm.smax.i64 argonmd.cpp(451,42)
+   -> llvm.smin.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+   -> llvm.smax.i64
+   -> llvm.floor.v2f64 argonmd.cpp(444,13)
+
+COMPILE FUNC: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.V)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(561,10)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(567,10)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(573,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(561,10)
+   -> llvm.floor.v4f64 argonmd.cpp(561,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(567,10)
+   -> llvm.floor.v4f64 argonmd.cpp(567,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(573,10)
+   -> llvm.floor.v4f64 argonmd.cpp(573,10)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(561,10)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(567,10)
+   -> llvm.floor.f64 argonmd.cpp(573,10)
+   -> llvm.floor.f64 argonmd.cpp(561,10)
+   -> llvm.floor.f64 argonmd.cpp(567,10)
+   -> llvm.floor.f64 argonmd.cpp(573,10)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(558,33)
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.store.v16f64.p0 argonmd.cpp(574,22)
+   -> llvm.masked.store.v16f64.p0 argonmd.cpp(575,25)
+   -> llvm.floor.v2f64 argonmd.cpp(561,10)
+
+COMPILE FUNC: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.A)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(561,10)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(567,10)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(573,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(561,10)
+   -> llvm.floor.v4f64 argonmd.cpp(561,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(567,10)
+   -> llvm.floor.v4f64 argonmd.cpp(567,10)
+   -> DELETE: llvm.floor.v4f64 argonmd.cpp(573,10)
+   -> llvm.floor.v4f64 argonmd.cpp(573,10)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(561,10)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(567,10)
+   -> llvm.floor.f64 argonmd.cpp(573,10)
+   -> llvm.floor.f64 argonmd.cpp(561,10)
+   -> llvm.floor.f64 argonmd.cpp(567,10)
+   -> llvm.floor.f64 argonmd.cpp(573,10)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(558,33)
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.load.v16f64.p0
+   -> llvm.masked.store.v16f64.p0 argonmd.cpp(574,22)
+   -> llvm.masked.store.v16f64.p0 argonmd.cpp(575,25)
+   -> llvm.floor.v2f64 argonmd.cpp(561,10)
+
+COMPILE FUNC: update_vel(double*, double const*, double const*, int, double, double) (.V)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(586,33)
+
+COMPILE FUNC: update_vel(double*, double const*, double const*, int, double, double) (.A)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(586,33)
+
+COMPILE FUNC: print_arr(double const*, int, int) (.V)
+   -> EXTERN: printf argonmd.cpp(629,3)
+   -> DELETE: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(630,37)
+
+COMPILE FUNC: print_arr(double const*, int, int) (.A)
+   -> EXTERN: printf argonmd.cpp(629,3)
+   -> DELETE: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> EXTERN: printf argonmd.cpp(631,5)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(630,37)
+
+COMPILE FUNC: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.V)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(492,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(495,13)
+   -> llvm.floor.f64 argonmd.cpp(498,13)
+   -> llvm.floor.v2f64 argonmd.cpp(492,13)
+
+COMPILE FUNC: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.A)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(492,13)
+   -> DELETE: llvm.floor.f64 argonmd.cpp(495,13)
+   -> llvm.floor.f64 argonmd.cpp(498,13)
+   -> llvm.floor.v2f64 argonmd.cpp(492,13)
+
+COMPILE FUNC: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.V)
+   -> EXTERN: fprintf argonmd.cpp(681,3)
+   -> EXTERN: fprintf argonmd.cpp(682,3)
+   -> DELETE: fprintf argonmd.cpp(685,7)
+   -> DELETE: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fwrite argonmd.cpp(694,3)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(686,17)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(691,17)
+
+COMPILE FUNC: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.A)
+   -> EXTERN: fprintf argonmd.cpp(681,3)
+   -> EXTERN: fprintf argonmd.cpp(682,3)
+   -> DELETE: fprintf argonmd.cpp(685,7)
+   -> DELETE: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fwrite argonmd.cpp(694,3)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(690,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> EXTERN: fprintf argonmd.cpp(685,7)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(686,17)
+   -> DELETE: llvm.ssa.copy.i64 argonmd.cpp(691,17)
+
+COMPILE FUNC: main.resolver
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: get_input_params(int, char**) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: rescale_temp(double*, int, double, double&, double&) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: check_pbc(double*, int, double const*) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: update_vel(double*, double const*, double const*, int, double, double) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: print_arr(double const*, int, int) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+COMPILE FUNC: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.resolver)
+   -> EXTERN: __intel_cpu_features_init
+
+---- End Inlining Report ------
+Register allocation report for: print_info(int const*, int, double, int, int, int, double, double, double, double const*, int)
+FUNCTION BEGIN
+ 4 reloads 4 spills 
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 18 [ r10 r11 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 1 [ r14  ]
+ Assigned : 18 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3  ]
+
+Routine stack 
+ Variables : 36 Bytes
+   Read Count : 5
+   Write Count : 4
+ Spills : 32 Bytes
+   Read Count : 4
+   Write Count : 4
+
+FUNCTION END
+Register allocation report for: print_thermo(int, double, double, double, double, double, double)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 26 [ rbp rbx rcx rdx r8 r9 r10 r11 r12 r13 r14 r15 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 9 [ rax rdi rsi zmm0 zmm1 zmm2 zmm3 zmm4 zmm5  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: random(int*)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 2 [ rip mxcsr  ]
+ Available : 30 [ rbp rbx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 6 [ eflags rax rcx rdi rdx zmm0  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: main.V
+FUNCTION BEGIN
+ 59 reloads 56 spills 
+ LOOP1 BEGIN at (argonmd.cpp:181:1)
+  62 reloads 6 spills 
+  LOOP2 BEGIN at (argonmd.cpp:558:3 @[ argonmd.cpp:187:3 ])
+   4 reloads 1 spills 
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:558:3 @[ argonmd.cpp:187:3 ])
+   3 reloads 
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:435:3 @[ argonmd.cpp:191:5 ])
+   4 reloads 
+   LOOP3 BEGIN at (argonmd.cpp:437:5 @[ argonmd.cpp:191:5 ])
+   LOOP3 END
+   LOOP3 BEGIN at (argonmd.cpp:437:5 @[ argonmd.cpp:191:5 ])
+    1 reloads 
+   LOOP3 END
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:586:3 @[ argonmd.cpp:202:3 ])
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:586:3 @[ argonmd.cpp:202:3 ])
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:384:3 @[ argonmd.cpp:208:5 ])
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:384:3 @[ argonmd.cpp:208:5 ])
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:435:3 @[ argonmd.cpp:156:1 ])
+  4 reloads 
+  LOOP2 BEGIN at (argonmd.cpp:437:5 @[ argonmd.cpp:156:1 ])
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:437:5 @[ argonmd.cpp:156:1 ])
+   2 reloads 
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:530:3 @[ argonmd.cpp:154:1 ])
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:530:3 @[ argonmd.cpp:154:1 ])
+  28 reloads 16 spills 
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:405:3 @[ argonmd.cpp:151:1 ])
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:405:3 @[ argonmd.cpp:151:1 ])
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:384:3 @[ argonmd.cpp:150:1 ])
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:384:3 @[ argonmd.cpp:150:1 ])
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ rsp ssp rip mxcsr  ]
+ Available : 4 [ k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 32 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 1028 Bytes
+   Read Count : 176
+   Write Count : 92
+ Spills : 1252 Bytes
+   Read Count : 167
+   Write Count : 79
+
+FUNCTION END
+Register allocation report for: main.A
+FUNCTION BEGIN
+ 57 reloads 56 spills 
+ LOOP1 BEGIN at (argonmd.cpp:181:1)
+  61 reloads 6 spills 
+  LOOP2 BEGIN at (argonmd.cpp:558:3 @[ argonmd.cpp:187:3 ])
+   4 reloads 1 spills 
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:558:3 @[ argonmd.cpp:187:3 ])
+   3 reloads 
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:435:3 @[ argonmd.cpp:191:5 ])
+   4 reloads 
+   LOOP3 BEGIN at (argonmd.cpp:437:5 @[ argonmd.cpp:191:5 ])
+    1 reloads 
+   LOOP3 END
+   LOOP3 BEGIN at (argonmd.cpp:437:5 @[ argonmd.cpp:191:5 ])
+    1 reloads 
+   LOOP3 END
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:586:3 @[ argonmd.cpp:202:3 ])
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:586:3 @[ argonmd.cpp:202:3 ])
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:384:3 @[ argonmd.cpp:208:5 ])
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:384:3 @[ argonmd.cpp:208:5 ])
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:435:3 @[ argonmd.cpp:156:1 ])
+  4 reloads 
+  LOOP2 BEGIN at (argonmd.cpp:437:5 @[ argonmd.cpp:156:1 ])
+   1 reloads 
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:437:5 @[ argonmd.cpp:156:1 ])
+   2 reloads 
+  LOOP2 END
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:530:3 @[ argonmd.cpp:154:1 ])
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:530:3 @[ argonmd.cpp:154:1 ])
+  21 reloads 13 spills 
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:405:3 @[ argonmd.cpp:151:1 ])
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:405:3 @[ argonmd.cpp:151:1 ])
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:384:3 @[ argonmd.cpp:150:1 ])
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:384:3 @[ argonmd.cpp:150:1 ])
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ mxcsr rsp ssp rip  ]
+ Available : 4 [ k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 32 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 972 Bytes
+   Read Count : 170
+   Write Count : 92
+ Spills : 1156 Bytes
+   Read Count : 159
+   Write Count : 76
+
+FUNCTION END
+Register allocation report for: main.resolver
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: get_input_params(int, char**) (.V)
+FUNCTION BEGIN
+ LOOP1 BEGIN at (argonmd.cpp:264:5)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 26 [ rcx r8 r9 r10 r11 r12 r13 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 3 [ r14 rbx r15  ]
+ Assigned : 10 [ eflags rax rbp rbx rdi rdx rsi r14 r15 zmm0  ]
+
+Routine stack 
+ Variables : 75 Bytes
+   Read Count : 5
+   Write Count : 3
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: get_input_params(int, char**) (.A)
+FUNCTION BEGIN
+ LOOP1 BEGIN at (argonmd.cpp:264:5)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 26 [ rcx r8 r9 r10 r11 r12 r13 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 3 [ r14 rbx r15  ]
+ Assigned : 10 [ eflags rax rbp rbx rdi rdx rsi r14 r15 zmm0  ]
+
+Routine stack 
+ Variables : 75 Bytes
+   Read Count : 5
+   Write Count : 3
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: get_input_params(int, char**) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.V)
+FUNCTION BEGIN
+ 2 reloads 14 spills 
+ LOOP1 BEGIN at (argonmd.cpp:368:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:368:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:334:3)
+  8 reloads 4 spills 
+  LOOP2 BEGIN at (argonmd.cpp:335:5)
+   8 reloads 4 spills 
+   LOOP3 BEGIN at (argonmd.cpp:336:7)
+    6 reloads 2 spills 
+    LOOP4 BEGIN at (argonmd.cpp:337:9)
+    LOOP4 END
+   LOOP3 END
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rip mxcsr  ]
+ Available : 6 [ zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 30 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13  ]
+
+Routine stack 
+ Variables : 152 Bytes
+   Read Count : 26
+   Write Count : 24
+ Spills : 148 Bytes
+   Read Count : 24
+   Write Count : 24
+
+FUNCTION END
+Register allocation report for: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.A)
+FUNCTION BEGIN
+ 2 reloads 14 spills 
+ LOOP1 BEGIN at (argonmd.cpp:368:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:334:3)
+  8 reloads 4 spills 
+  LOOP2 BEGIN at (argonmd.cpp:335:5)
+   8 reloads 4 spills 
+   LOOP3 BEGIN at (argonmd.cpp:336:7)
+    6 reloads 2 spills 
+    LOOP4 BEGIN at (argonmd.cpp:337:9)
+    LOOP4 END
+   LOOP3 END
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rip mxcsr  ]
+ Available : 6 [ zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 30 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13  ]
+
+Routine stack 
+ Variables : 152 Bytes
+   Read Count : 26
+   Write Count : 24
+ Spills : 148 Bytes
+   Read Count : 24
+   Write Count : 24
+
+FUNCTION END
+Register allocation report for: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.V)
+FUNCTION BEGIN
+ LOOP1 BEGIN at (argonmd.cpp:384:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:384:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ mxcsr rip  ]
+ Available : 17 [ rbp rbx r10 r11 r12 r13 r14 r15 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 19 [ eflags rax rcx rdi rdx rsi r8 r9 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.A)
+FUNCTION BEGIN
+ LOOP1 BEGIN at (argonmd.cpp:384:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:384:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ mxcsr rip  ]
+ Available : 17 [ rbp rbx r10 r11 r12 r13 r14 r15 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 19 [ eflags rax rcx rdi rdx rsi r8 r9 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: rescale_temp(double*, int, double, double&, double&) (.V)
+FUNCTION BEGIN
+ LOOP1 BEGIN at (argonmd.cpp:405:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:405:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 1 [ mxcsr  ]
+ Available : 25 [ rbp rbx r9 r10 r11 r12 r13 r14 r15 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 11 [ eflags rax rcx rdi rdx rsi r8 zmm0 zmm1 zmm2 zmm3  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: rescale_temp(double*, int, double, double&, double&) (.A)
+FUNCTION BEGIN
+ LOOP1 BEGIN at (argonmd.cpp:405:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:405:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 1 [ mxcsr  ]
+ Available : 25 [ rbp rbx r9 r10 r11 r12 r13 r14 r15 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 11 [ eflags rax rcx rdi rdx rsi r8 zmm0 zmm1 zmm2 zmm3  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: rescale_temp(double*, int, double, double&, double&) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: check_pbc(double*, int, double const*) (.V)
+FUNCTION BEGIN
+ 3 reloads 3 spills 
+ LOOP1 BEGIN at (argonmd.cpp:530:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:530:3)
+  19 reloads 16 spills 
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rip mxcsr  ]
+ Available : 13 [ rbp rbx r9 r10 r11 r12 r13 r14 r15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 23 [ eflags rax rcx rdi rdx rsi r8 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 560 Bytes
+   Read Count : 22
+   Write Count : 19
+ Spills : 560 Bytes
+   Read Count : 22
+   Write Count : 19
+
+FUNCTION END
+Register allocation report for: check_pbc(double*, int, double const*) (.A)
+FUNCTION BEGIN
+ 2 reloads 3 spills 
+ LOOP1 BEGIN at (argonmd.cpp:530:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:530:3)
+  22 reloads 17 spills 
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rip mxcsr  ]
+ Available : 12 [ rbp rbx r10 r11 r12 r13 r14 r15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 24 [ eflags rax rcx rdi rdx rsi r8 r9 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 592 Bytes
+   Read Count : 24
+   Write Count : 20
+ Spills : 592 Bytes
+   Read Count : 24
+   Write Count : 20
+
+FUNCTION END
+Register allocation report for: check_pbc(double*, int, double const*) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.V)
+FUNCTION BEGIN
+ 6 reloads 8 spills 
+ LOOP1 BEGIN at (argonmd.cpp:435:3)
+  4 reloads 
+  LOOP2 BEGIN at (argonmd.cpp:437:5)
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:437:5)
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ rsp ssp rip mxcsr  ]
+ Available : 8 [ zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 28 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11  ]
+
+Routine stack 
+ Variables : 84 Bytes
+   Read Count : 11
+   Write Count : 8
+ Spills : 76 Bytes
+   Read Count : 10
+   Write Count : 8
+
+FUNCTION END
+Register allocation report for: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.A)
+FUNCTION BEGIN
+ 6 reloads 8 spills 
+ LOOP1 BEGIN at (argonmd.cpp:435:3)
+  4 reloads 
+  LOOP2 BEGIN at (argonmd.cpp:437:5)
+  LOOP2 END
+  LOOP2 BEGIN at (argonmd.cpp:437:5)
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 4 [ rsp ssp rip mxcsr  ]
+ Available : 8 [ zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 28 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11  ]
+
+Routine stack 
+ Variables : 84 Bytes
+   Read Count : 11
+   Write Count : 8
+ Spills : 76 Bytes
+   Read Count : 10
+   Write Count : 8
+
+FUNCTION END
+Register allocation report for: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.V)
+FUNCTION BEGIN
+ 5 reloads 11 spills 
+ LOOP1 BEGIN at (argonmd.cpp:558:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:558:3)
+  6 reloads 
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:558:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ mxcsr rip  ]
+ Available : 4 [ k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 2 [ rbx rbp  ]
+ Assigned : 32 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 288 Bytes
+   Read Count : 11
+   Write Count : 11
+ Spills : 289 Bytes
+   Read Count : 11
+   Write Count : 11
+
+FUNCTION END
+Register allocation report for: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.A)
+FUNCTION BEGIN
+ 5 reloads 11 spills 
+ LOOP1 BEGIN at (argonmd.cpp:558:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:558:3)
+  6 reloads 
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:558:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ mxcsr rip  ]
+ Available : 4 [ k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 2 [ rbx rbp  ]
+ Assigned : 32 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 288 Bytes
+   Read Count : 11
+   Write Count : 11
+ Spills : 289 Bytes
+   Read Count : 11
+   Write Count : 11
+
+FUNCTION END
+Register allocation report for: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: update_vel(double*, double const*, double const*, int, double, double) (.V)
+FUNCTION BEGIN
+ LOOP1 BEGIN at (argonmd.cpp:586:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:586:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:586:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 1 [ mxcsr  ]
+ Available : 23 [ rbp rbx r12 r13 r14 r15 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 13 [ eflags rax rcx rdi rdx rsi r8 r9 r10 r11 zmm0 zmm1 zmm2  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: update_vel(double*, double const*, double const*, int, double, double) (.A)
+FUNCTION BEGIN
+ LOOP1 BEGIN at (argonmd.cpp:586:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:586:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:586:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 1 [ mxcsr  ]
+ Available : 23 [ rbp rbx r12 r13 r14 r15 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 13 [ eflags rax rcx rdi rdx rsi r8 r9 r10 r11 zmm0 zmm1 zmm2  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: update_vel(double*, double const*, double const*, int, double, double) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: print_arr(double const*, int, int) (.V)
+FUNCTION BEGIN
+ 4 reloads 2 spills 
+ LOOP1 BEGIN at (argonmd.cpp:630:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:630:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 21 [ r8 r9 r10 r11 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 5 [ rbx r12 r13 r14 r15  ]
+ Assigned : 15 [ eflags rax rbp rbx rcx rdi rdx rsi r12 r13 r14 r15 zmm0 zmm1 zmm2  ]
+
+Routine stack 
+ Variables : 16 Bytes
+   Read Count : 4
+   Write Count : 2
+ Spills : 16 Bytes
+   Read Count : 4
+   Write Count : 2
+
+FUNCTION END
+Register allocation report for: print_arr(double const*, int, int) (.A)
+FUNCTION BEGIN
+ 2 reloads 1 spills 
+ LOOP1 BEGIN at (argonmd.cpp:630:3)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:630:3)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 21 [ r8 r9 r10 r11 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 15 [ eflags rax rbp rbx rcx rdi rdx rsi r12 r13 r14 r15 zmm0 zmm1 zmm2  ]
+
+Routine stack 
+ Variables : 8 Bytes
+   Read Count : 2
+   Write Count : 1
+ Spills : 8 Bytes
+   Read Count : 2
+   Write Count : 1
+
+FUNCTION END
+Register allocation report for: print_arr(double const*, int, int) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.V)
+FUNCTION BEGIN
+ 4 spills 
+ LOOP1 BEGIN at (argonmd.cpp:478:3)
+  1 reloads 2 spills 
+  LOOP2 BEGIN at (argonmd.cpp:488:5)
+   5 reloads 1 spills 
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rip mxcsr  ]
+ Available : 7 [ rbp r12 r13 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 3 [ rbx r14 r15  ]
+ Assigned : 29 [ eflags rax rbx rcx rdi rdx rsi r8 r9 r10 r11 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 80 Bytes
+   Read Count : 9
+   Write Count : 7
+ Spills : 88 Bytes
+   Read Count : 6
+   Write Count : 7
+
+FUNCTION END
+Register allocation report for: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.A)
+FUNCTION BEGIN
+ 4 spills 
+ LOOP1 BEGIN at (argonmd.cpp:478:3)
+  1 reloads 2 spills 
+  LOOP2 BEGIN at (argonmd.cpp:488:5)
+   5 reloads 1 spills 
+  LOOP2 END
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rip mxcsr  ]
+ Available : 7 [ rbp r12 r13 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 3 [ rbx r14 r15  ]
+ Assigned : 29 [ eflags rax rbx rcx rdi rdx rsi r8 r9 r10 r11 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15  ]
+
+Routine stack 
+ Variables : 80 Bytes
+   Read Count : 9
+   Write Count : 7
+ Spills : 88 Bytes
+   Read Count : 6
+   Write Count : 7
+
+FUNCTION END
+Register allocation report for: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END
+Register allocation report for: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.V)
+FUNCTION BEGIN
+ 5 reloads 6 spills 
+ LOOP1 BEGIN at (argonmd.cpp:684:5)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:684:5)
+  1 reloads 
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:689:5)
+  1 reloads 
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:689:5)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 16 [ r10 r11 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 5 [ rbx r12 r13 r14 r15  ]
+ Assigned : 20 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5  ]
+
+Routine stack 
+ Variables : 24 Bytes
+   Read Count : 7
+   Write Count : 6
+ Spills : 48 Bytes
+   Read Count : 7
+   Write Count : 6
+
+FUNCTION END
+Register allocation report for: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.A)
+FUNCTION BEGIN
+ 5 reloads 4 spills 
+ LOOP1 BEGIN at (argonmd.cpp:684:5)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:684:5)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:689:5)
+ LOOP1 END
+ LOOP1 BEGIN at (argonmd.cpp:689:5)
+ LOOP1 END
+
+Hardware registers used
+ Reserved : 2 [ rsp ssp  ]
+ Available : 16 [ r10 r11 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 6 [ rbp rbx r12 r13 r14 r15  ]
+ Assigned : 20 [ eflags rax rbp rbx rcx rdi rdx rsi r8 r9 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5  ]
+
+Routine stack 
+ Variables : 16 Bytes
+   Read Count : 5
+   Write Count : 4
+ Spills : 32 Bytes
+   Read Count : 5
+   Write Count : 4
+
+FUNCTION END
+Register allocation report for: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.resolver)
+FUNCTION BEGIN
+
+Hardware registers used
+ Reserved : 3 [ rsp ssp rip  ]
+ Available : 33 [ rbp rbx rdi rdx rsi r8 r9 r10 r11 r12 r13 r14 r15 zmm0 zmm1 zmm2 zmm3 zmm4 zmm5 zmm6 zmm7 zmm8 zmm9 zmm10 zmm11 zmm12 zmm13 zmm14 zmm15 k0_k1 k2_k3 k4_k5 k6_k7  ]
+ Callee Saved : 0 [  ]
+ Assigned : 3 [ eflags rax rcx  ]
+
+Routine stack 
+ Variables : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+ Spills : 0 Bytes
+   Read Count : 0
+   Write Count : 0
+
+FUNCTION END

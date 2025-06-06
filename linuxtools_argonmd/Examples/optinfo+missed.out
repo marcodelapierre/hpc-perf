@@ -1,0 +1,346 @@
+argonmd.cpp:312:30: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:307:32: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:302:34: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:297:33: optimized:   Inlining double atof(const char*)/227 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:292:31: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:265:32: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:262:12: optimized:   Inlining char* strcpy(char*, const char*)/512 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:354:34: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:353:47: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:352:34: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:351:47: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:350:34: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:349:47: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:631:11: optimized:   Inlining int printf(const char*, ...)/256 into void print_arr(const double*, int, int)/695 (always_inline).
+argonmd.cpp:629:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_arr(const double*, int, int)/695 (always_inline).
+argonmd.cpp:658:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:656:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:655:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:654:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:653:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:651:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:650:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:649:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:648:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:647:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:645:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:669:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_thermo(int, double, double, double, double, double, double)/697 (always_inline).
+argonmd.cpp:694:10: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:690:14: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:685:14: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:682:10: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:681:10: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:230:7: optimized:   Inlining int printf(const char*, ...)/256 into int main(int, char**)/684 (always_inline).
+argonmd.cpp:167:7: optimized:   Inlining int printf(const char*, ...)/256 into int main(int, char**)/684 (always_inline).
+argonmd.cpp:144:7: optimized:   Inlining int printf(const char*, ...)/256 into int main(int, char**)/684 (always_inline).
+argonmd.cpp:222:13: missed:   will not early inline: int main(int, char**)/684->void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698, growth 67 exceeds --param early-inlining-insns
+argonmd.cpp:215:17: optimized:  Inlining void print_thermo(int, double, double, double, double, double, double)/697 into int main(int, char**)/684.
+argonmd.cpp:208:22: missed:   will not early inline: int main(int, char**)/684->void compute_temp_ekin(const double*, int, double, double, double, double&, double&)/687, call is cold and code would grow at least by 18
+argonmd.cpp:202:13: missed:   will not early inline: int main(int, char**)/684->void update_vel(double*, const double*, const double*, int, double, double)/693, call is cold and code would grow at least by 35
+argonmd.cpp:198:20: missed:   will not early inline: int main(int, char**)/684->void compute_forc_epot(const double*, int, int, const int*, const int*, const double*, const double*, double, double, double, double*, double&)/690, call is cold and code would grow at least by 87
+argonmd.cpp:191:18: missed:   will not early inline: int main(int, char**)/684->void compute_neigh(const double*, int, const double*, const double*, double, int, int*, int*)/689, call is cold and code would grow at least by 71
+argonmd.cpp:187:17: missed:   will not early inline: int main(int, char**)/684->void update_pos_pbc(double*, double*, const double*, const double*, int, double, double, double, const double*)/692, call is cold and code would grow at least by 66
+argonmd.cpp:173:11: missed:   will not early inline: int main(int, char**)/684->void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698, growth 67 exceeds --param early-inlining-insns
+argonmd.cpp:168:13: optimized:  Inlining void print_thermo(int, double, double, double, double, double, double)/697 into int main(int, char**)/684.
+argonmd.cpp:163:11: missed:   will not early inline: int main(int, char**)/684->void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696, call is cold and code would grow at least by 39
+argonmd.cpp:159:18: missed:   will not early inline: int main(int, char**)/684->void compute_forc_epot(const double*, int, int, const int*, const int*, const double*, const double*, double, double, double, double*, double&)/690, call is cold and code would grow at least by 87
+argonmd.cpp:156:14: missed:   will not early inline: int main(int, char**)/684->void compute_neigh(const double*, int, const double*, const double*, double, int, int*, int*)/689, call is cold and code would grow at least by 71
+argonmd.cpp:154:10: missed:   will not early inline: int main(int, char**)/684->void check_pbc(double*, int, const double*)/691, call is cold and code would grow at least by 36
+argonmd.cpp:151:13: missed:   will not early inline: int main(int, char**)/684->void rescale_temp(double*, int, double, double&, double&)/688, call is cold and code would grow at least by 22
+argonmd.cpp:150:18: missed:   will not early inline: int main(int, char**)/684->void compute_temp_ekin(const double*, int, double, double, double, double&, double&)/687, call is cold and code would grow at least by 18
+argonmd.cpp:148:16: missed:   will not early inline: int main(int, char**)/684->void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686, call is cold and code would grow at least by 160
+argonmd.cpp:54:44: missed:   will not early inline: int main(int, char**)/684->InputParams get_input_params(int, char**)/685, growth 84 exceeds --param early-inlining-insns
+argonmd.cpp:492:18: missed:   not inlinable: compute_forc_epot.constprop/1211 -> double floor(double)/1177, function body not available
+argonmd.cpp:495:18: missed:   not inlinable: compute_forc_epot.constprop/1211 -> double floor(double)/1177, function body not available
+argonmd.cpp:498:18: missed:   not inlinable: compute_forc_epot.constprop/1211 -> double floor(double)/1177, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed:   not inlinable: void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 -> int __fprintf_chk(FILE*, int, const char*, ...)/1178, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed:   not inlinable: void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 -> int __fprintf_chk(FILE*, int, const char*, ...)/1178, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed:   not inlinable: void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 -> int __fprintf_chk(FILE*, int, const char*, ...)/1178, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed:   not inlinable: void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 -> int __fprintf_chk(FILE*, int, const char*, ...)/1178, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed:   not inlinable: void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 -> int __fprintf_chk(FILE*, int, const char*, ...)/1178, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_thermo(int, double, double, double, double, double, double)/697 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_arr(const double*, int, int)/695 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: void print_arr(const double*, int, int)/695 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+argonmd.cpp:573:15: missed:   not inlinable: void update_pos_pbc(double*, double*, const double*, const double*, int, double, double, double, const double*)/692 -> double floor(double)/1177, function body not available
+argonmd.cpp:567:15: missed:   not inlinable: void update_pos_pbc(double*, double*, const double*, const double*, int, double, double, double, const double*)/692 -> double floor(double)/1177, function body not available
+argonmd.cpp:561:15: missed:   not inlinable: void update_pos_pbc(double*, double*, const double*, const double*, int, double, double, double, const double*)/692 -> double floor(double)/1177, function body not available
+argonmd.cpp:498:18: missed:   not inlinable: void compute_forc_epot(const double*, int, int, const int*, const int*, const double*, const double*, double, double, double, double*, double&)/690 -> double floor(double)/1177, function body not available
+argonmd.cpp:495:18: missed:   not inlinable: void compute_forc_epot(const double*, int, int, const int*, const int*, const double*, const double*, double, double, double, double*, double&)/690 -> double floor(double)/1177, function body not available
+argonmd.cpp:492:18: missed:   not inlinable: void compute_forc_epot(const double*, int, int, const int*, const int*, const double*, const double*, double, double, double, double*, double&)/690 -> double floor(double)/1177, function body not available
+argonmd.cpp:447:18: missed:   not inlinable: void compute_neigh(const double*, int, const double*, const double*, double, int, int*, int*)/689 -> double floor(double)/1177, function body not available
+argonmd.cpp:444:18: missed:   not inlinable: void compute_neigh(const double*, int, const double*, const double*, double, int, int*, int*)/689 -> double floor(double)/1177, function body not available
+argonmd.cpp:441:18: missed:   not inlinable: void compute_neigh(const double*, int, const double*, const double*, double, int, int*, int*)/689 -> double floor(double)/1177, function body not available
+argonmd.cpp:403:36: missed:   not inlinable: void rescale_temp(double*, int, double, double&, double&)/688 -> double sqrt(double)/1176, function body not available
+/usr/include/stdlib.h:483:23: missed:   not inlinable: InputParams get_input_params(int, char**)/685 -> long int strtol(const char*, char**, int)/1175, function body not available
+/usr/include/stdlib.h:483:23: missed:   not inlinable: InputParams get_input_params(int, char**)/685 -> long int strtol(const char*, char**, int)/1175, function body not available
+/usr/include/stdlib.h:483:23: missed:   not inlinable: InputParams get_input_params(int, char**)/685 -> long int strtol(const char*, char**, int)/1175, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:27:17: missed:   not inlinable: InputParams get_input_params(int, char**)/685 -> double strtod(const char*, char**)/1174, function body not available
+/usr/include/stdlib.h:483:23: missed:   not inlinable: InputParams get_input_params(int, char**)/685 -> long int strtol(const char*, char**, int)/1175, function body not available
+argonmd.cpp:266:28: missed:   not inlinable: InputParams get_input_params(int, char**)/685 -> char* strtok(char*, const char*)/1171, function body not available
+/usr/include/stdlib.h:483:23: missed:   not inlinable: InputParams get_input_params(int, char**)/685 -> long int strtol(const char*, char**, int)/1175, function body not available
+argonmd.cpp:263:26: missed:   not inlinable: InputParams get_input_params(int, char**)/685 -> char* strtok(char*, const char*)/1171, function body not available
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:79:33: missed:   not inlinable: InputParams get_input_params(int, char**)/685 -> char* __builtin___strcpy_chk(char*, const char*, long unsigned int)/1173, function body not available
+argonmd.cpp:243:11: missed:   not inlinable: int main(int, char**)/684 -> void operator delete [](void*)/1168, function body not available
+argonmd.cpp:242:11: missed:   not inlinable: int main(int, char**)/684 -> void operator delete [](void*)/1168, function body not available
+argonmd.cpp:241:11: missed:   not inlinable: int main(int, char**)/684 -> void operator delete [](void*)/1168, function body not available
+argonmd.cpp:240:11: missed:   not inlinable: int main(int, char**)/684 -> void operator delete [](void*)/1168, function body not available
+argonmd.cpp:239:11: missed:   not inlinable: int main(int, char**)/684 -> void operator delete [](void*)/1168, function body not available
+argonmd.cpp:238:11: missed:   not inlinable: int main(int, char**)/684 -> void operator delete [](void*)/1168, function body not available
+argonmd.cpp:237:11: missed:   not inlinable: int main(int, char**)/684 -> void operator delete [](void*)/1168, function body not available
+argonmd.cpp:234:26: missed:   not inlinable: int main(int, char**)/684 -> int fclose(FILE*)/1166, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: int main(int, char**)/684 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+argonmd.cpp:228:14: missed:   not inlinable: int main(int, char**)/684 -> clock_t clock()/1167, function body not available
+argonmd.cpp:222:13: missed:   not inlinable: int main(int, char**)/684 -> void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698, --param max-inline-insns-auto limit reached
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: int main(int, char**)/684 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+argonmd.cpp:211:18: missed:   not inlinable: int main(int, char**)/684 -> clock_t clock()/1167, function body not available
+argonmd.cpp:202:13: missed:   not inlinable: int main(int, char**)/684 -> void update_vel(double*, const double*, const double*, int, double, double)/693, --param max-inline-insns-auto limit reached
+argonmd.cpp:198:20: missed:   not inlinable: int main(int, char**)/684 -> compute_forc_epot.constprop/1211, --param max-inline-insns-auto limit reached
+argonmd.cpp:191:18: missed:   not inlinable: int main(int, char**)/684 -> void compute_neigh(const double*, int, const double*, const double*, double, int, int*, int*)/689, --param max-inline-insns-auto limit reached
+argonmd.cpp:187:17: missed:   not inlinable: int main(int, char**)/684 -> void update_pos_pbc(double*, double*, const double*, const double*, int, double, double, double, const double*)/692, --param max-inline-insns-auto limit reached
+argonmd.cpp:180:14: missed:   not inlinable: int main(int, char**)/684 -> clock_t clock()/1167, function body not available
+argonmd.cpp:175:15: missed:   not inlinable: int main(int, char**)/684 -> FILE* fopen(const char*, const char*)/1165, function body not available
+argonmd.cpp:174:9: missed:   not inlinable: int main(int, char**)/684 -> int fclose(FILE*)/1166, function body not available
+argonmd.cpp:173:11: missed:   not inlinable: int main(int, char**)/684 -> void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698, --param max-inline-insns-auto limit reached
+argonmd.cpp:172:15: missed:   not inlinable: int main(int, char**)/684 -> FILE* fopen(const char*, const char*)/1165, function body not available
+argonmd.cpp:127:34: missed:   not inlinable: int main(int, char**)/684 -> sizetype __cxa_throw_bad_array_new_length()/1164, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: int main(int, char**)/684 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: int main(int, char**)/684 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+argonmd.cpp:163:11: missed:   not inlinable: int main(int, char**)/684 -> void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696, --param max-inline-insns-auto limit reached
+argonmd.cpp:159:18: missed:   not inlinable: int main(int, char**)/684 -> compute_forc_epot.constprop/1211, --param max-inline-insns-auto limit reached
+argonmd.cpp:156:14: missed:   not inlinable: int main(int, char**)/684 -> void compute_neigh(const double*, int, const double*, const double*, double, int, int*, int*)/689, --param max-inline-insns-auto limit reached
+argonmd.cpp:154:10: missed:   not inlinable: int main(int, char**)/684 -> void check_pbc(double*, int, const double*)/691, --param max-inline-insns-auto limit reached
+argonmd.cpp:151:13: missed:   not inlinable: int main(int, char**)/684 -> void rescale_temp(double*, int, double, double&, double&)/688, call is unlikely and code size would grow
+argonmd.cpp:150:18: missed:   not inlinable: int main(int, char**)/684 -> void compute_temp_ekin(const double*, int, double, double, double, double&, double&)/687, call is unlikely and code size would grow
+argonmd.cpp:148:16: missed:   not inlinable: int main(int, char**)/684 -> void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686, call is unlikely and code size would grow
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed:   not inlinable: int main(int, char**)/684 -> int __printf_chk(int, const char*, ...)/1170, function body not available
+argonmd.cpp:133:43: missed:   not inlinable: int main(int, char**)/684 -> void* operator new [](std::size_t)/1163, function body not available
+argonmd.cpp:132:40: missed:   not inlinable: int main(int, char**)/684 -> void* operator new [](std::size_t)/1163, function body not available
+argonmd.cpp:131:39: missed:   not inlinable: int main(int, char**)/684 -> void* operator new [](std::size_t)/1163, function body not available
+argonmd.cpp:130:42: missed:   not inlinable: int main(int, char**)/684 -> void* operator new [](std::size_t)/1163, function body not available
+argonmd.cpp:129:39: missed:   not inlinable: int main(int, char**)/684 -> void* operator new [](std::size_t)/1163, function body not available
+argonmd.cpp:128:42: missed:   not inlinable: int main(int, char**)/684 -> void* operator new [](std::size_t)/1163, function body not available
+argonmd.cpp:127:34: missed:   not inlinable: int main(int, char**)/684 -> void* operator new [](std::size_t)/1163, function body not available
+argonmd.cpp:54:44: missed:   not inlinable: int main(int, char**)/684 -> InputParams get_input_params(int, char**)/685, --param max-inline-insns-auto limit reached
+argonmd.cpp:208:22: optimized:  Inlined void compute_temp_ekin(const double*, int, double, double, double, double&, double&)/1212 into int main(int, char**)/684 which now has time 1695.440447 and size 343, net change of +18.
+argonmd.cpp:491:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:494:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:497:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:491:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:494:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:497:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:478:22: missed: couldn't vectorize loop
+argonmd.cpp:478:22: missed: not vectorized: control flow in loop.
+argonmd.cpp:488:24: missed: couldn't vectorize loop
+argonmd.cpp:488:24: missed: not vectorized: control flow in loop.
+argonmd.cpp:491:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:494:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:497:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:512:23: missed: not vectorized: vectorization is not profitable.
+argonmd.cpp:512:23: missed: not vectorized: vectorization is not profitable.
+argonmd.cpp:488:24: optimized: loop unrolled 1 times
+/usr/include/stdlib.h:483:23: missed: statement clobbers memory: _72 = strtol (_18, 0B, 10);
+argonmd.cpp:314:24: optimized: sinking common stores to <retval>.ndump
+argonmd.cpp:271:33: optimized: sinking common stores to <retval>.box_units[2]
+/usr/include/stdlib.h:483:23: missed: statement clobbers memory: _63 = strtol (token_string_23, 0B, 10);
+/usr/include/stdlib.h:483:23: missed: statement clobbers memory: _63 = strtol (token_string_23, 0B, 10);
+argonmd.cpp:264:26: missed: couldn't vectorize loop
+argonmd.cpp:264:26: missed: not vectorized: number of iterations cannot be computed.
+/usr/include/stdlib.h:483:23: missed: statement clobbers memory: _63 = strtol (token_string_23, 0B, 10);
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:79:33: missed: statement clobbers memory: __builtin___strcpy_chk (&input_string, _1, 63);
+argonmd.cpp:263:26: missed: statement clobbers memory: token_string_37 = strtok (&input_string, ",");
+/usr/include/stdlib.h:483:23: missed: statement clobbers memory: _63 = strtol (token_string_23, 0B, 10);
+argonmd.cpp:266:28: missed: statement clobbers memory: token_string_55 = strtok (0B, ",");
+/usr/include/stdlib.h:483:23: missed: statement clobbers memory: _65 = strtol (_12, 0B, 10);
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:27:17: missed: statement clobbers memory: _67 = strtod (_13, 0B);
+/usr/include/stdlib.h:483:23: missed: statement clobbers memory: _68 = strtol (_15, 0B, 10);
+/usr/include/stdlib.h:483:23: missed: statement clobbers memory: _70 = strtol (_16, 0B, 10);
+/usr/include/stdlib.h:483:23: missed: statement clobbers memory: _72 = strtol (_18, 0B, 10);
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:353:30: optimized: loop with 5 iterations completely unrolled (header execution count 178992760)
+argonmd.cpp:351:30: optimized: loop with 5 iterations completely unrolled (header execution count 178992760)
+argonmd.cpp:349:30: optimized: loop with 5 iterations completely unrolled (header execution count 178992760)
+argonmd.cpp:368:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:368:22: optimized: loop vectorized using 16 byte vectors
+argonmd.cpp:334:22: missed: couldn't vectorize loop
+argonmd.cpp:334:22: missed: not vectorized: loop nest containing two or more consecutive inner loops cannot be vectorized
+argonmd.cpp:335:24: missed: couldn't vectorize loop
+argonmd.cpp:335:24: missed: not vectorized: loop nest containing two or more consecutive inner loops cannot be vectorized
+argonmd.cpp:336:26: missed: couldn't vectorize loop
+argonmd.cpp:336:26: missed: not vectorized: loop nest containing two or more consecutive inner loops cannot be vectorized
+argonmd.cpp:337:28: missed: couldn't vectorize loop
+argonmd.cpp:340:59: missed: not vectorized: no vectype for stmt: _15 = *_14;
+ scalar_type: const double
+argonmd.cpp:350:26: missed: not vectorized: vectorization is not profitable.
+argonmd.cpp:350:26: missed: not vectorized: vectorization is not profitable.
+argonmd.cpp:368:22: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:323:6: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:323:6: missed: not vectorized: vectorization is not profitable.
+argonmd.cpp:323:6: missed: not vectorized: vectorization is not profitable.
+argonmd.cpp:368:22: optimized: loop unrolled 3 times
+argonmd.cpp:384:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:384:22: optimized: loop vectorized using 16 byte vectors
+argonmd.cpp:384:22: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:379:6: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:384:22: optimized: loop unrolled 1 times
+argonmd.cpp:403:36: missed: statement clobbers memory: t_factor_sqrt_41 = sqrt (t_factor_27);
+argonmd.cpp:405:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:405:22: optimized: loop vectorized using 16 byte vectors
+argonmd.cpp:405:22: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:399:6: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:403:36: missed: statement clobbers memory: t_factor_sqrt_41 = sqrt (t_factor_27);
+argonmd.cpp:406:22: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:405:22: optimized: loop unrolled 3 times
+argonmd.cpp:431:22: optimized: Loop 1 distributed: split to 0 loops and 1 library calls.
+argonmd.cpp:440:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:443:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:446:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:451:42: missed: failed: evolution of base is not affine.
+argonmd.cpp:440:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:443:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:446:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:451:42: missed: failed: evolution of base is not affine.
+argonmd.cpp:440:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:443:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:446:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:451:42: missed: failed: evolution of base is not affine.
+argonmd.cpp:435:22: missed: couldn't vectorize loop
+argonmd.cpp:435:22: missed: not vectorized: control flow in loop.
+argonmd.cpp:437:24: missed: couldn't vectorize loop
+argonmd.cpp:437:24: missed: not vectorized: control flow in loop.
+argonmd.cpp:440:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:443:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:446:53: missed: failed: evolution of base is not affine.
+argonmd.cpp:451:42: missed: failed: evolution of base is not affine.
+argonmd.cpp:432:19: missed: statement clobbers memory: __builtin_memset (numneigh_74(D), 0, _151);
+argonmd.cpp:437:24: optimized: loop unrolled 1 times
+argonmd.cpp:491:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:494:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:497:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:491:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:494:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:497:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:478:22: missed: couldn't vectorize loop
+argonmd.cpp:478:22: missed: not vectorized: control flow in loop.
+argonmd.cpp:488:24: missed: couldn't vectorize loop
+argonmd.cpp:488:24: missed: not vectorized: control flow in loop.
+argonmd.cpp:491:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:494:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:497:38: missed: failed: evolution of base is not affine.
+argonmd.cpp:512:23: missed: not vectorized: vectorization is not profitable.
+argonmd.cpp:512:23: missed: not vectorized: vectorization is not profitable.
+argonmd.cpp:488:24: optimized: loop unrolled 1 times
+argonmd.cpp:530:22: missed: couldn't vectorize loop
+argonmd.cpp:530:22: missed: not vectorized: control flow in loop.
+argonmd.cpp:530:22: optimized: loop unrolled 1 times
+argonmd.cpp:558:22: missed: couldn't vectorize loop
+argonmd.cpp:559:32: missed: not vectorized: no vectype for stmt: _5 = *_4;
+ scalar_type: const double
+argonmd.cpp:558:22: optimized: loop unrolled 1 times
+argonmd.cpp:586:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:586:22: optimized:  loop versioned for vectorization because of possible aliasing
+argonmd.cpp:586:22: optimized: loop vectorized using 16 byte vectors
+argonmd.cpp:586:22: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:582:6: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:586:22: optimized: loop unrolled 3 times
+argonmd.cpp:586:22: optimized: loop unrolled 1 times
+argonmd.cpp:610:9: optimized: sinking common stores to *idum_12(D)
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "%+16.6E %+16.6E %+16.6E\n", _13, _10, _6);
+argonmd.cpp:630:27: missed: couldn't vectorize loop
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "%+16.6E %+16.6E %+16.6E\n", _13, _10, _6);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "%+16.6E %+16.6E %+16.6E\n", _13, _10, _6);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "\n%16c %16c %16c\n", 88, 89, 90);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "%+16.6E %+16.6E %+16.6E\n", _13, _10, _6);
+argonmd.cpp:630:27: optimized: loop unrolled 3 times
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "\n Box Units : %-3i  %-3i  %-3i\n", _3, _2, _1);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " No. Time Steps : %i\n", nsteps_9(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " Initial Temp [K] : %-6.1F\n", temp_ini_10(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " Neigh Update Freq : %i\n", nneighupd_11(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " Thermo Print Freq : %i\n", nthermo_12(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " Coord Dump Freq : %i\n", ndump_13(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "\n Time Step [ps] : %-5.3F\n", dt_14(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " Cutoff Dist [Ang] : %-5.3F\n", cut_15(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " Cell Par [Ang] : %-5.3F\n", cellpar_16(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " Box Length [Ang] : %-7.3F  %-7.3F  %-7.3F\n", _6, _5, _4);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " No. Atoms : %i\n", natoms_18(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " %9i  %10.3F  %8.3F  %+12.9F  %+12.9F  %+12.9F  %10.3F\n", istep_2(D), time_3(D), temp_4(D), ekin_5(D), epot_6(D), etot_7(D), clock_8(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "ATOM  %5i %4s UNK  %-5i   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", _17, elsym_44(D), _17, _16, _13, _9, elsym_44(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "ATOM  %5X %4s UNK  %-5X   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", _31, elsym_44(D), _31, _30, _27, _23, elsym_44(D));
+argonmd.cpp:684:23: missed: couldn't vectorize loop
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "ATOM  %5i %4s UNK  %-5i   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", _17, elsym_44(D), _17, _16, _13, _9, elsym_44(D));
+argonmd.cpp:689:23: missed: couldn't vectorize loop
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "ATOM  %5X %4s UNK  %-5X   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", _31, elsym_44(D), _31, _30, _27, _23, elsym_44(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "ATOM  %5X %4s UNK  %-5X   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", _31, elsym_44(D), _31, _30, _27, _23, elsym_44(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "ATOM  %5i %4s UNK  %-5i   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", _17, elsym_44(D), _17, _16, _13, _9, elsym_44(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "REMARK --- frame: %-5i\n", istep_39(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "CRYST1%9.3F%9.3F%9.3F%7.2F%7.2F%7.2F\n", _3, _2, _1, boxang_41(D), boxang_41(D), boxang_41(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "ATOM  %5X %4s UNK  %-5X   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", _31, elsym_44(D), _31, _30, _27, _23, elsym_44(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "ATOM  %5i %4s UNK  %-5i   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", _17, elsym_44(D), _17, _16, _13, _9, elsym_44(D));
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:79:24: missed: statement clobbers memory: __fprintf_chk (file_38(D), 2, "END   \n");
+argonmd.cpp:684:23: optimized: loop unrolled 1 times
+argonmd.cpp:689:23: optimized: loop unrolled 1 times
+argonmd.cpp:181:23: missed: couldn't vectorize loop
+argonmd.cpp:181:23: missed: not vectorized: control flow in loop.
+argonmd.cpp:384:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:54:44: missed: statement clobbers memory: input_params = get_input_params (argc_62(D), argv_63(D)); [return slot optimization]
+argonmd.cpp:127:34: missed: statement clobbers memory: __cxa_throw_bad_array_new_length ();
+argonmd.cpp:127:34: missed: statement clobbers memory: _97 = operator new [] (iftmp.0_95);
+argonmd.cpp:128:42: missed: statement clobbers memory: _100 = operator new [] (iftmp.1_98);
+argonmd.cpp:129:39: missed: statement clobbers memory: _103 = operator new [] (iftmp.2_101);
+argonmd.cpp:130:42: missed: statement clobbers memory: _105 = operator new [] (iftmp.2_101);
+argonmd.cpp:131:39: missed: statement clobbers memory: _107 = operator new [] (iftmp.2_101);
+argonmd.cpp:132:40: missed: statement clobbers memory: _110 = operator new [] (iftmp.2_101);
+argonmd.cpp:133:43: missed: statement clobbers memory: _113 = operator new [] (iftmp.2_101);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "\n** ArgonMD **\n");
+argonmd.cpp:148:16: missed: statement clobbers memory: setup_struc_vel (4, &box_units, 5.7949999999999999289457264239899814128875732421875e+0, &unitpos, natoms_73, _103, _105, _107);
+argonmd.cpp:150:18: missed: statement clobbers memory: compute_temp_ekin (_107, natoms_73, 3.99500000000000028421709430404007434844970703125e+1, temp_scale_93, 1.03642663765126435081696809614726362269720993936061859131e-4, &temp, &ekin);
+argonmd.cpp:151:13: missed: statement clobbers memory: rescale_temp (_107, natoms_73, temp_ini_69, &temp, &ekin);
+argonmd.cpp:154:10: missed: statement clobbers memory: check_pbc (_103, natoms_73, &boxlen);
+argonmd.cpp:156:14: missed: statement clobbers memory: compute_neigh (_103, natoms_73, &boxlen, &boxhalf, 9.62596454399999856832437217235565185546875e+1, 150, _97, _100);
+argonmd.cpp:159:18: missed: statement clobbers memory: compute_forc_epot.constprop (_103, natoms_73, _97, _100, &boxlen, &boxhalf, _110, &epot);
+argonmd.cpp:163:11: missed: statement clobbers memory: print_info (&box_units, nsteps_68, temp_ini_69, nneighupd_70, nthermo_71, ndump_72, 1.00000000000000002081668171172168513294309377670288085938e-3, 8.7599999999999997868371792719699442386627197265625e+0, 5.7949999999999999289457264239899814128875732421875e+0, &boxlen, natoms_73);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "\n %9s  %10s  %8s  %12s  %12s  %12s  %10s\n", "Step", "Time[ps]", "Temp[K]", "Ekin[eV]", "Epot[eV]", "Etot[eV]", "Clock[s]");
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " %9i  %10.3F  %8.3F  %+12.9F  %+12.9F  %+12.9F  %10.3F\n", 0, 0.0, temp.11_30, _29, _28, _27, 0.0);
+argonmd.cpp:172:15: missed: statement clobbers memory: _123 = fopen ("coord.pdb", "w");
+argonmd.cpp:173:11: missed: statement clobbers memory: dump_pdb (_123, 0, &boxlen, 9.0e+1, "Ar", _103, natoms_73);
+argonmd.cpp:174:9: missed: statement clobbers memory: fclose (_123);
+argonmd.cpp:175:15: missed: statement clobbers memory: _127 = fopen ("traj.pdb", "w");
+argonmd.cpp:180:14: missed: statement clobbers memory: start_129 = clock ();
+argonmd.cpp:228:14: missed: statement clobbers memory: _184 = clock ();
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "\n Loop Clock Time [s] : %10.3F\n", clocktime_187);
+argonmd.cpp:187:17: missed: statement clobbers memory: update_pos_pbc (_103, _105, _107, forc_193, natoms_73, 1.00000000000000002081668171172168513294309377670288085938e-3, 4.82426813279416503293939300078818632755428552627563476562e-3, 2.5031289111389236345939224293033475987613201141357421875e-2, &boxlen);
+argonmd.cpp:191:18: missed: statement clobbers memory: compute_neigh (_103, natoms_73, &boxlen, &boxhalf, 9.62596454399999856832437217235565185546875e+1, 150, _97, _100);
+argonmd.cpp:198:20: missed: statement clobbers memory: compute_forc_epot.constprop (_103, natoms_73, _97, _100, &boxlen, &boxhalf, forcold_195, &epot);
+argonmd.cpp:202:13: missed: statement clobbers memory: update_vel (_107, forc_193, forcold_195, natoms_73, 4.82426813279416588642334318137727677822113037109375e+0, 2.5031289111389236345939224293033475987613201141357421875e-2);
+argonmd.cpp:211:18: missed: statement clobbers memory: _33 = clock ();
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, " %9i  %10.3F  %8.3F  %+12.9F  %+12.9F  %+12.9F  %10.3F\n", istep_197, _44, _188, _41, _40, _39, clocktime_156);
+argonmd.cpp:222:13: missed: statement clobbers memory: dump_pdb (traj_52, istep_197, &boxlen, 9.0e+1, "Ar", _103, natoms_73);
+argonmd.cpp:228:14: missed: statement clobbers memory: _46 = clock ();
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:86:23: missed: statement clobbers memory: __printf_chk (2, "\n Loop Clock Time [s] : %10.3F\n", clocktime_132);
+argonmd.cpp:234:26: missed: statement clobbers memory: fclose (traj_52);
+argonmd.cpp:237:11: missed: statement clobbers memory: operator delete [] (forcold_210);
+argonmd.cpp:238:11: missed: statement clobbers memory: operator delete [] (forc_207);
+argonmd.cpp:239:11: missed: statement clobbers memory: operator delete [] (_107);
+argonmd.cpp:240:11: missed: statement clobbers memory: operator delete [] (_105);
+argonmd.cpp:241:11: missed: statement clobbers memory: operator delete [] (_103);
+argonmd.cpp:242:11: missed: statement clobbers memory: operator delete [] (_100);
+argonmd.cpp:243:11: missed: statement clobbers memory: operator delete [] (_97);
+argonmd.cpp:85:14: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:85:14: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:181:23: missed: missed loop optimization: niters analysis ends up with assumptions.
+argonmd.cpp:384:22: optimized: loop unrolled 1 times

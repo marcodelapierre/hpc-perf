@@ -1,0 +1,245 @@
+======================================================================================
+======================================================================================
+Welcome to AMD Optimization Report 1.0 
+Date : 2025-06-06 16:40:46.397299
+User : mdelapierre
+Machine : lenovoE14-mdelapierre
+Processor : x86_64
+Memory : 14 GB
+Platform : Linux
+Platform Details : Linux 6.11.0-25-generic
+======================================================================================
+======================================================================================
+
+AMD Optimization Report Details...
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:388:9
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  cannot prove it is safe to reorder floating-point operations
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:405:3
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that interleaving is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:405:3
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Successful
+Additional information loop-vectorize Optimization : vectorized loop (vectorization width: 4, interleaved count: 1)
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:530:3
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that vectorization is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:530:3
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that interleaving is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:437:5
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  value that could not be identified as reduction is used outside the loop
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:586:3
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that interleaving is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:586:3
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Successful
+Additional information loop-vectorize Optimization : vectorized loop (vectorization width: 4, interleaved count: 1)
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:558:3
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that interleaving is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:558:3
+Optimizer Passname : loop-vectorize
+Function Name : main
+loop-vectorize Optimization Status : Successful
+Additional information loop-vectorize Optimization : vectorized loop (vectorization width: 4, interleaved count: 1)
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:264:5
+Optimizer Passname : loop-vectorize
+Function Name : get_input_params(int, char**)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  value that could not be identified as reduction is used outside the loop
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:264:5
+Optimizer Passname : loop-vectorize
+Function Name : get_input_params(int, char**)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  It is not possible to determine the number of loop iterations.
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:356:17
+Optimizer Passname : loop-vectorize
+Function Name : setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  cannot prove it is safe to reorder floating-point operations
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:368:3
+Optimizer Passname : loop-vectorize
+Function Name : setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that interleaving is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:368:3
+Optimizer Passname : loop-vectorize
+Function Name : setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*)
+loop-vectorize Optimization Status : Successful
+Additional information loop-vectorize Optimization : vectorized loop (vectorization width: 4, interleaved count: 1)
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:388:9
+Optimizer Passname : loop-vectorize
+Function Name : compute_temp_ekin(double const*, int, double, double, double, double&, double&)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  cannot prove it is safe to reorder floating-point operations
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:405:3
+Optimizer Passname : loop-vectorize
+Function Name : rescale_temp(double*, int, double, double&, double&)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that interleaving is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:405:3
+Optimizer Passname : loop-vectorize
+Function Name : rescale_temp(double*, int, double, double&, double&)
+loop-vectorize Optimization Status : Successful
+Additional information loop-vectorize Optimization : vectorized loop (vectorization width: 4, interleaved count: 1)
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:530:3
+Optimizer Passname : loop-vectorize
+Function Name : check_pbc(double*, int, double const*)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that vectorization is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:530:3
+Optimizer Passname : loop-vectorize
+Function Name : check_pbc(double*, int, double const*)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that interleaving is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:437:5
+Optimizer Passname : loop-vectorize
+Function Name : compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  value that could not be identified as reduction is used outside the loop
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:488:5
+Optimizer Passname : loop-vectorize
+Function Name : compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  value that could not be identified as reduction is used outside the loop
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:491:23
+Optimizer Passname : loop-vectorize
+Function Name : compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  Array bounds cannot be determined because the loop uses arrays where the array element is of aggregate type.
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:690:7
+Optimizer Passname : loop-vectorize
+Function Name : dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  Call instruction cannot be vectorized because the called function fprintf is a non-intrinsic function.
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:689:5
+Optimizer Passname : loop-vectorize
+Function Name : dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  'call' instruction may read from memory. Only load instruction is supported.
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:685:7
+Optimizer Passname : loop-vectorize
+Function Name : dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  Call instruction cannot be vectorized because the called function fprintf is a non-intrinsic function.
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:684:5
+Optimizer Passname : loop-vectorize
+Function Name : dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  'call' instruction may read from memory. Only load instruction is supported.
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:558:3
+Optimizer Passname : loop-vectorize
+Function Name : update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that interleaving is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:558:3
+Optimizer Passname : loop-vectorize
+Function Name : update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*)
+loop-vectorize Optimization Status : Successful
+Additional information loop-vectorize Optimization : vectorized loop (vectorization width: 4, interleaved count: 1)
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:586:3
+Optimizer Passname : loop-vectorize
+Function Name : update_vel(double*, double const*, double const*, int, double, double)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure : the cost-model indicates that interleaving is not beneficial
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:586:3
+Optimizer Passname : loop-vectorize
+Function Name : update_vel(double*, double const*, double const*, int, double, double)
+loop-vectorize Optimization Status : Successful
+Additional information loop-vectorize Optimization : vectorized loop (vectorization width: 4, interleaved count: 1)
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:631:5
+Optimizer Passname : loop-vectorize
+Function Name : print_arr(double const*, int, int)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  Call instruction cannot be vectorized because the called function printf is a non-intrinsic function.
+**************************************************************************************
+**************************************************************************************
+Source location : argonmd.cpp:630:3
+Optimizer Passname : loop-vectorize
+Function Name : print_arr(double const*, int, int)
+loop-vectorize Optimization Status : Failed
+Reason for loop-vectorize Optimization Failure :  'call' instruction may read from memory. Only load instruction is supported.

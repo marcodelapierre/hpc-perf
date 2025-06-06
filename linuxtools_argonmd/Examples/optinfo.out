@@ -1,0 +1,86 @@
+argonmd.cpp:312:30: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:307:32: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:302:34: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:297:33: optimized:   Inlining double atof(const char*)/227 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:292:31: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:265:32: optimized:   Inlining int atoi(const char*)/217 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:262:12: optimized:   Inlining char* strcpy(char*, const char*)/512 into InputParams get_input_params(int, char**)/685 (always_inline).
+argonmd.cpp:354:34: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:353:47: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:352:34: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:351:47: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:350:34: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:349:47: optimized:  Inlining double random(int*)/694 into void setup_struc_vel(int, const int*, double, const double*, int, double*, double*, double*)/686.
+argonmd.cpp:631:11: optimized:   Inlining int printf(const char*, ...)/256 into void print_arr(const double*, int, int)/695 (always_inline).
+argonmd.cpp:629:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_arr(const double*, int, int)/695 (always_inline).
+argonmd.cpp:658:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:656:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:655:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:654:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:653:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:651:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:650:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:649:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:648:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:647:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:645:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_info(const int*, int, double, int, int, int, double, double, double, const double*, int)/696 (always_inline).
+argonmd.cpp:669:9: optimized:   Inlining int printf(const char*, ...)/256 into void print_thermo(int, double, double, double, double, double, double)/697 (always_inline).
+argonmd.cpp:694:10: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:690:14: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:685:14: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:682:10: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:681:10: optimized:   Inlining int fprintf(FILE*, const char*, ...)/255 into void dump_pdb(FILE*, int, const double*, double, const char*, const double*, int)/698 (always_inline).
+argonmd.cpp:230:7: optimized:   Inlining int printf(const char*, ...)/256 into int main(int, char**)/684 (always_inline).
+argonmd.cpp:167:7: optimized:   Inlining int printf(const char*, ...)/256 into int main(int, char**)/684 (always_inline).
+argonmd.cpp:144:7: optimized:   Inlining int printf(const char*, ...)/256 into int main(int, char**)/684 (always_inline).
+argonmd.cpp:215:17: optimized:  Inlining void print_thermo(int, double, double, double, double, double, double)/697 into int main(int, char**)/684.
+argonmd.cpp:168:13: optimized:  Inlining void print_thermo(int, double, double, double, double, double, double)/697 into int main(int, char**)/684.
+argonmd.cpp:208:22: optimized:  Inlined void compute_temp_ekin(const double*, int, double, double, double, double&, double&)/1212 into int main(int, char**)/684 which now has time 1695.440447 and size 343, net change of +18.
+argonmd.cpp:488:24: optimized: loop unrolled 1 times
+argonmd.cpp:314:24: optimized: sinking common stores to <retval>.ndump
+argonmd.cpp:271:33: optimized: sinking common stores to <retval>.box_units[2]
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:269:33: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:353:30: optimized: loop with 5 iterations completely unrolled (header execution count 178992760)
+argonmd.cpp:351:30: optimized: loop with 5 iterations completely unrolled (header execution count 178992760)
+argonmd.cpp:349:30: optimized: loop with 5 iterations completely unrolled (header execution count 178992760)
+argonmd.cpp:368:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:368:22: optimized: loop vectorized using 16 byte vectors
+argonmd.cpp:368:22: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:323:6: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:368:22: optimized: loop unrolled 3 times
+argonmd.cpp:384:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:384:22: optimized: loop vectorized using 16 byte vectors
+argonmd.cpp:384:22: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:379:6: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:384:22: optimized: loop unrolled 1 times
+argonmd.cpp:405:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:405:22: optimized: loop vectorized using 16 byte vectors
+argonmd.cpp:405:22: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:399:6: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:406:22: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:405:22: optimized: loop unrolled 3 times
+argonmd.cpp:431:22: optimized: Loop 1 distributed: split to 0 loops and 1 library calls.
+argonmd.cpp:437:24: optimized: loop unrolled 1 times
+argonmd.cpp:488:24: optimized: loop unrolled 1 times
+argonmd.cpp:530:22: optimized: loop unrolled 1 times
+argonmd.cpp:558:22: optimized: loop unrolled 1 times
+argonmd.cpp:586:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:586:22: optimized:  loop versioned for vectorization because of possible aliasing
+argonmd.cpp:586:22: optimized: loop vectorized using 16 byte vectors
+argonmd.cpp:586:22: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:582:6: optimized: loop turned into non-loop; it never loops
+argonmd.cpp:586:22: optimized: loop unrolled 3 times
+argonmd.cpp:586:22: optimized: loop unrolled 1 times
+argonmd.cpp:610:9: optimized: sinking common stores to *idum_12(D)
+argonmd.cpp:630:27: optimized: loop unrolled 3 times
+argonmd.cpp:684:23: optimized: loop unrolled 1 times
+argonmd.cpp:689:23: optimized: loop unrolled 1 times
+argonmd.cpp:384:22: optimized: loop vectorized using 32 byte vectors
+argonmd.cpp:85:14: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:85:14: optimized: basic block part vectorized using 32 byte vectors
+argonmd.cpp:384:22: optimized: loop unrolled 1 times

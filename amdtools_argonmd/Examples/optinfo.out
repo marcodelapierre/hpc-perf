@@ -1,0 +1,423 @@
+--- !AnalysisFPCommute
+Pass:            loop-vectorize
+Name:            CantReorderFPOps
+DebugLoc:        { File: argonmd.cpp, Line: 388, Column: 9 }
+Function:        main
+Args:
+  - String:          'loop not vectorized: cannot prove it is safe to reorder floating-point operations'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 384, Column: 3 }
+Function:        main
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 405, Column: 3 }
+Function:        main
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-vectorize
+Name:            Vectorized
+DebugLoc:        { File: argonmd.cpp, Line: 405, Column: 3 }
+Function:        main
+Args:
+  - String:          'vectorized loop (vectorization width: '
+  - VectorizationFactor: '4'
+  - String:          ', interleaved count: '
+  - InterleaveCount: '1'
+  - String:          ')'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            VectorizationNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 530, Column: 3 }
+Function:        main
+Args:
+  - String:          the cost-model indicates that vectorization is not beneficial
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 530, Column: 3 }
+Function:        main
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: argonmd.cpp, Line: 437, Column: 5 }
+Function:        main
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 437, Column: 5 }
+Function:        main
+Args:
+  - String:          loop not vectorized
+...
+--- !AnalysisFPCommute
+Pass:            loop-vectorize
+Name:            CantReorderFPOps
+DebugLoc:        { File: argonmd.cpp, Line: 388, Column: 9 }
+Function:        main
+Args:
+  - String:          'loop not vectorized: cannot prove it is safe to reorder floating-point operations'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 384, Column: 3 }
+Function:        main
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 586, Column: 3 }
+Function:        main
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-vectorize
+Name:            Vectorized
+DebugLoc:        { File: argonmd.cpp, Line: 586, Column: 3 }
+Function:        main
+Args:
+  - String:          'vectorized loop (vectorization width: '
+  - VectorizationFactor: '4'
+  - String:          ', interleaved count: '
+  - InterleaveCount: '1'
+  - String:          ')'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: argonmd.cpp, Line: 437, Column: 5 }
+Function:        main
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 437, Column: 5 }
+Function:        main
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 558, Column: 3 }
+Function:        main
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-vectorize
+Name:            Vectorized
+DebugLoc:        { File: argonmd.cpp, Line: 558, Column: 3 }
+Function:        main
+Args:
+  - String:          'vectorized loop (vectorization width: '
+  - VectorizationFactor: '4'
+  - String:          ', interleaved count: '
+  - InterleaveCount: '1'
+  - String:          ')'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: argonmd.cpp, Line: 264, Column: 5 }
+Function:        _Z16get_input_paramsiPPc
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: argonmd.cpp, Line: 264, Column: 5 }
+Function:        _Z16get_input_paramsiPPc
+Args:
+  - String:          'loop not vectorized: '
+  - String:          It is not possible to determine the number of loop iterations.
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 264, Column: 5 }
+Function:        _Z16get_input_paramsiPPc
+Args:
+  - String:          loop not vectorized
+...
+--- !AnalysisFPCommute
+Pass:            loop-vectorize
+Name:            CantReorderFPOps
+DebugLoc:        { File: argonmd.cpp, Line: 356, Column: 17 }
+Function:        _Z15setup_struc_veliPKidPKdiPdS3_S3_
+Args:
+  - String:          'loop not vectorized: cannot prove it is safe to reorder floating-point operations'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 337, Column: 9 }
+Function:        _Z15setup_struc_veliPKidPKdiPdS3_S3_
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 368, Column: 3 }
+Function:        _Z15setup_struc_veliPKidPKdiPdS3_S3_
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-vectorize
+Name:            Vectorized
+DebugLoc:        { File: argonmd.cpp, Line: 368, Column: 3 }
+Function:        _Z15setup_struc_veliPKidPKdiPdS3_S3_
+Args:
+  - String:          'vectorized loop (vectorization width: '
+  - VectorizationFactor: '4'
+  - String:          ', interleaved count: '
+  - InterleaveCount: '1'
+  - String:          ')'
+...
+--- !AnalysisFPCommute
+Pass:            loop-vectorize
+Name:            CantReorderFPOps
+DebugLoc:        { File: argonmd.cpp, Line: 388, Column: 9 }
+Function:        _Z17compute_temp_ekinPKdidddRdS1_
+Args:
+  - String:          'loop not vectorized: cannot prove it is safe to reorder floating-point operations'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 384, Column: 3 }
+Function:        _Z17compute_temp_ekinPKdidddRdS1_
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 405, Column: 3 }
+Function:        _Z12rescale_tempPdidRdS0_
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-vectorize
+Name:            Vectorized
+DebugLoc:        { File: argonmd.cpp, Line: 405, Column: 3 }
+Function:        _Z12rescale_tempPdidRdS0_
+Args:
+  - String:          'vectorized loop (vectorization width: '
+  - VectorizationFactor: '4'
+  - String:          ', interleaved count: '
+  - InterleaveCount: '1'
+  - String:          ')'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            VectorizationNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 530, Column: 3 }
+Function:        _Z9check_pbcPdiPKd
+Args:
+  - String:          the cost-model indicates that vectorization is not beneficial
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 530, Column: 3 }
+Function:        _Z9check_pbcPdiPKd
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: argonmd.cpp, Line: 437, Column: 5 }
+Function:        _Z13compute_neighPKdiS0_S0_diPiS1_
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 437, Column: 5 }
+Function:        _Z13compute_neighPKdiS0_S0_diPiS1_
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: argonmd.cpp, Line: 488, Column: 5 }
+Function:        _Z17compute_forc_epotPKdiiPKiS2_S0_S0_dddPdRd
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantIdentifyArrayBounds
+DebugLoc:        { File: argonmd.cpp, Line: 491, Column: 23 }
+Function:        _Z17compute_forc_epotPKdiiPKiS2_S0_S0_dddPdRd
+Args:
+  - String:          'loop not vectorized: '
+  - String:          Array bounds cannot be determined because the loop uses arrays where the array element is of aggregate type.
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 488, Column: 5 }
+Function:        _Z17compute_forc_epotPKdiiPKiS2_S0_S0_dddPdRd
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeLibcall
+DebugLoc:        { File: argonmd.cpp, Line: 690, Column: 7 }
+Function:        _Z8dump_pdbP8_IO_FILEiPKddPKcS2_i
+Args:
+  - String:          'loop not vectorized: '
+  - String:          Call instruction cannot be vectorized because the called function fprintf is a non-intrinsic function.
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeInstruction
+DebugLoc:        { File: argonmd.cpp, Line: 689, Column: 5 }
+Function:        _Z8dump_pdbP8_IO_FILEiPKddPKcS2_i
+Args:
+  - String:          'loop not vectorized: '
+  - String:          ''''
+  - String:          call
+  - String:          ''' instruction may read from memory. Only load instruction is supported.'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 689, Column: 5 }
+Function:        _Z8dump_pdbP8_IO_FILEiPKddPKcS2_i
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeLibcall
+DebugLoc:        { File: argonmd.cpp, Line: 685, Column: 7 }
+Function:        _Z8dump_pdbP8_IO_FILEiPKddPKcS2_i
+Args:
+  - String:          'loop not vectorized: '
+  - String:          Call instruction cannot be vectorized because the called function fprintf is a non-intrinsic function.
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeInstruction
+DebugLoc:        { File: argonmd.cpp, Line: 684, Column: 5 }
+Function:        _Z8dump_pdbP8_IO_FILEiPKddPKcS2_i
+Args:
+  - String:          'loop not vectorized: '
+  - String:          ''''
+  - String:          call
+  - String:          ''' instruction may read from memory. Only load instruction is supported.'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 684, Column: 5 }
+Function:        _Z8dump_pdbP8_IO_FILEiPKddPKcS2_i
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 558, Column: 3 }
+Function:        _Z14update_pos_pbcPdS_PKdS1_idddS1_
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-vectorize
+Name:            Vectorized
+DebugLoc:        { File: argonmd.cpp, Line: 558, Column: 3 }
+Function:        _Z14update_pos_pbcPdS_PKdS1_idddS1_
+Args:
+  - String:          'vectorized loop (vectorization width: '
+  - VectorizationFactor: '4'
+  - String:          ', interleaved count: '
+  - InterleaveCount: '1'
+  - String:          ')'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: argonmd.cpp, Line: 586, Column: 3 }
+Function:        _Z10update_velPdPKdS1_idd
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-vectorize
+Name:            Vectorized
+DebugLoc:        { File: argonmd.cpp, Line: 586, Column: 3 }
+Function:        _Z10update_velPdPKdS1_idd
+Args:
+  - String:          'vectorized loop (vectorization width: '
+  - VectorizationFactor: '4'
+  - String:          ', interleaved count: '
+  - InterleaveCount: '1'
+  - String:          ')'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeLibcall
+DebugLoc:        { File: argonmd.cpp, Line: 631, Column: 5 }
+Function:        _Z9print_arrPKdii
+Args:
+  - String:          'loop not vectorized: '
+  - String:          Call instruction cannot be vectorized because the called function printf is a non-intrinsic function.
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeInstruction
+DebugLoc:        { File: argonmd.cpp, Line: 630, Column: 3 }
+Function:        _Z9print_arrPKdii
+Args:
+  - String:          'loop not vectorized: '
+  - String:          ''''
+  - String:          call
+  - String:          ''' instruction may read from memory. Only load instruction is supported.'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: argonmd.cpp, Line: 630, Column: 3 }
+Function:        _Z9print_arrPKdii
+Args:
+  - String:          loop not vectorized
+...
