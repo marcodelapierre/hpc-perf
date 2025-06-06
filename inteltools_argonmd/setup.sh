@@ -1,5 +1,8 @@
 #!/bin/bash
 
+module purge
+. /opt/intel/oneapi/setvars.sh
+
 #git clone git@github.com:marcodelapierre/argonmd
 #cp argonmd/serial_one_source/argonmd.cpp .
 

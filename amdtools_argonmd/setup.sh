@@ -1,5 +1,8 @@
 #!/bin/bash
 
+module purge
+module load zen
+
 #git clone git@github.com:marcodelapierre/argonmd
 #cp argonmd/serial_one_source/argonmd.cpp .
 
