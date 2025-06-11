@@ -1,7 +1,24 @@
 # hpc-perf
 Workflows and examples for HPC performance analysis
 
-# Useful readings
+## Examples considered
+- argonmd molecular dynamics mini-app: https://github.com/marcodelapierre/argonmd
+- cardiac fem mini-app: https://github.com/CardiacDemo/Cardiac_demo.git
+
+## Compilers in use
+- GNU compiler collection
+- AMD AOCC
+- Intel oneAPI
+
+## Profilers in use
+- Linux `time`
+- Linux `gprof`
+- Linux `gprofng`
+- Linux `perf` tools
+- AMD uProf
+- Intel vTune and Advisor
+
+## Useful readings
 - [`profng` docs](https://sourceware.org/binutils/docs-2.42/gprofng.html)
 - [`perf` docs](https://perfwiki.github.io/main), includes good intro to Top-Down Analysis
 - [`perf` examples](https://www.brendangregg.com/perf.html)
@@ -11,6 +28,6 @@ Workflows and examples for HPC performance analysis
 - [Intel Advisor Cookbook](https://www.intel.com/content/www/us/en/docs/advisor/cookbook/2024-2/overview.html)
 - [Intel article on performance optimisation](https://www.intel.com/content/www/us/en/developer/articles/technical/demystifying-software-performance-optimization.html)
 - [Intel vectorisation guide](https://www.intel.com/content/dam/develop/external/us/en/documents/31848-compilerautovectorizationguide.pdf)
-- [Intel code examples on GitHub](git@github.com:oneapi-src/oneAPI-samples.git)
+- [Intel code examples on GitHub](https://github.com/oneapi-src/oneAPI-samples)
 - [Cardiac demo code](https://github.com/CardiacDemo/Cardiac_demo)
-- [UoB test code for vectorising compilers](git@github.com:UoB-HPC/TSVC_2.git)
+- [UoB test code for vectorising compilers](https://github.com/UoB-HPC/TSVC_2)
