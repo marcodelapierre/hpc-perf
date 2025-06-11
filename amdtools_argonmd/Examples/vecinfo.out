@@ -1,0 +1,21 @@
+argonmd.cpp:405:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+  405 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:586:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+  586 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:558:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+  558 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:368:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+  368 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:405:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+  405 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:558:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+  558 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:586:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+  586 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^

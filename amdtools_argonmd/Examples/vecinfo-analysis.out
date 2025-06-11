@@ -1,0 +1,70 @@
+argonmd.cpp:388:9: remark: loop not vectorized: cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'. [-Rpass-analysis=loop-vectorize]
+  388 |     tmp += (vx * vx + vy * vy + vz * vz) * mass; // mass: having it here is more general
+      |         ^
+argonmd.cpp:405:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  405 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:437:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:388:9: remark: loop not vectorized: cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'. [-Rpass-analysis=loop-vectorize]
+  388 |     tmp += (vx * vx + vy * vy + vz * vz) * mass; // mass: having it here is more general
+      |         ^
+argonmd.cpp:586:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  586 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:437:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:558:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  558 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:264:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  264 |     while ( token_string != NULL ) {
+      |     ^
+argonmd.cpp:264:5: remark: loop not vectorized: It is not possible to determine the number of loop iterations. [-Rpass-analysis=loop-vectorize]
+argonmd.cpp:356:17: remark: loop not vectorized: cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'. [-Rpass-analysis=loop-vectorize]
+  356 |           vxtmp += vel[ idx + 0 ];
+      |                 ^
+argonmd.cpp:368:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  368 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:388:9: remark: loop not vectorized: cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'. [-Rpass-analysis=loop-vectorize]
+  388 |     tmp += (vx * vx + vy * vy + vz * vz) * mass; // mass: having it here is more general
+      |         ^
+argonmd.cpp:405:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  405 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:437:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:488:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  488 |     for ( int k = 0; k < numneighs; k++ ) {
+      |     ^
+argonmd.cpp:491:23: remark: loop not vectorized: Array bounds cannot be determined because the loop uses arrays where the array element is of aggregate type. [-Rpass-analysis=loop-vectorize]
+  491 |       double dx = x - pos[ 3 * j + 0 ];
+      |                       ^
+argonmd.cpp:690:7: remark: loop not vectorized: Call instruction cannot be vectorized because the called function fprintf is a non-intrinsic function. [-Rpass-analysis=loop-vectorize]
+  690 |       fprintf( file, "ATOM  %5X %4s UNK  %-5X   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", 
+      |       ^
+argonmd.cpp:689:5: remark: loop not vectorized: 'call' instruction may read from memory. Only load instruction is supported. [-Rpass-analysis=loop-vectorize]
+  689 |     for (int i = 0; i < natoms; i++ ) {
+      |     ^
+argonmd.cpp:685:7: remark: loop not vectorized: Call instruction cannot be vectorized because the called function fprintf is a non-intrinsic function. [-Rpass-analysis=loop-vectorize]
+  685 |       fprintf( file, "ATOM  %5i %4s UNK  %-5i   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", 
+      |       ^
+argonmd.cpp:684:5: remark: loop not vectorized: 'call' instruction may read from memory. Only load instruction is supported. [-Rpass-analysis=loop-vectorize]
+  684 |     for (int i = 0; i < natoms; i++ ) {
+      |     ^
+argonmd.cpp:558:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  558 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:586:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  586 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:631:5: remark: loop not vectorized: Call instruction cannot be vectorized because the called function printf is a non-intrinsic function. [-Rpass-analysis=loop-vectorize]
+  631 |     printf( "%+16.6E %+16.6E %+16.6E\n", arr[ 3 * i + 0 ], arr[ 3 * i + 1 ], arr[ 3 * i + 2 ] );
+      |     ^
+argonmd.cpp:630:3: remark: loop not vectorized: 'call' instruction may read from memory. Only load instruction is supported. [-Rpass-analysis=loop-vectorize]
+  630 |   for ( int i = istart; i < istop; i++) {
+      |   ^

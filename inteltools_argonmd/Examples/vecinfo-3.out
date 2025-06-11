@@ -1,0 +1,1088 @@
+Begin optimization report for: print_info(int const*, int, double, int, int, int, double, double, double, double const*, int)
+=================================================================
+
+Begin optimization report for: print_thermo(int, double, double, double, double, double, double)
+=================================================================
+
+Begin optimization report for: random(int*)
+=================================================================
+
+Begin optimization report for: main.V
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+<Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+    remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+    remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 16.000000 
+    remark #15477: vector cost: 7.000000 
+    remark #15478: estimated potential speedup: 2.250000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.843750
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+    remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9 @[ argonmd.cpp:150:1 ]]
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 5.000000 
+    remark #15477: vector cost: 2.140625 
+    remark #15478: estimated potential speedup: 2.281250 
+    remark #15309: vectorization support: normalized vectorization overhead 0.921875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (531, 16) ] 
+    remark #15598: load #2 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 16) ] 
+    remark #15598: load #3 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (530, 33) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 60.000000 
+    remark #15477: vector cost: 40.062500 
+    remark #15478: estimated potential speedup: 1.453125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.109375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15459: masked indexed (or scatter) stores: 3 
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+<Distributed chunk1>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+<Distributed chunk2>
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (181, 1)
+
+    LOOP BEGIN at argonmd.cpp (558, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 17) ] 
+        remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 17) ] 
+        remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 17) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 41) ] 
+        remark #15598: load #2 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 41) ] 
+        remark #15598: load #3 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 41) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (560, 16) ] 
+        remark #15598: load #2 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (566, 16) ] 
+        remark #15598: load #3 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (572, 16) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 25) ] 
+        remark #15598: load #2 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 25) ] 
+        remark #15598: load #3 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 25) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+        remark #15599: store #1 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 5) ] 
+        remark #15599: store #2 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 5) ] 
+        remark #15599: store #3 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 5) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+        remark #15599: store #1 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (562, 22) ] 
+        remark #15599: store #2 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (568, 22) ] 
+        remark #15599: store #3 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (574, 22) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 90.000000 
+        remark #15477: vector cost: 42.750000 
+        remark #15478: estimated potential speedup: 2.078125 
+        remark #15309: vectorization support: normalized vectorization overhead 0.031250
+        remark #15591: vectorized intrinsic functions: 3
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 12
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 6
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (558, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (435, 3)
+    <Distributed chunk2>
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at argonmd.cpp (437, 5)
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+        LOOP END
+
+        LOOP BEGIN at argonmd.cpp (437, 5)
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (586, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15389: vectorization support: unmasked unaligned unit stride load: forc forc forc forctmp forc forc forctmp forcold [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 50) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride load: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 27) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride load: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 22) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride store: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 5) ] 
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 9.000000 
+        remark #15477: vector cost: 3.234375 
+        remark #15478: estimated potential speedup: 2.703125 
+        remark #15309: vectorization support: normalized vectorization overhead 0.609375
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 3 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (586, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (384, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+        remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+        remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 16.000000 
+        remark #15477: vector cost: 7.000000 
+        remark #15478: estimated potential speedup: 2.250000 
+        remark #15309: vectorization support: normalized vectorization overhead 0.843750
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+        remark #15474: --- end vector loop memory reference summary ---
+        remark #25587: Loop has reduction
+        remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9 @[ argonmd.cpp:208:5 ]]
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (384, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: main.A
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+    remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+    remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 16.000000 
+    remark #15477: vector cost: 14.000000 
+    remark #15478: estimated potential speedup: 1.125000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.421875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+    remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9 @[ argonmd.cpp:150:1 ]]
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 5.000000 
+    remark #15477: vector cost: 2.140625 
+    remark #15478: estimated potential speedup: 2.281250 
+    remark #15309: vectorization support: normalized vectorization overhead 0.921875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (531, 16) ] 
+    remark #15598: load #2 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 16) ] 
+    remark #15598: load #3 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (530, 33) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 60.000000 
+    remark #15477: vector cost: 47.062500 
+    remark #15478: estimated potential speedup: 1.250000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.093750
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15459: masked indexed (or scatter) stores: 3 
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (181, 1)
+
+    LOOP BEGIN at argonmd.cpp (558, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 17) ] 
+        remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 17) ] 
+        remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 17) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 41) ] 
+        remark #15598: load #2 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 41) ] 
+        remark #15598: load #3 from: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 41) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (560, 16) ] 
+        remark #15598: load #2 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (566, 16) ] 
+        remark #15598: load #3 from: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (572, 16) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 25) ] 
+        remark #15598: load #2 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 25) ] 
+        remark #15598: load #3 from: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 25) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+        remark #15599: store #1 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 5) ] 
+        remark #15599: store #2 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 5) ] 
+        remark #15599: store #3 to: posraw posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 5) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+        remark #15599: store #1 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (562, 22) ] 
+        remark #15599: store #2 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (568, 22) ] 
+        remark #15599: store #3 to: pos pos pos pos pos pos pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (574, 22) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 90.000000 
+        remark #15477: vector cost: 84.250000 
+        remark #15478: estimated potential speedup: 1.062500 
+        remark #15309: vectorization support: normalized vectorization overhead 0.015625
+        remark #15591: vectorized intrinsic functions: 3
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 12
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 6
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (558, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (435, 3)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at argonmd.cpp (437, 5)
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+        LOOP END
+
+        LOOP BEGIN at argonmd.cpp (437, 5)
+            remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+            remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (586, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15389: vectorization support: unmasked unaligned unit stride load: forc forc forc forctmp forc forc forctmp forcold [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 50) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride load: forcold forcold forcold forcold forcold forc forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 27) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride load: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 22) ] 
+        remark #15389: vectorization support: unmasked unaligned unit stride store: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 5) ] 
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 9.000000 
+        remark #15477: vector cost: 3.234375 
+        remark #15478: estimated potential speedup: 2.703125 
+        remark #15309: vectorization support: normalized vectorization overhead 0.609375
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 3 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (586, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (384, 3)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 4
+        remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+        remark #15598: load #1 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+        remark #15598: load #2 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+        remark #15598: load #3 from: vel vel vel vel vel vel vel vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+        remark #15600: -- end VLS-optimized group
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 16.000000 
+        remark #15477: vector cost: 14.000000 
+        remark #15478: estimated potential speedup: 1.125000 
+        remark #15309: vectorization support: normalized vectorization overhead 0.421875
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+        remark #15474: --- end vector loop memory reference summary ---
+        remark #25587: Loop has reduction
+        remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9 @[ argonmd.cpp:208:5 ]]
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (384, 3)
+    <Remainder loop for vectorization>
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: main.resolver
+=================================================================
+
+Begin optimization report for: get_input_params(int, char**) (.V)
+
+LOOP BEGIN at argonmd.cpp (264, 5)
+    remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+=================================================================
+
+Begin optimization report for: get_input_params(int, char**) (.A)
+
+LOOP BEGIN at argonmd.cpp (264, 5)
+    remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+=================================================================
+
+Begin optimization report for: get_input_params(int, char**) (.resolver)
+=================================================================
+
+Begin optimization report for: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.V)
+
+LOOP BEGIN at argonmd.cpp (334, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (335, 5)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at argonmd.cpp (336, 7)
+            remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+            LOOP BEGIN at argonmd.cpp (337, 9)
+                remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at argonmd.cpp (349, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                LOOP END
+
+                LOOP BEGIN at argonmd.cpp (351, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                LOOP END
+
+                LOOP BEGIN at argonmd.cpp (353, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                LOOP END
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (368, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (369, 22) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (370, 22) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (371, 22) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (369, 5) ] 
+    remark #15599: store #2 to: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (370, 5) ] 
+    remark #15599: store #3 to: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (371, 5) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 15.000000 
+    remark #15477: vector cost: 8.250000 
+    remark #15478: estimated potential speedup: 1.796875 
+    remark #15309: vectorization support: normalized vectorization overhead 0.234375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (368, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.A)
+
+LOOP BEGIN at argonmd.cpp (334, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (335, 5)
+        remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at argonmd.cpp (336, 7)
+            remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+            LOOP BEGIN at argonmd.cpp (337, 9)
+                remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+                LOOP BEGIN at argonmd.cpp (349, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                LOOP END
+
+                LOOP BEGIN at argonmd.cpp (351, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                LOOP END
+
+                LOOP BEGIN at argonmd.cpp (353, 11)
+                    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                    remark #15346: vector dependence: assumed FLOW dependence between seed and seed 
+                LOOP END
+            LOOP END
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (368, 3)
+    remark #15335: loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (368, 3)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: setup_struc_vel(int, int const*, double, double const*, int, double*, double*, double*) (.resolver)
+=================================================================
+
+Begin optimization report for: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.V)
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 16.000000 
+    remark #15477: vector cost: 7.000000 
+    remark #15478: estimated potential speedup: 2.250000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.843750
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+    remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9]
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.A)
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (385, 23) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (386, 23) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (387, 23) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 16.000000 
+    remark #15477: vector cost: 14.000000 
+    remark #15478: estimated potential speedup: 1.125000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.421875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+    remark #15590: vectorization support: add reduction with value type double [argonmd.cpp:388:9]
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (384, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_temp_ekin(double const*, int, double, double, double, double&, double&) (.resolver)
+=================================================================
+
+Begin optimization report for: rescale_temp(double*, int, double, double&, double&) (.V)
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 5.000000 
+    remark #15477: vector cost: 2.140625 
+    remark #15478: estimated potential speedup: 2.281250 
+    remark #15309: vectorization support: normalized vectorization overhead 0.921875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: rescale_temp(double*, int, double, double&, double&) (.A)
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (406, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 5.000000 
+    remark #15477: vector cost: 2.140625 
+    remark #15478: estimated potential speedup: 2.281250 
+    remark #15309: vectorization support: normalized vectorization overhead 0.921875
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 1 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (405, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: rescale_temp(double*, int, double, double&, double&) (.resolver)
+=================================================================
+
+Begin optimization report for: check_pbc(double*, int, double const*) (.V)
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (531, 16) ] 
+    remark #15598: load #2 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 16) ] 
+    remark #15598: load #3 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (530, 33) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 60.000000 
+    remark #15477: vector cost: 40.062500 
+    remark #15478: estimated potential speedup: 1.453125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.109375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15459: masked indexed (or scatter) stores: 3 
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: check_pbc(double*, int, double const*) (.A)
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 16
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (531, 16) ] 
+    remark #15598: load #2 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 16) ] 
+    remark #15598: load #3 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (535, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (539, 27) ] 
+    remark #15329: vectorization support: masked scatter store: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (530, 33) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 60.000000 
+    remark #15477: vector cost: 47.062500 
+    remark #15478: estimated potential speedup: 1.250000 
+    remark #15309: vectorization support: normalized vectorization overhead 0.093750
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15459: masked indexed (or scatter) stores: 3 
+    remark #15568: Scatters are generated due to non-unit stride index of the corresponding stores.
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 3
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (530, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: check_pbc(double*, int, double const*) (.resolver)
+=================================================================
+
+Begin optimization report for: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.V)
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.A)
+
+LOOP BEGIN at argonmd.cpp (435, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+
+    LOOP BEGIN at argonmd.cpp (437, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 9) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] and num_nn [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (451, 37) ] 
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_neigh(double const*, int, double const*, double const*, double, int, int*, int*) (.resolver)
+=================================================================
+
+Begin optimization report for: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.V)
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Multiversioned v1>
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 17) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 17) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 17) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 41) ] 
+    remark #15598: load #2 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 41) ] 
+    remark #15598: load #3 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 41) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (560, 16) ] 
+    remark #15598: load #2 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (566, 16) ] 
+    remark #15598: load #3 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (572, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 25) ] 
+    remark #15598: load #2 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 25) ] 
+    remark #15598: load #3 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 25) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 5) ] 
+    remark #15599: store #2 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 5) ] 
+    remark #15599: store #3 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 5) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (562, 22) ] 
+    remark #15599: store #2 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (568, 22) ] 
+    remark #15599: store #3 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (574, 22) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 90.000000 
+    remark #15477: vector cost: 42.750000 
+    remark #15478: estimated potential speedup: 2.078125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.031250
+    remark #15591: vectorized intrinsic functions: 3
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 12
+    remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 6
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.A)
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Multiversioned v1>
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 17) ] 
+    remark #15598: load #2 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 17) ] 
+    remark #15598: load #3 from: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 17) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (559, 41) ] 
+    remark #15598: load #2 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (565, 41) ] 
+    remark #15598: load #3 from: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (571, 41) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (560, 16) ] 
+    remark #15598: load #2 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (566, 16) ] 
+    remark #15598: load #3 from: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (572, 16) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector load replaces 3 independent loads of stride 3
+    remark #15598: load #1 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 25) ] 
+    remark #15598: load #2 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 25) ] 
+    remark #15598: load #3 from: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 25) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (563, 5) ] 
+    remark #15599: store #2 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (569, 5) ] 
+    remark #15599: store #3 to: posraw [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (575, 5) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15597: -- VLS-optimized vector store replaces 3 independent stores of stride 3
+    remark #15599: store #1 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (562, 22) ] 
+    remark #15599: store #2 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (568, 22) ] 
+    remark #15599: store #3 to: pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (574, 22) ] 
+    remark #15600: -- end VLS-optimized group
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 90.000000 
+    remark #15477: vector cost: 84.250000 
+    remark #15478: estimated potential speedup: 1.062500 
+    remark #15309: vectorization support: normalized vectorization overhead 0.015625
+    remark #15591: vectorized intrinsic functions: 3
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 12
+    remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 6
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (558, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: update_pos_pbc(double*, double*, double const*, double const*, int, double, double, double, double const*) (.resolver)
+=================================================================
+
+Begin optimization report for: update_vel(double*, double const*, double const*, int, double, double) (.V)
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Multiversioned v1>
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 50) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride load: forcold [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 27) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 9.000000 
+    remark #15477: vector cost: 3.234375 
+    remark #15478: estimated potential speedup: 2.703125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.609375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 3 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: update_vel(double*, double const*, double const*, int, double, double) (.A)
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Multiversioned v1>
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15389: vectorization support: unmasked unaligned unit stride load: forc [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 50) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride load: forcold [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 27) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride load: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 22) ] 
+    remark #15389: vectorization support: unmasked unaligned unit stride store: vel [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (587, 5) ] 
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 9.000000 
+    remark #15477: vector cost: 3.234375 
+    remark #15478: estimated potential speedup: 2.703125 
+    remark #15309: vectorization support: normalized vectorization overhead 0.609375
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 3 
+    remark #15451: unmasked unaligned unit stride stores: 1 
+    remark #15474: --- end vector loop memory reference summary ---
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (586, 3)
+<Remainder loop for vectorization>
+LOOP END
+=================================================================
+
+Begin optimization report for: update_vel(double*, double const*, double const*, int, double, double) (.resolver)
+=================================================================
+
+Begin optimization report for: print_arr(double const*, int, int) (.V)
+
+LOOP BEGIN at argonmd.cpp (630, 3)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (630, 3)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: print_arr(double const*, int, int) (.A)
+
+LOOP BEGIN at argonmd.cpp (630, 3)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (630, 3)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: print_arr(double const*, int, int) (.resolver)
+=================================================================
+
+Begin optimization report for: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.V)
+
+LOOP BEGIN at argonmd.cpp (478, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (488, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (491, 23) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (494, 23) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (497, 23) ] 
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.A)
+
+LOOP BEGIN at argonmd.cpp (478, 3)
+    remark #15541: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at argonmd.cpp (488, 5)
+        remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+        remark #15346: vector dependence: assumed FLOW dependence between [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (491, 23) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (494, 23) ] 
+        remark #15346: vector dependence: assumed FLOW dependence between epot [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (509, 14) ] and pos [ /home/mdelapierre/proj/bmkg/intel-profiling/argonmd.cpp (497, 23) ] 
+    LOOP END
+LOOP END
+=================================================================
+
+Begin optimization report for: compute_forc_epot(double const*, int, int, int const*, int const*, double const*, double const*, double, double, double, double*, double&) (.resolver)
+=================================================================
+
+Begin optimization report for: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.V)
+
+LOOP BEGIN at argonmd.cpp (689, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (689, 5)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (684, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (684, 5)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.A)
+
+LOOP BEGIN at argonmd.cpp (689, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (689, 5)
+<Remainder loop>
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (684, 5)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+LOOP END
+
+LOOP BEGIN at argonmd.cpp (684, 5)
+<Remainder loop>
+LOOP END
+=================================================================
+
+Begin optimization report for: dump_pdb(_IO_FILE*, int, double const*, double, char const*, double const*, int) (.resolver)
+=================================================================
+

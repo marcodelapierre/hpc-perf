@@ -1,0 +1,44 @@
+argonmd.cpp:384:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  384 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:530:3: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  530 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:530:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+argonmd.cpp:437:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:384:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  384 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:437:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:264:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  264 |     while ( token_string != NULL ) {
+      |     ^
+argonmd.cpp:337:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  337 |         for ( int l = 0; l < funits; l++ ) {
+      |         ^
+argonmd.cpp:384:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  384 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:530:3: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  530 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:530:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+argonmd.cpp:437:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:488:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  488 |     for ( int k = 0; k < numneighs; k++ ) {
+      |     ^
+argonmd.cpp:689:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  689 |     for (int i = 0; i < natoms; i++ ) {
+      |     ^
+argonmd.cpp:684:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  684 |     for (int i = 0; i < natoms; i++ ) {
+      |     ^
+argonmd.cpp:630:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  630 |   for ( int i = istart; i < istop; i++) {
+      |   ^
