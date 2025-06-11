@@ -12,3 +12,4 @@ Workflows and examples for HPC performance analysis
 - [Intel article on performance optimisation](https://www.intel.com/content/www/us/en/developer/articles/technical/demystifying-software-performance-optimization.html)
 - [Intel code examples on GitHub](git@github.com:oneapi-src/oneAPI-samples.git)
 - [Cardiac demo code](https://github.com/CardiacDemo/Cardiac_demo)
+- [UoB test code for vectorising compilers](git@github.com:UoB-HPC/TSVC_2.git)
