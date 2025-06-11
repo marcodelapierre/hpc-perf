@@ -20,7 +20,8 @@ Workflows and examples for HPC performance analysis
 
 ## Useful readings
 - [`profng` docs](https://sourceware.org/binutils/docs-2.42/gprofng.html)
-- [`perf` docs](https://perfwiki.github.io/main), includes good intro to Top-Down Analysis
+- [`perf` docs](https://perfwiki.github.io/main)
+  - includes good intro to Top-Down Analysis
 - [`perf` examples](https://www.brendangregg.com/perf.html)
 - [Performance analysis methods](https://www.brendangregg.com/methodology.html)
 - [AMD uPRof user guide](https://docs.amd.com/r/en-US/57368-uProf-user-guide)
@@ -29,5 +30,6 @@ Workflows and examples for HPC performance analysis
 - [Intel article on performance optimisation](https://www.intel.com/content/www/us/en/developer/articles/technical/demystifying-software-performance-optimization.html)
 - [Intel vectorisation guide](https://www.intel.com/content/dam/develop/external/us/en/documents/31848-compilerautovectorizationguide.pdf)
 - [Intel code examples on GitHub](https://github.com/oneapi-src/oneAPI-samples)
+  - includes `oneAPI-samples/Tools/VTuneProfiler/matrix_multiply_c/`
 - [Cardiac demo code](https://github.com/CardiacDemo/Cardiac_demo)
 - [UoB test code for vectorising compilers](https://github.com/UoB-HPC/TSVC_2)
