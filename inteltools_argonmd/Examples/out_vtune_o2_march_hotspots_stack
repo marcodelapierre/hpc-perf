@@ -1,0 +1,69 @@
+vtune: Warning: Microarchitecture performance insights will not be available. Make sure the sampling driver is installed and enabled on your system.
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /home/mdelapierre/proj/bmkg/intel-profiling/vtune_o2_march_hotspots_stack -command stop.
+
+** ArgonMD **
+
+ Box Units : 5    5    5  
+ No. Time Steps : 10000
+ Initial Temp [K] : 10.0  
+ Neigh Update Freq : 20
+ Thermo Print Freq : 1000
+ Coord Dump Freq : 0
+
+ Time Step [ps] : 0.001
+ Cutoff Dist [Ang] : 8.760
+ Cell Par [Ang] : 5.795
+ Box Length [Ang] : 28.975   28.975   28.975 
+ No. Atoms : 500
+
+      Step    Time[ps]   Temp[K]      Ekin[eV]      Epot[eV]      Etot[eV]    Clock[s]
+         0       0.000    10.000  +0.001290016  -0.072045884  -0.070755867       0.000
+      1000       1.000     5.973  +0.000770507  -0.071526372  -0.070755865       0.180
+      2000       2.000     4.778  +0.000616321  -0.071376488  -0.070760167       0.358
+      3000       3.000     4.492  +0.000579534  -0.071339370  -0.070759837       0.536
+      4000       4.000     4.805  +0.000619904  -0.071377424  -0.070757520       0.713
+      5000       5.000     5.007  +0.000645927  -0.071402785  -0.070756858       0.891
+      6000       6.000     4.770  +0.000615386  -0.071373898  -0.070758513       1.079
+      7000       7.000     5.101  +0.000658049  -0.071414245  -0.070756196       1.274
+      8000       8.000     4.975  +0.000641736  -0.071398594  -0.070756858       1.455
+      9000       9.000     4.839  +0.000624277  -0.071381135  -0.070756857       1.634
+     10000      10.000     4.879  +0.000629441  -0.071386299  -0.070756857       1.814
+
+ Loop Clock Time [s] :      1.814
+vtune: Collection stopped.
+vtune: Using result path `/home/mdelapierre/proj/bmkg/intel-profiling/vtune_o2_march_hotspots_stack'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-2558281-lenovoE14-mdelapvtune: Executing actions 12 % Loading 'systemcollector-2558281-lenovoE14-mdelapvtune: Executing actions 12 % Loading '2558281-2558287.0.trace' file           vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `argonmd_o2_march.x'   vtune: Executing actions 19 % Resolving information for `libc.so.6'            vtune: Executing actions 20 % Resolving information for `libc.so.6'            vtune: Executing actions 22 % Resolving information for `libc.so.6'            vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 24 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 29 % Processing profile metrics and debug information vtune: Executing actions 30 % Processing profile metrics and debug information vtune: Executing actions 30 % Setting data model parameters                    vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 31 % Precomputing frequently used data                vtune: Executing actions 33 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 36 % Precomputing frequently used data                vtune: Executing actions 36 % Updating precomputed scalar metrics              vtune: Executing actions 37 % Updating precomputed scalar metrics              vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 39 % Discarding redundant overtime data               vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 42 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 1.816s
+    CPU Time: 1.810s
+        Effective Time: 1.810s
+        Spin Time: 0s
+        Overhead Time: 0s
+    Total Thread Count: 1
+    Paused Time: 0s
+
+Top Hotspots
+Function           Module              CPU Time  % of CPU Time(%)
+-----------------  ------------------  --------  ----------------
+compute_forc_epot  argonmd_o2_march.x    1.560s             86.2%
+compute_neigh      argonmd_o2_march.x    0.240s             13.3%
+update_pos_pbc     argonmd_o2_march.x    0.010s              0.6%
+Collection and Platform Info
+    Application Command Line: ./argonmd_o2_march.x 
+    Operating System: 6.11.0-26-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=24.04 DISTRIB_CODENAME=noble DISTRIB_DESCRIPTION="Ubuntu 24.04.1 LTS"
+    Computer Name: lenovoE14-mdelapierre
+    Result Size: 3.6 MB 
+    Collection start time: 05:14:03 11/06/2025 UTC
+    Collection stop time: 05:14:05 11/06/2025 UTC
+    Collector Type: User-mode sampling and tracing
+    CPU
+        Name: Unknown
+        Frequency: 3.294 GHz
+        Logical CPU Count: 12
+        Cache Allocation Technology
+            Level 2 capability: not detected
+            Level 3 capability: available
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            

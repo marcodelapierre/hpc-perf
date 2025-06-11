@@ -6,6 +6,7 @@ module purge
 # run-pass-thru options fix the error `SampleCallback: timestamps aren't ascended`
 
 vtune -collect hotspots -run-pass-thru=-timestamp=sys -r ./vtune_o2_march_hotspots -- ./argonmd_o2_march.x &>out_vtune_o2_march_hotspots
+vtune -collect hotspots -knob enable-stack-collection=true -run-pass-thru=-timestamp=sys -r ./vtune_o2_march_hotspots_stack -- ./argonmd_o2_march.x &>out_vtune_o2_march_hotspots_stack
 vtune -collect memory-consumption -run-pass-thru=-timestamp=sys -r ./vtune_o2_march_memory_cons -- ./argonmd_o2_march.x &>out_vtune_o2_march_memory_cons
 
 # not available
