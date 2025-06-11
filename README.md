@@ -10,6 +10,7 @@ Workflows and examples for HPC performance analysis
 - [Intel VTune Cookbook](https://www.intel.com/content/www/us/en/docs/vtune-profiler/cookbook/2025-0/overview.html)
 - [Intel Advisor Cookbook](https://www.intel.com/content/www/us/en/docs/advisor/cookbook/2024-2/overview.html)
 - [Intel article on performance optimisation](https://www.intel.com/content/www/us/en/developer/articles/technical/demystifying-software-performance-optimization.html)
+- [Intel vectorisation guide](https://www.intel.com/content/dam/develop/external/us/en/documents/31848-compilerautovectorizationguide.pdf)
 - [Intel code examples on GitHub](git@github.com:oneapi-src/oneAPI-samples.git)
 - [Cardiac demo code](https://github.com/CardiacDemo/Cardiac_demo)
 - [UoB test code for vectorising compilers](git@github.com:UoB-HPC/TSVC_2.git)
