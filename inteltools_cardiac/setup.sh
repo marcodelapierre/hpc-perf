@@ -12,8 +12,9 @@ module purge
 
 sed -i 's;class vector<Facet>;class std::vector<Facet>;g' mesh.cpp
 
+# `-march=native -axhost` faster than `-march=core-avx2 -axCORE-AVX2`
 for opt in 0 1 2 3 ; do 
-  mpiicpx -qopenmp -g -O${opt} -unroll -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0 -o heart_demo_o${opt}_unroll.x heart_demo.cpp luo_rudy_1991.cpp rcm.cpp mesh.cpp -Wl,-rpath=$LIBRARY_PATH -Wl,--disable-new-dtags
+  mpiicpx -fiopenmp -g -O${opt} -unroll -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0 -o heart_demo_o${opt}_unroll.x heart_demo.cpp luo_rudy_1991.cpp rcm.cpp mesh.cpp -Wl,-rpath=$LIBRARY_PATH -Wl,--disable-new-dtags
 
-  mpiicpx -qopenmp -g -O${opt} -unroll -march=core-avx2 -axCORE-AVX2 -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0 -o heart_demo_o${opt}_unroll_march.x heart_demo.cpp luo_rudy_1991.cpp rcm.cpp mesh.cpp -Wl,-rpath=$LIBRARY_PATH -Wl,--disable-new-dtags
+  mpiicpx -fiopenmp -g -O${opt} -unroll -march=native -axhost -std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0 -o heart_demo_o${opt}_unroll_march.x heart_demo.cpp luo_rudy_1991.cpp rcm.cpp mesh.cpp -Wl,-rpath=$LIBRARY_PATH -Wl,--disable-new-dtags
 done
