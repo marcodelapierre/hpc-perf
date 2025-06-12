@@ -7,8 +7,13 @@ module load openmpi-gcc
 export OMP_NUM_THREADS=1
 export FLAGS=" -m ./mesh_mid -s ./setup_mid.txt -t 1"
 
-
 gprofng collect app -O gprofng_o2.er ./heart_demo_o2_unroll.x $FLAGS &>out_gprofng_o2
 
 gprofng display text -script script.gpng gprofng_o2.er/ &>out_gprofng_o2_analysis
 
+
+export OMP_NUM_THREADS=2
+
+gprofng collect app -O gprofng_o2_thr.er ./heart_demo_o2_unroll.x $FLAGS &>out_gprofng_o2_thr
+
+gprofng display text -script script_threads.gpng gprofng_o2_thr.er/ &>out_gprofng_o2_thr_analysis

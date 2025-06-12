@@ -1,0 +1,70 @@
+Experiment: gprofng_o2_thr.er/
+No errors
+*** Collector Warning: Collection interval timer period was changed (10007 -> 0); profile data may be unreliable
+Archive command ` /usr/bin/gp-archive -n -a on --outfile /home/mdelapierre/proj/bmkg/linux-profiling-cardiac/gprofng_o2_thr.er/archive.log /home/mdelapierre/proj/bmkg/linux-profiling-cardiac/gprofng_o2_thr.er'
+
+Target command (64-bit): './heart_demo_o2_unroll.x -m ./mesh_mid -s ./setup_mid.txt -t 1'
+Process pid 3557431, ppid 3053951, pgrp 3557431, sid 3053951
+Current working directory: /home/mdelapierre/proj/bmkg/linux-profiling-cardiac
+Collector version: `2.42'; experiment version 12.4 (64-bit)
+Host `lenovoE14-mdelapierre', OS `Linux 6.11.0-26-generic', page size 4096, architecture `x86_64'
+  12 CPUs, with clocks ranging from 400 to 2967 MHz.; max of 2967 MHz. assumed
+  Memory: 3773525 pages @  4096 = 14740 MB.
+Data collection parameters:
+  Clock-profiling, interval = 10007 microsecs.
+  Periodic sampling, 1 secs.
+  Follow descendant processes from: fork|exec|combo
+
+Experiment started Thu Jun 12 12:02:18 2025
+
+Experiment Ended: 6.878521012
+Data Collection Duration: 6.878521012
+Error: Invalid command: ovewview
+Print limit set to 10
+Objects sorted by metric: Exclusive Total CPU Time
+
+Excl. Total    Name
+CPU
+ sec.      %
+6.855 100.00   <Total>
+6.204  90.51   Process 1, Thread 2
+0.650   9.49   Process 1, Thread 1
+
+Exp Sel Total 
+=== === ===== 
+  1 1       2 
+Functions sorted by metric: Exclusive Total CPU Time
+
+Excl. Total   Incl. Total    Name
+CPU           CPU
+ sec.      %   sec.      %
+0.650 100.00  0.650 100.00   <Total>
+0.170  26.15  0.310  47.69   LR_I::compute(double, double*)
+0.140  21.54  0.140  21.54   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0]
+0.110  16.92  0.110  16.92   <static>@0x77ace (<libm.so.6>)
+0.090  13.85  0.140  21.54   exp
+0.040   6.15  0.150  23.08   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.2]
+0.020   3.08  0.020   3.08   <static>@0x2542b (<libgomp.so.1.0.0>)
+0.020   3.08  0.070  10.77   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.3]
+0.010   1.54  0.010   1.54   <static>@0x10220 (<libm.so.6>)
+0.010   1.54  0.010   1.54   <static>@0x187ff1 (<libc.so.6>)
+
+Exp Sel Total 
+=== === ===== 
+  1 2       2 
+Functions sorted by metric: Exclusive Total CPU Time
+
+Excl. Total   Incl. Total    Name
+CPU           CPU
+ sec.      %   sec.      %
+6.204 100.00  6.204 100.00   <Total>
+1.711  27.58  1.711  27.58   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0]
+1.471  23.71  2.662  42.90   LR_I::compute(double, double*)
+0.891  14.35  0.891  14.35   <static>@0x77ace (<libm.so.6>)
+0.670  10.81  1.131  18.23   exp
+0.300   4.84  0.921  14.84   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.2]
+0.290   4.68  0.290   4.68   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.4]
+0.190   3.06  0.731  11.77   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.0]
+0.180   2.90  0.881  14.19   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.3]
+0.140   2.26  0.140   2.26   <static>@0x4770 (<heart_demo_o2_unroll.x>)
+
