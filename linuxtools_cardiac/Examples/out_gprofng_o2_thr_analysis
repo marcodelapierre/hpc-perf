@@ -19,8 +19,26 @@ Experiment started Thu Jun 12 12:02:18 2025
 
 Experiment Ended: 6.878521012
 Data Collection Duration: 6.878521012
-Error: Invalid command: ovewview
+Experiment(s):
+
+Experiment      :gprofng_o2_thr.er/
+  Target        : './heart_demo_o2_unroll.x -m ./mesh_mid -s ./setup_mid.txt -t 1'
+  Host          : lenovoE14-mdelapierre (x86_64, Linux 6.11.0-26-generic)
+  Start Time    : Thu Jun 12 12:02:18 2025
+  Duration      : 6.879 Seconds
+
+Metrics:
+
+  Experiment Duration (Seconds): [6.879]
+  Clock Profiling
+    [X]Total CPU Time - totalcpu (Seconds): [*6.855]
+
+Notes: '*' indicates hot metrics, '[X]' indicates currently enabled metrics.
+       The metrics command can be used to change selections. The metric_list command lists all available metrics.
 Print limit set to 10
+Exp Sel Total 
+=== === ===== 
+  1 all     2 
 Objects sorted by metric: Exclusive Total CPU Time
 
 Excl. Total    Name

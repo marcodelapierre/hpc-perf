@@ -1,6 +1,7 @@
 header
-ovewview
+overview
 limit 10
+thread_list
 threads
 thread_select 1
 functions

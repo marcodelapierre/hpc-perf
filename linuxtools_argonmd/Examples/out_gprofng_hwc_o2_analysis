@@ -23,7 +23,29 @@ Experiment started Thu Jun  5 12:15:19 2025
 
 Experiment Ended: 5.327074600
 Data Collection Duration: 5.327074600
-Error: Invalid command: ovewview
+Experiment(s):
+
+Experiment      :gprofng_hwc_o2.er/
+  Target        : './argonmd_o2.x'
+  Host          : lenovoE14-mdelapierre (x86_64, Linux 6.11.0-25-generic)
+  Start Time    : Thu Jun  5 12:15:19 2025
+  Duration      : 5.327 Seconds
+
+Metrics:
+
+  Experiment Duration (Seconds): [5.327]
+  Clock Profiling
+    [X]Total CPU Time - totalcpu (Seconds): [*0.530]
+  Derived and Other Metrics
+    [ ]Instructions Per Cycle - IPC: [2.296]
+    [ ]Cycles Per Instruction - CPI: [0.436]
+  HW Counter Profiling
+    General Hardware Counters
+      [X]Instructions Executed - insts: [51551915416]
+      [X]CPU Cycles - cycles (Seconds): [7.599]
+
+Notes: '*' indicates hot metrics, '[X]' indicates currently enabled metrics.
+       The metrics command can be used to change selections. The metric_list command lists all available metrics.
 Current metrics: e+%insts:e.%cycles:name
 Current Sort Metric: Exclusive Instructions Executed ( e+%insts )
 Functions sorted by metric: Exclusive Instructions Executed
