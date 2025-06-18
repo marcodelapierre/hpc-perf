@@ -1,0 +1,86 @@
+Experiment: gprofng_o2_thr_aff.er/
+No errors
+*** Collector Warning: Collection interval timer period was changed (10007 -> 0); profile data may be unreliable
+Archive command ` /usr/bin/gp-archive -n -a on --outfile /home/mdelapierre/proj/bmkg/linux-profiling-cardiac/gprofng_o2_thr_aff.er/archive.log /home/mdelapierre/proj/bmkg/linux-profiling-cardiac/gprofng_o2_thr_aff.er'
+
+Target command (64-bit): './heart_demo_o2_unroll.x -m ./mesh_mid -s ./setup_mid.txt -t 1'
+Process pid 48872, ppid 3921405, pgrp 48872, sid 3921405
+Current working directory: /home/mdelapierre/proj/bmkg/linux-profiling-cardiac
+Collector version: `2.42'; experiment version 12.4 (64-bit)
+Host `lenovoE14-mdelapierre', OS `Linux 6.11.0-26-generic', page size 4096, architecture `x86_64'
+  12 CPUs, with clocks ranging from 400 to 2968 MHz.; max of 2968 MHz. assumed
+  Memory: 3773525 pages @  4096 = 14740 MB.
+Data collection parameters:
+  Clock-profiling, interval = 10007 microsecs.
+  Periodic sampling, 1 secs.
+  Follow descendant processes from: fork|exec|combo
+
+Experiment started Wed Jun 18 16:34:01 2025
+
+Experiment Ended: 6.847508272
+Data Collection Duration: 6.847508272
+Error: Invalid command: ovewview
+Print limit set to 10
+Objects sorted by metric: Exclusive Total CPU Time
+
+Excl. Total    Name
+CPU
+ sec.      %
+6.975 100.00   <Total>
+6.314  90.53   Process 1, Thread 2
+0.660   9.47   Process 1, Thread 1
+
+Exp Sel Total 
+=== === ===== 
+  1 1       2 
+Functions sorted by metric: Exclusive Total CPU Time
+
+Excl. Total   Incl. Total    Name
+CPU           CPU
+ sec.      %   sec.      %
+0.660 100.00  0.660 100.00   <Total>
+0.180  27.27  0.340  51.52   LR_I::compute(double, double*)
+0.110  16.67  0.110  16.67   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0]
+0.090  13.64  0.140  21.21   exp
+0.080  12.12  0.080  12.12   <static>@0x77ace (<libm.so.6>)
+0.040   6.06  0.140  21.21   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.2]
+0.030   4.55  0.030   4.55   <static>@0x2542b (<libgomp.so.1.0.0>)
+0.030   4.55  0.070  10.61   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.3]
+0.020   3.03  0.090  13.64   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.0]
+0.020   3.03  0.020   3.03   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.4]
+
+Objects sorted by metric: Exclusive Total CPU Time
+
+Excl. Total    Name
+CPU
+ sec.      %
+0.660 100.00   <Total>
+0.660 100.00   CPU 0
+
+Exp Sel Total 
+=== === ===== 
+  1 2       2 
+Functions sorted by metric: Exclusive Total CPU Time
+
+Excl. Total   Incl. Total    Name
+CPU           CPU
+ sec.      %   sec.      %
+6.314 100.00  6.314 100.00   <Total>
+1.751  27.73  1.751  27.73   Task::update_coupling_v2(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, int) [clone ._omp_fn.0]
+1.641  25.99  2.782  44.06   LR_I::compute(double, double*)
+0.811  12.84  0.811  12.84   <static>@0x77ace (<libm.so.6>)
+0.660  10.46  1.071  16.96   exp
+0.250   3.96  0.250   3.96   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.4]
+0.200   3.17  0.200   3.17   <static>@0x4770 (<heart_demo_o2_unroll.x>)
+0.190   3.01  0.190   3.01   <static>@0x2542b (<libgomp.so.1.0.0>)
+0.190   3.01  0.791  12.52   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.2]
+0.180   2.85  0.851  13.47   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.3]
+
+Objects sorted by metric: Exclusive Total CPU Time
+
+Excl. Total    Name
+CPU
+ sec.      %
+6.314 100.00   <Total>
+6.314 100.00   CPU 2
+

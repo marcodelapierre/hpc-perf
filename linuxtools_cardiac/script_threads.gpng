@@ -4,5 +4,7 @@ limit 10
 threads
 thread_select 1
 functions
+cpus
 thread_select 2
 functions
+cpus

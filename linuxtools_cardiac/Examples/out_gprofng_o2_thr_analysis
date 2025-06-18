@@ -49,6 +49,15 @@ CPU           CPU
 0.010   1.54  0.010   1.54   <static>@0x10220 (<libm.so.6>)
 0.010   1.54  0.010   1.54   <static>@0x187ff1 (<libc.so.6>)
 
+Objects sorted by metric: Exclusive Total CPU Time
+
+Excl. Total    Name
+CPU
+ sec.      %
+0.650 100.00   <Total>
+0.390  60.00   CPU 5
+0.260  40.00   CPU 4
+
 Exp Sel Total 
 === === ===== 
   1 2       2 
@@ -67,4 +76,13 @@ CPU           CPU
 0.190   3.06  0.731  11.77   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.0]
 0.180   2.90  0.881  14.19   Task::make_rk_step(std::vector<compute_node, std::allocator<compute_node> >&, int, double, double, double) [clone ._omp_fn.3]
 0.140   2.26  0.140   2.26   <static>@0x4770 (<heart_demo_o2_unroll.x>)
+
+Objects sorted by metric: Exclusive Total CPU Time
+
+Excl. Total    Name
+CPU
+ sec.      %
+6.204 100.00   <Total>
+3.372  54.35   CPU 1
+2.832  45.65   CPU 0
 
