@@ -1,0 +1,65 @@
+AMDPROFILER POWER PROFILE REPORT
+
+AMDuProfCLI Version 5.0.1479.0,
+
+LAUNCHED APPLICATION DETAILS
+Target Path:,./argonmd_o2.x,
+Command Line Arguments:,,
+Working Directory:,/home/mdelapierre/proj/bmkg/amd-profiling,
+CPU Core Affinity Mask:,,
+
+PROFILE DETAILS
+CPU Details:,Family(0x19) Model(0x44)
+Sampling Interval:,100 milli-seconds
+Profile Start Time:,Jun-23-2025_11-57-32,
+
+PROFILED COUNTERS
+COUNTER ID,NAME,CATEGORY,UNIT,DESCRIPTION
+36.,socket0-package-power,Power,W,Socket0-Average Package Power reported in Watts.
+50.,socket0-temperature,Temperature,C,Socket0-Package Temperature for the sampling period, reported in Celsius. Temperature reported is with reference to Tclt
+
+PROFILE RECORDS
+RecordId,Timestamp,socket0-package-power,socket0-temperature
+1,11:57:33:036,   14.95,   53.38
+2,11:57:33:136,   23.02,   54.88
+3,11:57:33:236,   22.00,   56.38
+4,11:57:33:336,   22.82,   57.88
+5,11:57:33:436,   22.54,   59.25
+6,11:57:33:536,   22.22,   60.50
+7,11:57:33:636,   23.82,   61.75
+8,11:57:33:736,   22.60,   62.88
+9,11:57:33:836,   23.15,   63.88
+10,11:57:33:936,   22.36,   64.88
+11,11:57:34:036,   22.24,   65.75
+12,11:57:34:136,   25.50,   66.50
+13,11:57:34:236,   24.91,   66.75
+14,11:57:34:336,   24.95,   67.25
+15,11:57:34:436,   24.75,   67.62
+16,11:57:34:536,   24.72,   68.00
+17,11:57:34:636,   24.00,   68.62
+18,11:57:34:736,   22.45,   69.25
+19,11:57:34:836,   21.67,   69.75
+20,11:57:34:936,   22.13,   70.38
+21,11:57:35:036,   22.79,   70.88
+22,11:57:35:136,   23.02,   71.38
+23,11:57:35:236,   22.73,   71.88
+24,11:57:35:336,   24.44,   72.25
+25,11:57:35:436,   21.81,   72.75
+26,11:57:35:536,   24.66,   73.00
+27,11:57:35:636,   23.73,   73.25
+28,11:57:35:736,   23.60,   73.50
+29,11:57:35:836,   23.65,   73.75
+30,11:57:35:936,   21.60,   74.00
+31,11:57:36:036,   23.18,   74.25
+32,11:57:36:136,   22.62,   74.50
+33,11:57:36:236,   23.03,   74.75
+34,11:57:36:336,   23.68,   75.00
+35,11:57:36:436,   23.32,   75.25
+36,11:57:36:536,   23.04,   75.38
+37,11:57:36:636,   24.77,   75.62
+38,11:57:36:736,   22.94,   75.75
+39,11:57:36:836,   21.92,   76.00
+40,11:57:36:936,   21.43,   76.50
+41,11:57:37:036,   19.17,   77.25
+42,11:57:37:136,   19.35,   77.88
+43,11:57:37:236,   18.76,   78.38
