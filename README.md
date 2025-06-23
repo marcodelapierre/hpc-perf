@@ -24,7 +24,8 @@ Workflows and examples for HPC performance analysis
   - includes good intro to Top-Down Analysis
 - [`perf` examples](https://www.brendangregg.com/perf.html)
 - [Performance analysis methods](https://www.brendangregg.com/methodology.html)
-- [AMD uPRof user guide](https://docs.amd.com/r/en-US/57368-uProf-user-guide)
+- [AMD uProf getting started guide](https://docs.amd.com/r/en-US/68658-uProf-getting-started-guide)
+- [AMD uProf user guide](https://docs.amd.com/r/en-US/57368-uProf-user-guide)
 - [Intel VTune Cookbook](https://www.intel.com/content/www/us/en/docs/vtune-profiler/cookbook/2025-0/overview.html)
 - [Intel Advisor Cookbook](https://www.intel.com/content/www/us/en/docs/advisor/cookbook/2024-2/overview.html)
 - [Intel article on performance optimisation](https://www.intel.com/content/www/us/en/developer/articles/technical/demystifying-software-performance-optimization.html)
