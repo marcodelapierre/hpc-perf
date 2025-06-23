@@ -3,6 +3,12 @@
 module purge
 module load zen
 
+### TO EXPORT SESSION FOR LOCAL GUI USAGE
+# use --export-session flag
+# retrieve tarball of session files
+# make sure to have a local copy of source and binary
+# provide path to source and binary in the GUI, while importing session data
+
 # examples of report generation
 # NOTE: -g --detail --inline
 AMDuProfCLI report -g --detail --inline -i dir_amduprof_o2_gcc_hotspots/AMDuProf-argonmd_o2_gcc-Hotspots_Jun-09-2025_15-35-29/ --report-output detail.csv
