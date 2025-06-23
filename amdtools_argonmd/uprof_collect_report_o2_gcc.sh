@@ -5,7 +5,7 @@ module load zen
 
 # collect
 
-for type in hotspots tbp assess branch ibs ; do 
+for type in hotspots tbp assess data_access branch ibs ; do 
   AMDuProfCLI collect --config $type -g \
     -o dir_amduprof_o2_gcc_$type \
     ./argonmd_o2_gcc.x &>out_amduprof_o2_gcc_$type
@@ -20,6 +20,6 @@ done
 
 # report
 
-for type in hotspots tbp overview assess branch ibs ; do
+for type in hotspots tbp overview assess data_access branch ibs ; do
   AMDuProfCLI report -i dir_amduprof_o2_gcc_$type/AMD*
 done
