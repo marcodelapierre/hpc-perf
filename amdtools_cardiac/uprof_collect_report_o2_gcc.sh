@@ -26,5 +26,8 @@ done
 # report
 
 for type in hotspots tbp overview assess branch ibs ; do
-  AMDuProfCLI report -i dir_amduprof_o2_unroll_gcc_$type/AMD*
+  AMDuProfCLI report \
+    -g --detail --inline \
+    --export-session \
+    -i dir_amduprof_o2_unroll_gcc_$type/AMD*
 done
