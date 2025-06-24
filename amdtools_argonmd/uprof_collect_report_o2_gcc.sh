@@ -21,5 +21,10 @@ done
 # report
 
 for type in hotspots tbp overview assess data_access branch ibs ; do
-  AMDuProfCLI report -i dir_amduprof_o2_gcc_$type/AMD*
+#  AMDuProfCLI report -i dir_amduprof_o2_gcc_$type/AMD*
+# Updated: extra details
+# -g: callstack
+# --detail: more details, eg code snippets
+# --inline: info on inlined functions
+  AMDuProfCLI report -g --detail --inline -i dir_amduprof_o2_gcc_$type/AMD*
 done
