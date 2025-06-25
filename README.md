@@ -30,6 +30,7 @@ Workflows and examples for HPC performance analysis
 - [Intel Advisor Cookbook](https://www.intel.com/content/www/us/en/docs/advisor/cookbook/2024-2/overview.html)
 - [Intel article on performance optimisation](https://www.intel.com/content/www/us/en/developer/articles/technical/demystifying-software-performance-optimization.html)
 - [Intel vectorisation guide](https://www.intel.com/content/dam/develop/external/us/en/documents/31848-compilerautovectorizationguide.pdf)
+- [Codee Open Catalog of Code Guidelines](https://open-catalog.codee.com/)
 - [Intel code examples on GitHub](https://github.com/oneapi-src/oneAPI-samples)
   - includes `oneAPI-samples/Tools/VTuneProfiler/matrix_multiply_c/`
 - [Cardiac demo code](https://github.com/CardiacDemo/Cardiac_demo)
