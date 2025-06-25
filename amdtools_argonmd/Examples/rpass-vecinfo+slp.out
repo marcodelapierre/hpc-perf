@@ -1,0 +1,418 @@
+argonmd.cpp:388:9: remark: loop not vectorized: cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'. [-Rpass-analysis=loop-vectorize]
+  388 |     tmp += (vx * vx + vy * vy + vz * vz) * mass; // mass: having it here is more general
+      |         ^
+argonmd.cpp:384:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  384 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:405:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  405 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:405:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+argonmd.cpp:530:3: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  530 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:530:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+argonmd.cpp:437:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:437:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+argonmd.cpp:388:9: remark: loop not vectorized: cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'. [-Rpass-analysis=loop-vectorize]
+  388 |     tmp += (vx * vx + vy * vy + vz * vz) * mass; // mass: having it here is more general
+      |         ^
+argonmd.cpp:384:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  384 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:586:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  586 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:586:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+argonmd.cpp:437:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:437:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+argonmd.cpp:558:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  558 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:558:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+argonmd.cpp:446:19: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  446 |       double dz = pos[ 3 * i + 2 ] - pos[ 3 * j + 2 ];
+      |                   ^
+argonmd.cpp:444:10: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  444 |       dy -= floor( ( dy + boxhalf1 ) / boxlen1 ) * boxlen1;
+      |          ^
+argonmd.cpp:440:19: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  440 |       double dx = pos[ 3 * i + 0 ] - pos[ 3 * j + 0 ];
+      |                   ^
+argonmd.cpp:443:19: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  443 |       double dy = pos[ 3 * i + 1 ] - pos[ 3 * j + 1 ];
+      |                   ^
+argonmd.cpp:440:38: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  440 |       double dx = pos[ 3 * i + 0 ] - pos[ 3 * j + 0 ];
+      |                                      ^
+argonmd.cpp:46:5: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+   46 | int main( int argc, char** argv ) {
+      |     ^
+argonmd.cpp:386:23: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  386 |     const double vy = vel[ 3 * i + 1 ];
+      |                       ^
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  586 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Cannot SLP vectorize list: type <4 x double> is unsupported by vectorizer [-Rpass-missed=slp-vectorizer]
+  558 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:558:3: remark: Vectorizing horizontal reduction is possible but not beneficial with cost 601 and threshold 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Vectorizing horizontal reduction is possible but not beneficial with cost 303 and threshold 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:446:19: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  446 |       double dz = pos[ 3 * i + 2 ] - pos[ 3 * j + 2 ];
+      |                   ^
+argonmd.cpp:444:10: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  444 |       dy -= floor( ( dy + boxhalf1 ) / boxlen1 ) * boxlen1;
+      |          ^
+argonmd.cpp:440:19: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  440 |       double dx = pos[ 3 * i + 0 ] - pos[ 3 * j + 0 ];
+      |                   ^
+argonmd.cpp:443:19: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  443 |       double dy = pos[ 3 * i + 1 ] - pos[ 3 * j + 1 ];
+      |                   ^
+argonmd.cpp:440:38: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  440 |       double dx = pos[ 3 * i + 0 ] - pos[ 3 * j + 0 ];
+      |                                      ^
+argonmd.cpp:46:5: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+   46 | int main( int argc, char** argv ) {
+      |     ^
+argonmd.cpp:540:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  540 |     if ( z >= boxlen2 ) { z -= boxlen2; pos[ 3 * i + 2 ] = z; }
+      |            ^
+argonmd.cpp:540:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:536:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  536 |     if ( y >= boxlen1 ) { y -= boxlen1; pos[ 3 * i + 1 ] = y; }
+      |            ^
+argonmd.cpp:536:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:532:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  532 |     if ( x >= boxlen0 ) { x -= boxlen0; pos[ 3 * i + 0 ] = x; }
+      |            ^
+argonmd.cpp:532:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:386:23: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  386 |     const double vy = vel[ 3 * i + 1 ];
+      |                       ^
+argonmd.cpp:46:5: note: could not determine the original source location for argonmd.cpp:0:0
+   46 | int main( int argc, char** argv ) {
+      |     ^
+argonmd.cpp:46:5: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+   46 | int main( int argc, char** argv ) {
+      |     ^
+argonmd.cpp:46:5: note: could not determine the original source location for argonmd.cpp:0:0
+argonmd.cpp:46:5: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+   46 | int main( int argc, char** argv ) {
+      |     ^
+argonmd.cpp:46:5: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:46:5: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:46:5: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:75:28: remark: Stores SLP vectorized with cost -2 and with tree size 5 [-Rpass=slp-vectorizer]
+   75 | const double boxlen[ 3 ] = {
+      |                            ^
+argonmd.cpp:80:29: remark: Stores SLP vectorized with cost -3 and with tree size 4 [-Rpass=slp-vectorizer]
+   80 | const double boxhalf[ 3 ] = {
+      |                             ^
+argonmd.cpp:85:14: remark: Stores SLP vectorized with cost -2 and with tree size 2 [-Rpass=slp-vectorizer]
+   85 | const double unitpos[ funits * 3 ] = {
+      |              ^
+argonmd.cpp:85:14: remark: Stores SLP vectorized with cost -2 and with tree size 2 [-Rpass=slp-vectorizer]
+argonmd.cpp:127:17: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  127 | int* numneigh = new int [ natoms ];
+      |                 ^
+argonmd.cpp:127:17: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:264:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  264 |     while ( token_string != NULL ) {
+      |     ^
+argonmd.cpp:264:5: remark: loop not vectorized: It is not possible to determine the number of loop iterations. [-Rpass-analysis=loop-vectorize]
+argonmd.cpp:264:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+argonmd.cpp:274:33: remark: Stores SLP vectorized with cost -1 and with tree size 2 [-Rpass=slp-vectorizer]
+  274 |       input_params.box_units[1] = box_units[0];
+      |                                 ^
+argonmd.cpp:277:33: remark: Stores SLP vectorized with cost -2 and with tree size 2 [-Rpass=slp-vectorizer]
+  277 |       input_params.box_units[0] = box_units[0];
+      |                                 ^
+argonmd.cpp:356:17: remark: loop not vectorized: cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'. [-Rpass-analysis=loop-vectorize]
+  356 |           vxtmp += vel[ idx + 0 ];
+      |                 ^
+argonmd.cpp:337:9: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  337 |         for ( int l = 0; l < funits; l++ ) {
+      |         ^
+argonmd.cpp:368:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  368 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:368:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+argonmd.cpp:369:22: remark: Stores SLP vectorized with cost -22 and with tree size 20 [-Rpass=slp-vectorizer]
+  369 |     vel[ 3 * i + 0 ] -= vxtmp;
+      |                      ^
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  610 |   *idum = IA * (*idum - k * IQ) - IR * k;
+      |              ^
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:612:6: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  612 |   if(*idum < 0) *idum += IM;
+      |      ^
+argonmd.cpp:612:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  612 |   if(*idum < 0) *idum += IM;
+      |            ^
+argonmd.cpp:614:14: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  614 |   ans = AM * (*idum);
+      |              ^
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  610 |   *idum = IA * (*idum - k * IQ) - IR * k;
+      |              ^
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:612:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  612 |   if(*idum < 0) *idum += IM;
+      |            ^
+argonmd.cpp:323:6: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  323 | void setup_struc_vel( const int funits, const int* const box_units, 
+      |      ^
+argonmd.cpp:323:6: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:323:6: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:323:6: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:388:9: remark: loop not vectorized: cannot prove it is safe to reorder floating-point operations; allow reordering by specifying '#pragma clang loop vectorize(enable)' before the loop or by providing the compiler option '-ffast-math'. [-Rpass-analysis=loop-vectorize]
+  388 |     tmp += (vx * vx + vy * vy + vz * vz) * mass; // mass: having it here is more general
+      |         ^
+argonmd.cpp:384:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  384 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:386:23: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  386 |     const double vy = vel[ 3 * i + 1 ];
+      |                       ^
+argonmd.cpp:405:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  405 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:405:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+argonmd.cpp:406:22: remark: Stores SLP vectorized with cost -3 and with tree size 4 [-Rpass=slp-vectorizer]
+  406 |     vel[ 3 * i + 0 ] *= t_factor_sqrt;
+      |                      ^
+argonmd.cpp:530:3: remark: the cost-model indicates that vectorization is not beneficial [-Rpass-missed=loop-vectorize]
+  530 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:530:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-missed=loop-vectorize]
+argonmd.cpp:540:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  540 |     if ( z >= boxlen2 ) { z -= boxlen2; pos[ 3 * i + 2 ] = z; }
+      |            ^
+argonmd.cpp:540:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:536:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  536 |     if ( y >= boxlen1 ) { y -= boxlen1; pos[ 3 * i + 1 ] = y; }
+      |            ^
+argonmd.cpp:536:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:532:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  532 |     if ( x >= boxlen0 ) { x -= boxlen0; pos[ 3 * i + 0 ] = x; }
+      |            ^
+argonmd.cpp:532:12: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:437:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:437:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+argonmd.cpp:446:19: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  446 |       double dz = pos[ 3 * i + 2 ] - pos[ 3 * j + 2 ];
+      |                   ^
+argonmd.cpp:444:10: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  444 |       dy -= floor( ( dy + boxhalf1 ) / boxlen1 ) * boxlen1;
+      |          ^
+argonmd.cpp:440:19: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  440 |       double dx = pos[ 3 * i + 0 ] - pos[ 3 * j + 0 ];
+      |                   ^
+argonmd.cpp:443:19: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  443 |       double dy = pos[ 3 * i + 1 ] - pos[ 3 * j + 1 ];
+      |                   ^
+argonmd.cpp:440:38: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  440 |       double dx = pos[ 3 * i + 0 ] - pos[ 3 * j + 0 ];
+      |                                      ^
+argonmd.cpp:419:6: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  419 | void compute_neigh( const double* const pos, const int natoms, 
+      |      ^
+argonmd.cpp:488:5: remark: loop not vectorized: value that could not be identified as reduction is used outside the loop [-Rpass-analysis=loop-vectorize]
+  488 |     for ( int k = 0; k < numneighs; k++ ) {
+      |     ^
+argonmd.cpp:491:23: remark: loop not vectorized: Array bounds cannot be determined because the loop uses arrays where the array element is of aggregate type. [-Rpass-analysis=loop-vectorize]
+  491 |       double dx = x - pos[ 3 * j + 0 ];
+      |                       ^
+argonmd.cpp:488:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+  488 |     for ( int k = 0; k < numneighs; k++ ) {
+      |     ^
+argonmd.cpp:464:6: note: could not determine the original source location for argonmd.cpp:0:0
+  464 | void compute_forc_epot( const double* const pos, const int natoms, 
+      |      ^
+argonmd.cpp:464:6: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  464 | void compute_forc_epot( const double* const pos, const int natoms, 
+      |      ^
+argonmd.cpp:464:6: note: could not determine the original source location for argonmd.cpp:0:0
+argonmd.cpp:464:6: note: could not determine the original source location for argonmd.cpp:0:0
+argonmd.cpp:464:6: remark: SLP vectorized with cost -21 and with tree size 15 [-Rpass=slp-vectorizer]
+  464 | void compute_forc_epot( const double* const pos, const int natoms, 
+      |      ^
+argonmd.cpp:464:6: note: could not determine the original source location for argonmd.cpp:0:0
+argonmd.cpp:503:48: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  503 |         const double isr6 = irsq * irsq * irsq * sigma6;
+      |                                                ^
+argonmd.cpp:502:33: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  502 |         const double irsq = 1.0 / rsq;
+      |                                 ^
+argonmd.cpp:502:33: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:502:33: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:505:42: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  505 |         const double force_factor = 48.0 * isr6 * (isr6 - 0.5) * irsq * eps;
+      |                                          ^
+argonmd.cpp:502:33: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  502 |         const double irsq = 1.0 / rsq;
+      |                                 ^
+argonmd.cpp:502:33: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:502:33: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:505:42: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  505 |         const double force_factor = 48.0 * isr6 * (isr6 - 0.5) * irsq * eps;
+      |                                          ^
+argonmd.cpp:502:33: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  502 |         const double irsq = 1.0 / rsq;
+      |                                 ^
+argonmd.cpp:502:33: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:464:6: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  464 | void compute_forc_epot( const double* const pos, const int natoms, 
+      |      ^
+argonmd.cpp:500:39: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+  500 |       const double rsq = dx * dx + dy * dy + dz * dz;
+      |                                       ^
+argonmd.cpp:513:23: remark: Stores SLP vectorized with cost -2 and with tree size 4 [-Rpass=slp-vectorizer]
+  513 |     forc[ 3 * i + 1 ] = fy;
+      |                       ^
+argonmd.cpp:690:7: remark: loop not vectorized: Call instruction cannot be vectorized because the called function fprintf is a non-intrinsic function. [-Rpass-analysis=loop-vectorize]
+  690 |       fprintf( file, "ATOM  %5X %4s UNK  %-5X   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", 
+      |       ^
+argonmd.cpp:689:5: remark: loop not vectorized: 'call' instruction may read from memory. Only load instruction is supported. [-Rpass-analysis=loop-vectorize]
+  689 |     for (int i = 0; i < natoms; i++ ) {
+      |     ^
+argonmd.cpp:689:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+argonmd.cpp:685:7: remark: loop not vectorized: Call instruction cannot be vectorized because the called function fprintf is a non-intrinsic function. [-Rpass-analysis=loop-vectorize]
+  685 |       fprintf( file, "ATOM  %5i %4s UNK  %-5i   %8.3F%8.3F%8.3F  1.00  0.00          %2s  \n", 
+      |       ^
+argonmd.cpp:684:5: remark: loop not vectorized: 'call' instruction may read from memory. Only load instruction is supported. [-Rpass-analysis=loop-vectorize]
+  684 |     for (int i = 0; i < natoms; i++ ) {
+      |     ^
+argonmd.cpp:684:5: remark: loop not vectorized [-Rpass-missed=loop-vectorize]
+argonmd.cpp:558:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  558 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:558:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+argonmd.cpp:558:3: remark: Cannot SLP vectorize list: type <4 x double> is unsupported by vectorizer [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Vectorizing horizontal reduction is possible but not beneficial with cost 403 and threshold 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Vectorizing horizontal reduction is possible but not beneficial with cost 404 and threshold 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:558:3: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: the cost-model indicates that interleaving is not beneficial [-Rpass-analysis=loop-vectorize]
+  586 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:586:3: remark: vectorized loop (vectorization width: 4, interleaved count: 1) [-Rpass=loop-vectorize]
+argonmd.cpp:586:3: remark: Cannot SLP vectorize list: type <4 x double> is unsupported by vectorizer [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: Cannot SLP vectorize list: vectorization was impossible with available vectorization factors [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:586:3: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+  610 |   *idum = IA * (*idum - k * IQ) - IR * k;
+      |              ^
+argonmd.cpp:610:14: remark: List vectorization was possible but not beneficial with cost 0 >= 0 [-Rpass-missed=slp-vectorizer]
+argonmd.cpp:631:5: remark: loop not vectorized: Call instruction cannot be vectorized because the called function printf is a non-intrinsic function. [-Rpass-analysis=loop-vectorize]
+  631 |     printf( "%+16.6E %+16.6E %+16.6E\n", arr[ 3 * i + 0 ], arr[ 3 * i + 1 ], arr[ 3 * i + 2 ] );
+      |     ^
+argonmd.cpp:630:3: remark: loop not vectorized: 'call' instruction may read from memory. Only load instruction is supported. [-Rpass-analysis=loop-vectorize]
+  630 |   for ( int i = istart; i < istop; i++) {
+      |   ^
+argonmd.cpp:630:3: remark: loop not vectorized [-Rpass-missed=loop-vectorize]

@@ -1,0 +1,18 @@
+argonmd.cpp:437:5: remark: Unswitched loop at argonmd.cpp:435:3 [-Rpass=loop-unswitch]
+  437 |     for ( int j = 0; j < natoms; j++ ) {
+      |     ^
+argonmd.cpp:432:19: remark: Transformed loop-strided store in _Z13compute_neighPKdiS0_S0_diPiS1_ function into a call to llvm.memset.p0.i64() intrinsic [-Rpass=loop-idiom]
+  432 |     numneigh[ i ] = 0;
+      |                   ^
+argonmd.cpp:431:3: remark: Loop deleted because it is invariant [-Rpass=loop-delete]
+  431 |   for ( int i = 0; i < natoms; i++ ) {
+      |   ^
+argonmd.cpp:349:11: remark: completely unrolled loop with 5 iterations [-Rpass=loop-unroll]
+  349 |           for ( int m = 0; m < 5; m++ ) random( &seed );
+      |           ^
+argonmd.cpp:351:11: remark: completely unrolled loop with 5 iterations [-Rpass=loop-unroll]
+  351 |           for ( int m = 0; m < 5; m++ ) random( &seed );
+      |           ^
+argonmd.cpp:353:11: remark: completely unrolled loop with 5 iterations [-Rpass=loop-unroll]
+  353 |           for ( int m = 0; m < 5; m++ ) random( &seed );
+      |           ^

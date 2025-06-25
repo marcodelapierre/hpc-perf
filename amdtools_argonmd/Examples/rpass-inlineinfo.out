@@ -1,0 +1,87 @@
+argonmd.cpp:265:28: remark: 'atoi' inlined into '_Z16get_input_paramsiPPc' with (cost=10, threshold=487) at callsite _Z16get_input_paramsiPPc:13:28; [-Rpass=inline]
+  265 |       box_units[count++] = atoi( token_string );
+      |                            ^
+argonmd.cpp:292:27: remark: 'atoi' inlined into '_Z16get_input_paramsiPPc' with (cost=10, threshold=487) at callsite _Z16get_input_paramsiPPc:40:27; [-Rpass=inline]
+  292 |     input_params.nsteps = atoi( argv[2] );
+      |                           ^
+argonmd.cpp:297:29: remark: 'atof' inlined into '_Z16get_input_paramsiPPc' with (cost=5, threshold=487) at callsite _Z16get_input_paramsiPPc:45:29; [-Rpass=inline]
+  297 |     input_params.temp_ini = atof( argv[3] );
+      |                             ^
+argonmd.cpp:302:30: remark: 'atoi' inlined into '_Z16get_input_paramsiPPc' with (cost=10, threshold=487) at callsite _Z16get_input_paramsiPPc:50:30; [-Rpass=inline]
+  302 |     input_params.nneighupd = atoi( argv[4] );
+      |                              ^
+argonmd.cpp:307:28: remark: 'atoi' inlined into '_Z16get_input_paramsiPPc' with (cost=10, threshold=487) at callsite _Z16get_input_paramsiPPc:55:28; [-Rpass=inline]
+  307 |     input_params.nthermo = atoi( argv[5] );
+      |                            ^
+argonmd.cpp:312:26: remark: 'atoi' inlined into '_Z16get_input_paramsiPPc' with (cost=10, threshold=487) at callsite _Z16get_input_paramsiPPc:60:26; [-Rpass=inline]
+  312 |     input_params.ndump = atoi( argv[6] );
+      |                          ^
+argonmd.cpp:350:28: remark: '_Z6randomPi' inlined into '_Z15setup_struc_veliPKidPKdiPdS3_S3_' with (cost=20, threshold=787) at callsite _Z15setup_struc_veliPKidPKdiPdS3_S3_:27:28; [-Rpass=inline]
+  350 |           vel[ idx + 0 ] = random( &seed );
+      |                            ^
+argonmd.cpp:349:41: remark: '_Z6randomPi' inlined into '_Z15setup_struc_veliPKidPKdiPdS3_S3_' with (cost=20, threshold=787) at callsite _Z15setup_struc_veliPKidPKdiPdS3_S3_:26:41; [-Rpass=inline]
+  349 |           for ( int m = 0; m < 5; m++ ) random( &seed );
+      |                                         ^
+argonmd.cpp:352:28: remark: '_Z6randomPi' inlined into '_Z15setup_struc_veliPKidPKdiPdS3_S3_' with (cost=20, threshold=787) at callsite _Z15setup_struc_veliPKidPKdiPdS3_S3_:29:28; [-Rpass=inline]
+  352 |           vel[ idx + 1 ] = random( &seed );
+      |                            ^
+argonmd.cpp:351:41: remark: '_Z6randomPi' inlined into '_Z15setup_struc_veliPKidPKdiPdS3_S3_' with (cost=20, threshold=787) at callsite _Z15setup_struc_veliPKidPKdiPdS3_S3_:28:41; [-Rpass=inline]
+  351 |           for ( int m = 0; m < 5; m++ ) random( &seed );
+      |                                         ^
+argonmd.cpp:354:28: remark: '_Z6randomPi' inlined into '_Z15setup_struc_veliPKidPKdiPdS3_S3_' with (cost=20, threshold=787) at callsite _Z15setup_struc_veliPKidPKdiPdS3_S3_:31:28; [-Rpass=inline]
+  354 |           vel[ idx + 2 ] = random( &seed );
+      |                            ^
+argonmd.cpp:353:41: remark: '_Z6randomPi' inlined into '_Z15setup_struc_veliPKidPKdiPdS3_S3_' with (cost=20, threshold=787) at callsite _Z15setup_struc_veliPKidPKdiPdS3_S3_:30:41; [-Rpass=inline]
+  353 |           for ( int m = 0; m < 5; m++ ) random( &seed );
+      |                                         ^
+argonmd.cpp:54:28: remark: '_Z16get_input_paramsiPPc' not inlined into 'main' because too costly to inline (cost=535, threshold=250) [-Rpass-missed=inline]
+   54 | InputParams input_params = get_input_params( argc, argv );
+      |                            ^
+argonmd.cpp:148:1: remark: '_Z15setup_struc_veliPKidPKdiPdS3_S3_' not inlined into 'main' because too costly to inline (cost=675, threshold=250) [-Rpass-missed=inline]
+  148 | setup_struc_vel( funits, box_units, cellpar, unitpos, natoms, pos, posraw, vel );
+      | ^
+argonmd.cpp:150:1: remark: '_Z17compute_temp_ekinPKdidddRdS1_' inlined into 'main' with (cost=25, threshold=250) at callsite main:104:1; [-Rpass=inline]
+  150 | compute_temp_ekin( vel, natoms, mass, temp_scale, ekin_scale, temp, ekin );
+      | ^
+argonmd.cpp:151:1: remark: '_Z12rescale_tempPdidRdS0_' inlined into 'main' with (cost=50, threshold=250) at callsite main:105:1; [-Rpass=inline]
+  151 | rescale_temp( vel, natoms, temp_ini, temp, ekin );
+      | ^
+argonmd.cpp:154:1: remark: '_Z9check_pbcPdiPKd' inlined into 'main' with (cost=145, threshold=250) at callsite main:108:1; [-Rpass=inline]
+  154 | check_pbc( pos, natoms, boxlen );
+      | ^
+argonmd.cpp:156:1: remark: '_Z13compute_neighPKdiS0_S0_diPiS1_' inlined into 'main' with (cost=205, threshold=250) at callsite main:110:1; [-Rpass=inline]
+  156 | compute_neigh( pos, natoms, boxlen, boxhalf, cutskinsq, maxneigh, numneigh, neigh );
+      | ^
+argonmd.cpp:159:1: remark: '_Z17compute_forc_epotPKdiiPKiS2_S0_S0_dddPdRd' not inlined into 'main' because too costly to inline (cost=260, threshold=250) [-Rpass-missed=inline]
+  159 | compute_forc_epot( pos, natoms, maxneigh, numneigh, neigh, 
+      | ^
+argonmd.cpp:163:1: remark: '_Z10print_infoPKiidiiidddPKdi' not inlined into 'main' because too costly to inline (cost=375, threshold=375) [-Rpass-missed=inline]
+  163 | print_info( box_units, nsteps, temp_ini, nneighupd, nthermo, ndump, dt, cut, cellpar, boxlen, natoms );
+      | ^
+argonmd.cpp:168:1: remark: '_Z12print_thermoidddddd' inlined into 'main' with (cost=5, threshold=375) at callsite main:122:1; [-Rpass=inline]
+  168 | print_thermo( istep, dt*istep, temp, ekin/natoms, epot/natoms, (ekin+epot)/natoms, 0.0 );
+      | ^
+argonmd.cpp:173:3: remark: '_Z8dump_pdbP8_IO_FILEiPKddPKcS2_i' not inlined into 'main' because too costly to inline (cost=360, threshold=250) [-Rpass-missed=inline]
+  173 |   dump_pdb( coor, istep, boxlen, cellang, elsym, pos, natoms );
+      |   ^
+argonmd.cpp:187:3: remark: '_Z14update_pos_pbcPdS_PKdS1_idddS1_' inlined into 'main' with (cost=190, threshold=250) at callsite main:141:3; [-Rpass=inline]
+  187 |   update_pos_pbc( pos, posraw, vel, forc, natoms, dt, forc_hdtsq_scale, imass, boxlen );
+      |   ^
+argonmd.cpp:191:5: remark: '_Z13compute_neighPKdiS0_S0_diPiS1_' inlined into 'main' with (cost=205, threshold=250) at callsite main:145:5; [-Rpass=inline]
+  191 |     compute_neigh( pos, natoms, boxlen, boxhalf, cutskinsq, maxneigh, numneigh, neigh );
+      |     ^
+argonmd.cpp:198:3: remark: '_Z17compute_forc_epotPKdiiPKiS2_S0_S0_dddPdRd' not inlined into 'main' because too costly to inline (cost=260, threshold=250) [-Rpass-missed=inline]
+  198 |   compute_forc_epot( pos, natoms, maxneigh, numneigh, neigh, 
+      |   ^
+argonmd.cpp:202:3: remark: '_Z10update_velPdPKdS1_idd' inlined into 'main' with (cost=85, threshold=250) at callsite main:156:3; [-Rpass=inline]
+  202 |   update_vel( vel, forcold, forc, natoms, forc_hdt_scale, imass );
+      |   ^
+argonmd.cpp:208:5: remark: '_Z17compute_temp_ekinPKdidddRdS1_' inlined into 'main' with (cost=25, threshold=250) at callsite main:162:5; [-Rpass=inline]
+  208 |     compute_temp_ekin( vel, natoms, mass, temp_scale, ekin_scale, temp, ekin );
+      |     ^
+argonmd.cpp:215:5: remark: '_Z12print_thermoidddddd' inlined into 'main' with (cost=5, threshold=375) at callsite main:169:5; [-Rpass=inline]
+  215 |     print_thermo( istep, dt*istep, temp, ekin/natoms, epot/natoms, (ekin+epot)/natoms, clocktime );
+      |     ^
+argonmd.cpp:222:5: remark: '_Z8dump_pdbP8_IO_FILEiPKddPKcS2_i' not inlined into 'main' because too costly to inline (cost=360, threshold=250) [-Rpass-missed=inline]
+  222 |     dump_pdb( traj, istep, boxlen, cellang, elsym, pos, natoms );
+      |     ^
